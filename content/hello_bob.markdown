@@ -10,54 +10,52 @@ The gold standard in the first baby steps to learning a new programming language
 In some languages it's hardly more than the two words:
 
 ~~~ruby
-# to run: ruby hello_world.rb
+# ruby
 puts 'Hello world!'
 ~~~
 
 ~~~blacklight
-;; to run: blacklight run hello_world.bl
+;; blacklight
 'Hello world!' print
 ~~~
 
 In others it's a little more verbose:
 
-~~~c
-#include<stdio.h>
-
-int main()
+~~~java
+// Java
+public class HelloWorld
 {
-  printf("\nHello world!");
-  return 0;
+ public static void main(String[] args)
+ {
+  System.out.println("Hello world!");
+ }
 }
 ~~~
 
-~~~nemerle
-class Hello
-{
-  static Main () : void
-  {
-    System.Console.WriteLine ("Hello world!");
-  }
+~~~rust
+// Rust
+fn main () {
+   println!("Hello world!");
 }
 ~~~
 
 Some years back I read a convincing article (that I can no longer find) that
 made the argument that "Hello, world!" was a poor metric for comparing
 languages as well as a poor example to start with. Then there was the acedemic
-paper "Hello World Considered Harmful" which was terrible in its own right.
+paper "Hello World Considered Harmful" (which turned out to be terrible).
 
-In either case, I think it's half true. Thr first thing is to get a "Hello,
-world!" running as a litmus test to prove your system is doing the right thing.
+"Hello, world!" makes a litmus test to prove your system is doing the right thing.
 
-Immediately afterwards this simple example should be modified into something only slightly
-more complex. I've always called it "Hello, Bob!" and it was one of the very first programs I
-ever wrote. It probably looked something like this:
+Immediately afterwards this simple example should be modified into something
+more complex, if only barely. I've always called the next step "Hello, Bob!" and
+it was one of the very first programs I ever wrote. It probably looked something
+like this:
 
 ~~~basic
-01 REM THEY DIDN'T HAVE FANCY LOWERCASE BACK THEN
+01 REM APPLESOFT BASIC - THEY DIDN'T HAVE FANCY LOWERCASE BACK THEN
 10 INPUT "WHAT IS YOUR NAME? "; NAME$
 20 PRINT "HELLO, " NAME$ "!"
-[RUN](https://www.scullinsteel.com/apple2/ "TRY IT OUT")
+RUN
 ~~~
 
 This example shows us user input, how variables work, and string concatenation.
