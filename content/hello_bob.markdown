@@ -1,7 +1,7 @@
 +++
 date = "2015-11-15T18:57:07-06:00"
 draft = true
-title = "Hello, Bob!"
+title = "hello bob"
 
 +++
 

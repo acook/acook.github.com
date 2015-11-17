@@ -1,7 +1,7 @@
 ---
 date: "2015-11-15T13:38:46-06:00"
 draft: true
-title: "This Nomad"
+title: "this nomad"
 ---
 
 ## Timeline

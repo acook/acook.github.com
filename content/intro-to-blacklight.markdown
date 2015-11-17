@@ -1,7 +1,7 @@
 ---
 date: 2015-11-16T19:26:49-06:00
 draft: true
-title: intro to blacklight
+title: blacklight
 ---
 
 ~~~blacklight
