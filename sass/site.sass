@@ -6,6 +6,92 @@ pre
     overflow-x: auto
     padding: 0.5em
 
-.post-date
-  float: right
-  margin-top: -30px
+body
+  background: #7F1000
+
+// sidebar
+
+.sidebar
+  .nav-item-separator
+    letter-spacing: normal
+    margin-right: 0
+
+// landing page
+
+.content
+  background: #fff
+  padding: 0px
+  .brand-tagline
+    margin: 48px
+.posts
+  margin: 48px
+  .post
+    margin: 0 48px
+    .post-title
+      text-align: left
+      margin: 0
+    .post-date
+      float: right
+      margin-top: -30px
+  .nav-item a
+    font-size: 1rem
+    color: #888
+  .nav-item a:hover
+    color: #E54028
+  .nav-item-separator
+    letter-spacing: normal
+    margin-right: 0
+
+// single post
+
+.post
+  margin: 48px
+  .post-date
+    float: right
+    margin-top: -82px
+    .post-date-year, .post-date-month
+      color: #888
+  .post-title
+    text-align: left
+    margin: 48px 0
+  .read-more-link
+    float: none
+#toc
+  text-align: right
+  margin-top: 48px
+  margin-left: 48px
+  margin-right: 48px
+  text-transform: lowercase
+  font-family: 'Libre Baskerville', serif
+  .toc-label
+    margin-top: 0.25rem
+    font-weight: bold
+    font-size: 14px
+#TableOfContents
+  ul
+    padding-left: 0
+  ul li a
+    font-family: 'Libre Baskerville', serif
+    font-size: 12px
+    text-decoration: none
+  ul ul ul
+    li:after
+      content: " //"
+      color: #7F1000
+
+.footer
+  margin-top: 50px
+  background: #7F1000
+  text-align: center
+  height: 200px
+  width: 100%
+  p, a
+    color: #fff
+    font-family: 'Libre Baskerville', serif
+  hr.thin
+    width: 100%
+    background: #fff
+  .pure-menu.pure-menu-horizontal
+    background: #7F1000
+    li a:hover
+      text-decoration: none
