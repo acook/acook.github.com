@@ -15,5 +15,4 @@ body
           a href="{{ .RelPermalink }}" {{ .Title }} &nbsp;
          {{ end }}
 
-      {{ partial "footer.html" . }}
   {{ partial "bodyend.html" . }}

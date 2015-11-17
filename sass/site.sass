@@ -7,14 +7,21 @@ pre
     padding: 0.5em
 
 body
-  background: #7F1000
+  //background: #7F1000
+
+.decorative-marker, .nav-item-separator
+  letter-spacing: normal
+  margin-right: 0
 
 // sidebar
 
 .sidebar
-  .nav-item-separator
-    letter-spacing: normal
-    margin-right: 0
+  background: #eee
+  h1.brand-title
+    color: #555
+  .nav-item a
+    color: #888
+
 
 // landing page
 
@@ -49,11 +56,20 @@ body
   .post-date
     float: right
     margin-top: -82px
+    font-family: "Raleway","Helvetica","Arial",sans-serif
+    font-weight: 200
     .post-date-year, .post-date-month
+      text-transform: uppercase
       color: #888
-  .post-title
+  h1.post-title
     text-align: left
     margin: 48px 0
+    font-size: 1.4rem
+    margin-top: 0.25rem
+    font-family: "Raleway","Helvetica","Arial",sans-serif
+    font-weight: 200
+    a
+      color: #555
   .read-more-link
     float: none
 #toc
@@ -79,6 +95,29 @@ body
       content: " //"
       color: #7F1000
 
+.paging
+  &.pure-g a, &.pure-g span
+    font-family: "Raleway","Helvetica","Arial",sans-serif
+    font-weight: 200
+  a
+    text-decoration: none
+  .paging-label
+    text-transform: uppercase
+    font-style: normal
+    text-align: center
+  .paging-newer
+    clear: none
+    span
+      text-transform: uppercase
+  .paging-older
+    clear: none
+    text-align: right
+    span
+      text-transform: uppercase
+  hr.thin
+    width: 80%
+    margin: 25px 10%
+
 .footer
   margin-top: 50px
   background: #7F1000
@@ -88,9 +127,6 @@ body
   p, a
     color: #fff
     font-family: 'Libre Baskerville', serif
-  hr.thin
-    width: 100%
-    background: #fff
   .pure-menu.pure-menu-horizontal
     background: #7F1000
     li a:hover

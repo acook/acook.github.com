@@ -81,22 +81,21 @@
         {{ end }}
 
         {{ if not .Params.nopaging }}
-        <div class="paging">
+        <div class="paging pure-g">
           <hr class="thin"/>
-          <span class="paging-label">More Reading</span>
+          <div class="paging-newer pure-u-1-5">
           {{ if .Prev }}
-          <div class="paging-newer">
-            <span class="dark-red">Newer</span><span class="decorative-marker">//</span>
-            <a class="paging-link" href="{{ .Prev.RelPermalink }}">{{ .Prev.Title }}</a>
-          </div>
+            <span class="dark-red">Newer</span>
+            <span class="decorative-marker">//</span><a class="paging-link" href="{{ .Prev.RelPermalink }}">{{ .Prev.Title }}</a>
           {{ end }}
-
+          </div>
+          <span class="paging-label pure-u-3-5">&#x21e0; Read More &#x21e2;</span>
+          <div class="paging-older pure-u-1-5">
           {{ if .Next }}
-          <div class="paging-older">
-            <span class="dark-red">Older</span><span class="decorative-marker">//</span>
-            <a class="paging-link" href="{{ .Next.RelPermalink }}">{{ .Next.Title  }}</a>
-          </div>
+            <span class="dark-red">Older</span>
+            <span class="decorative-marker">//</span><a class="paging-link" href="{{ .Next.RelPermalink }}">{{ .Next.Title  }}</a>
           {{ end }}
+          </div>
         </div>
         {{ end }}
       </section>
@@ -104,7 +103,6 @@
       {{ template "_internal/disqus.html" . }}
       {{ end }}
 
-      {{ partial "footer.html" . }}
     </div>
   </div>
   {{ if .Params.totop }}
