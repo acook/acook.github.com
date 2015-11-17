@@ -1,3 +1,9 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "http://anthonymcook.com"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "digital. [nomad]"
+
+MetaDataFormat = "yaml"
+
+[params]
+sidebartitle = "digital. [nomad]"
+sidebartagline = "the digital frontier"
