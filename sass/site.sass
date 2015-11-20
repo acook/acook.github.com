@@ -1,13 +1,66 @@
+$c-code: #181914
+$c-primary: #E54028
+$c-accent: #7f1000
+$c-serious: #555555
+$c-normal: #888888
+$c-reverse: #fff
+$c-contrast: #eee
+
+$f-clean: "Raleway","Helvetica","Arial",sans-serif
+$f-rugged: 'Libre Baskerville', serif
+$f-mono: Menlo,Monaco,monospace,sans-serif
+
+$t-normal: 1s
+
+body
+  //background: $c-accent
 pre
-  background: #181914
+  background: $c-code
   color: #dccf8f
   code
     display: block
     overflow-x: auto
     padding: 0.5em
+code, kbd, pre, samp
+  font-family: $f-mono
+code
+  background: $c-contrast
+  padding: 2px
+a:hover
+  color: $c-primary !important
+  -o-transition: $t-normal
+  -ms-transition: $t-normal
+  -moz-transition: $t-normal
+  -webkit-transition: $t-normal
+  transition: $t-normal
 
-body
-  //background: #7F1000
+blockquote
+  background: #f9f9f9
+  border-left: 10px solid #ccc
+  margin: 1.5em 10px
+  padding: 0.5em 10px
+  quotes: "\201C""\201D""\2018""\2019"
+
+blockquote:before
+  color: #ccc
+  content: open-quote
+  font-size: 4em
+  line-height: 0.1em
+  margin-right: 0.25em
+  vertical-align: -0.4em
+blockquote p
+  display: inline
+
+aside
+  padding: 1rem
+  background-color: $c-contrast
+  border-top: 1px solid $c-serious
+  border-bottom: 1px solid $c-serious
+  margin: 1rem 0 2rem 0
+  text-indent: 4rem
+
+ul li
+  font-family: $f-clean
 
 .decorative-marker, .nav-item-separator
   letter-spacing: normal
@@ -16,11 +69,14 @@ body
 // sidebar
 
 .sidebar
-  background: #eee
+  background: $c-contrast
+  .header
+    margin: 2rem 4rem
   h1.brand-title
-    color: #555
+    color: $c-serious
+    padding: 0
   .nav-item a
-    color: #888
+    color: $c-normal
 
 
 // landing page
@@ -42,9 +98,11 @@ body
       margin-top: -30px
   .nav-item a
     font-size: 1rem
-    color: #888
+    color: $c-normal
+    font-family: $f-clean
+    font-weight: 400
   .nav-item a:hover
-    color: #E54028
+    color: $c-primary
   .nav-item-separator
     letter-spacing: normal
     margin-right: 0
@@ -52,54 +110,54 @@ body
 // single post
 
 .post
-  margin: 48px
+  padding: 2rem 4rem
   .post-date
     float: right
     margin-top: -82px
-    font-family: "Raleway","Helvetica","Arial",sans-serif
+    font-family: $f-clean
     font-weight: 200
     .post-date-year, .post-date-month
       text-transform: uppercase
-      color: #888
+      color: $c-normal
   h1.post-title
+    text-transform: uppercase
     text-align: left
-    margin: 48px 0
+    margin: 0rem 0px 48px
     font-size: 1.4rem
-    margin-top: 0.25rem
-    font-family: "Raleway","Helvetica","Arial",sans-serif
+    //margin-top: 0.25rem
+    font-family: $f-clean
     font-weight: 200
     a
-      color: #555
+      color: $c-serious
+  h2, h3, h4
+    font-family: $f-rugged
   .read-more-link
     float: none
 #toc
-  text-align: right
-  margin-top: 48px
-  margin-left: 48px
-  margin-right: 48px
-  text-transform: lowercase
-  font-family: 'Libre Baskerville', serif
+  padding: 2rem 3rem
+  font-family: $f-rugged
   .toc-label
     margin-top: 0.25rem
     font-weight: bold
     font-size: 14px
+    color: $c-serious
 #TableOfContents
   ul
+    list-style: number
     padding-left: 0
+    margin-bottom: 0
   ul li a
-    font-family: 'Libre Baskerville', serif
+    font-family: $f-rugged
     font-size: 12px
     text-decoration: none
   ul ul ul
-    li:after
-      content: " //"
-      color: #7F1000
 
 .paging
   &.pure-g a, &.pure-g span
-    font-family: "Raleway","Helvetica","Arial",sans-serif
+    font-family: $f-clean
     font-weight: 200
   a
+    text-transform: uppercase
     text-decoration: none
   .paging-label
     text-transform: uppercase
@@ -108,26 +166,13 @@ body
   .paging-newer
     clear: none
     span
-      text-transform: uppercase
+      text-transform: lowercase
   .paging-older
     clear: none
     text-align: right
     span
-      text-transform: uppercase
+      text-transform: lowercase
   hr.thin
     width: 80%
     margin: 25px 10%
 
-.footer
-  margin-top: 50px
-  background: #7F1000
-  text-align: center
-  height: 200px
-  width: 100%
-  p, a
-    color: #fff
-    font-family: 'Libre Baskerville', serif
-  .pure-menu.pure-menu-horizontal
-    background: #7F1000
-    li a:hover
-      text-decoration: none
