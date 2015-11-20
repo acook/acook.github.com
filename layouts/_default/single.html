@@ -27,7 +27,7 @@
       </div>
       {{ end }}
       {{ end }}
-      <section class="post">
+      <section class="post pure-u-1 pure-u-md-3-4">
         <h1 class="post-title">
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </h1>
@@ -85,16 +85,20 @@
           <hr class="thin"/>
           <div class="paging-newer pure-u-1-5">
           {{ if .Prev }}
-            <span class="dark-red">Newer</span>
-            <span class="decorative-marker">//</span><a class="paging-link" href="{{ .Prev.RelPermalink }}">{{ .Prev.Title }}</a>
+            <a class="paging-link" href="{{ .Prev.RelPermalink }}">
+              <span class="dark-red">Newer</span>
+              <span class="decorative-marker">//</span>{{ .Prev.Title }}
+            </a>
           {{ end }}
           </div>
           <span class="paging-label pure-u-3-5">&#x21e0; Read More &#x21e2;</span>
           <div class="paging-older pure-u-1-5">
-          {{ if .Next }}
-            <span class="dark-red">Older</span>
-            <span class="decorative-marker">//</span><a class="paging-link" href="{{ .Next.RelPermalink }}">{{ .Next.Title  }}</a>
-          {{ end }}
+            {{ if .Next }}
+            <a class="paging-link" href="{{ .Next.RelPermalink }}">
+              <span class="dark-red">Older</span>
+              <span class="decorative-marker">//</span>{{ .Next.Title  }}
+            </a>
+            {{ end }}
           </div>
         </div>
         {{ end }}

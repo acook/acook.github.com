@@ -15,12 +15,14 @@
         {{ range .Site.Menus.main }}
         <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
+      </ul>
 
-        <h2 class="brand-tagline">nomadic posts</h2>
-         {{ $Site := .Site }}
-         {{ range .Site.Pages }}
+      <h2 class="brand-tagline">nomadic posts</h2>
+      <ul class="nav-list">
+        {{ $Site := .Site }}
+        {{ range .Site.Pages }}
         <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-         {{ end }}
+        {{ end }}
 
       </ul>
     </nav>
