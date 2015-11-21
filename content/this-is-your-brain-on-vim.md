@@ -1,7 +1,9 @@
 ---
 slug: this-is-your-brain-on-vim
 fulldate: Thu Dec 16 2010 21:56:00 GMT-0600 (CST)
-tags: vim, awesome
+tags:
+  - vim
+  - awesome
 title: Your brain on vim
 id: 2344596248
 link: http://anthonymcook.com/post/2344596248/this-is-your-brain-on-vim

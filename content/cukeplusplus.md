@@ -1,7 +1,10 @@
 ---
 slug: cukeplusplus
 origindate: Sat Dec 18 2010 13:54:00 GMT-0600 (CST)
-tags: cucumber, feature testing, formatter
+tags:
+  - cucumber
+  - feature testing
+  - formatter
 title: Cukeplusplus
 id: 2363388377
 link: http://anthonymcook.com/post/2363388377/cukeplusplus

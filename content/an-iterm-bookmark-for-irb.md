@@ -1,7 +1,12 @@
 ---
 slug: an-iterm-bookmark-for-irb
 fulldate: Thu Dec 09 2010 15:57:13 GMT-0600 (CST)
-tags: OS X, iTerm, irb, ruby, rvm
+tags:
+  - OS X
+  - iTerm
+  - irb
+  - ruby
+  - rvm
 title: IRB & iTerm
 id: 2157946537
 link: http://anthonymcook.com/post/2157946537/an-iterm-bookmark-for-irb

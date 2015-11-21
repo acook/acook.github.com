@@ -1,7 +1,10 @@
 ---
 slug: iterm2-vs-macvim
 fulldate: Thu Dec 16 2010 22:41:00 GMT-0600 (CST)
-tags: vim, iTerm2, MacVim
+tags:
+  - vim
+  - iTerm2
+  - MacVim
 title: MacVim vs iTerm
 id: 2345102621
 link: http://anthonymcook.com/post/2345102621/iterm2-vs-macvim
