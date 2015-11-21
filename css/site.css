@@ -51,6 +51,22 @@ aside {
 ul li {
   font-family: "Raleway", "Helvetica", "Arial", sans-serif; }
 
+aside.url {
+  text-indent: 0; }
+  aside.url a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: "Libre Baskerville", serif; }
+  aside.url a:after {
+    content: "〉";
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal; }
+  aside.url div {
+    font-size: 16px;
+    font-family: "Raleway", "Helvetica", "Arial", sans-serif;
+    font-weight: 200; }
+
 .decorative-marker, .nav-item-separator {
   letter-spacing: normal;
   margin-right: 0; }
@@ -115,6 +131,8 @@ ul li {
     font-family: "Libre Baskerville", serif; }
   .post .read-more-link {
     float: none; }
+  .post img {
+    width: 100%; }
 
 #toc {
   padding: 2rem 3rem;

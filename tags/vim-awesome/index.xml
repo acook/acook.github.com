@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim Awesome on digital. [nomad]</title>
+    <link>http://localhost:1313/tags/vim-awesome/</link>
+    <description>Recent content in Vim Awesome on digital. [nomad]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Dec 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/vim-awesome/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Your brain on vim</title>
+      <link>http://localhost:1313/this-is-your-brain-on-vim/</link>
+      <pubDate>Thu, 16 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/this-is-your-brain-on-vim/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;http://kevinw.github.com/2010/12/15/this-is-your-brain-on-vim&#34;&gt;
+&lt;div&gt;kevinw.github.com&lt;/div&gt;
+This is Your Brain on Vim
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;p&gt;Its insanity. I love it. ⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

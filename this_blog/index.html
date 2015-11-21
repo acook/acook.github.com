@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
   <title>
-    hello bob // digital. [nomad]
+    this_blog // digital. [nomad]
   </title>
 
   <link href="http://gmpg.org/xfn/11" rel="profile">
@@ -16,11 +16,11 @@
 <meta name="author" content="">
 <meta name="generator" content="Hugo 0.14" />
 
-  <meta property="og:title" content="hello bob" />
+  <meta property="og:title" content="this_blog" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="http://localhost:1313/hello_bob/" />
+<meta property="og:url" content="http://localhost:1313/this_blog/" />
 
 
   
@@ -112,10 +112,24 @@
 
       
       
+      <div id="toc" class="pure-u-1 pure-u-md-1-4">
+        <small class="toc-label">Contents</small>
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#technologies:ebd1e4c6bac976b23c3660f1f75a21af">Technologies</a></li>
+<li><a href="#directory-structure:ebd1e4c6bac976b23c3660f1f75a21af">Directory Structure</a></li>
+<li><a href="#references:ebd1e4c6bac976b23c3660f1f75a21af">References</a></li>
+</ul></li>
+</ul>
+</nav>
+      </div>
+      
       
       <section class="post pure-u-1 pure-u-md-3-4">
         <h1 class="post-title">
-          <a href="/hello_bob/">hello bob</a>
+          <a href="/this_blog/">this_blog</a>
         </h1>
         <h3 class="post-subtitle">
           
@@ -136,57 +150,41 @@
 
         
 
-        <p>The gold standard in the first baby steps to learning a new programming language is the ubiquitous &ldquo;Hello world!&rdquo; program.</p>
+        
 
-<p>In some languages it&rsquo;s hardly more than the two words:</p>
+<h2 id="technologies:ebd1e4c6bac976b23c3660f1f75a21af">Technologies</h2>
 
-<pre><code class="language-ruby"># ruby
-puts 'Hello world!'
+<ul>
+<li>Hugo</li>
+<li>Github (Jekyll)</li>
+</ul>
+
+<h2 id="directory-structure:ebd1e4c6bac976b23c3660f1f75a21af">Directory Structure</h2>
+
+<p>I cloned the site repo into an ignored subdirectory (called <code>public</code>):</p>
+
+<pre><code class="language-sh">$ git clone . public
 </code></pre>
 
-<pre><code class="language-blacklight">;; blacklight
-'Hello world!' print
+<p>Then I changed the branch and cleaned up the subdirectory:</p>
+
+<pre><code class="language-sh">$ git co -b develop
+$ cd public
+$ shopt -s extglob
+$ git rm -rf .
+$ cd ..
+$ hugo
+$ cd public
+$ git add .
+$ git commit
 </code></pre>
 
-<p>In others it&rsquo;s a little more verbose:</p>
+<h2 id="references:ebd1e4c6bac976b23c3660f1f75a21af">References</h2>
 
-<pre><code class="language-java">// Java
-public class HelloWorld
-{
- public static void main(String[] args)
- {
-  System.out.println(&quot;Hello world!&quot;);
- }
-}
-</code></pre>
-
-<pre><code class="language-rust">// Rust
-fn main () {
-   println!(&quot;Hello world!&quot;);
-}
-</code></pre>
-
-<p>Some years back I read a convincing article (that I can no longer find) that
-made the argument that &ldquo;Hello, world!&rdquo; was a poor metric for comparing
-languages as well as a poor example to start with. Then there was the acedemic
-paper &ldquo;Hello World Considered Harmful&rdquo; (which turned out to be terrible).</p>
-
-<p>&ldquo;Hello, world!&rdquo; makes a litmus test to prove your system is doing the right thing.</p>
-
-<p>Immediately afterwards this simple example should be modified into something
-more complex, if only barely. I&rsquo;ve always called the next step &ldquo;Hello, Bob!&rdquo; and
-it was one of the very first programs I ever wrote. It probably looked something
-like this:</p>
-
-<pre><code class="language-basic">01 REM APPLESOFT BASIC - THEY DIDN'T HAVE FANCY LOWERCASE BACK THEN
-10 INPUT &quot;WHAT IS YOUR NAME? &quot;; NAME$
-20 PRINT &quot;HELLO, &quot; NAME$ &quot;!&quot;
-RUN
-</code></pre>
-
-<p>This example shows us user input, how variables work, and string concatenation.
-While this example is hardly more complex, most programs in the wild constantly
-use these three things.</p>
+<ul>
+<li><a href="http://jimmybonney.com/articles/export_tumblr_posts_to_nanoc/">http://jimmybonney.com/articles/export_tumblr_posts_to_nanoc/</a>
+-</li>
+</ul>
 
 
         
@@ -198,18 +196,13 @@ use these three things.</p>
           <hr class="thin"/>
           <div class="paging-newer pure-u-1-5">
           
-            <a class="paging-link" href="/intro-to-blacklight/">
-              <span class="dark-red">Newer</span>
-              <span class="decorative-marker">//</span>blacklight
-            </a>
-          
           </div>
           <span class="paging-label pure-u-3-5">&#x21e0; Read More &#x21e2;</span>
           <div class="paging-older pure-u-1-5">
             
-            <a class="paging-link" href="/about/">
+            <a class="paging-link" href="/intro-to-blacklight/">
               <span class="dark-red">Older</span>
-              <span class="decorative-marker">//</span>this nomad
+              <span class="decorative-marker">//</span>blacklight
             </a>
             
           </div>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
   <title>
-    hello bob // digital. [nomad]
+    Cukeplusplus // digital. [nomad]
   </title>
 
   <link href="http://gmpg.org/xfn/11" rel="profile">
@@ -16,11 +16,11 @@
 <meta name="author" content="">
 <meta name="generator" content="Hugo 0.14" />
 
-  <meta property="og:title" content="hello bob" />
+  <meta property="og:title" content="Cukeplusplus" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="http://localhost:1313/hello_bob/" />
+<meta property="og:url" content="http://anthonymcook.com/cukeplusplus/" />
 
 
   
@@ -68,21 +68,13 @@
 
     <nav class="nav">
       <ul class="nav-list">
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="http://localhost:1313/">Home</a></li>
+        <li class="nav-item"><span class="nav-item-separator">//</span><a href="http://anthonymcook.com">Home</a></li>
         
       </ul>
 
       <h2 class="brand-tagline">nomadic posts</h2>
       <ul class="nav-list">
         
-        
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="/this_blog/">this_blog</a></li>
-        
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="/intro-to-blacklight/">blacklight</a></li>
-        
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="/hello_bob/">hello bob</a></li>
-        
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="/about/">this nomad</a></li>
         
         <li class="nav-item"><span class="nav-item-separator">//</span><a href="/the-new-powerline/">powerline</a></li>
         
@@ -115,14 +107,14 @@
       
       <section class="post pure-u-1 pure-u-md-3-4">
         <h1 class="post-title">
-          <a href="/hello_bob/">hello bob</a>
+          <a href="/cukeplusplus/">Cukeplusplus</a>
         </h1>
         <h3 class="post-subtitle">
           
         </h3>
         
         <span class="post-date">
-          <span class="post-date-month"><sup>Nov</sup></span><span class="post-date-separator">/</span><span class="post-date-year">2015</span>
+          <span class="post-date-month"><sup>Dec</sup></span><span class="post-date-separator">/</span><span class="post-date-year">2010</span>
         </span>
         
         
@@ -136,61 +128,50 @@
 
         
 
-        <p>The gold standard in the first baby steps to learning a new programming language is the ubiquitous &ldquo;Hello world!&rdquo; program.</p>
+        <aside class="url">
+<a href="https://github.com/acook/cukeplusplus">
+<div>github.com</div>
+cukeplusplus
+</a></aside>
 
-<p>In some languages it&rsquo;s hardly more than the two words:</p>
+<p>I was dissatisfied with existing Cucumber formatters and spent a few
+hours figuring out the API and dismantling the Pretty formatter in order
+to create this. Cukeplusplus is inspired by the easy to read colorized
+output of Emerge, Gentoo’s package manager.</p>
 
-<pre><code class="language-ruby"># ruby
-puts 'Hello world!'
-</code></pre>
+<p>It has no dependancies other than Cucumber itself, and I’m kind of in
+love with how it looks on my terminal. Honestly the code is a mess, it
+was written during a 32-hour coding session and my primary goal was
+useful output in the fastest time possible. So I’ll do some code
+cleanup, finish the Readme, and package it as a gem; then post some
+screenshots and a screencast!</p>
 
-<pre><code class="language-blacklight">;; blacklight
-'Hello world!' print
-</code></pre>
+<p>If anyone wants to help out or has some suggestions, feel free to throw
+them my way, fork the code on Github and send me a pull request!</p>
 
-<p>In others it&rsquo;s a little more verbose:</p>
+<p>Planned features: Show more detail about the running step and compile
+statistics to catch particularly slow steps so we can optimize test
+running time. I’d like to add more colors, but I’m kinda digging the way
+it looks right now. I may add optional 256 color support, so I can use
+more shades of grey and make sure people can see the same attractive
+colors I see in my own terminal!</p>
 
-<pre><code class="language-java">// Java
-public class HelloWorld
-{
- public static void main(String[] args)
- {
-  System.out.println(&quot;Hello world!&quot;);
- }
-}
-</code></pre>
-
-<pre><code class="language-rust">// Rust
-fn main () {
-   println!(&quot;Hello world!&quot;);
-}
-</code></pre>
-
-<p>Some years back I read a convincing article (that I can no longer find) that
-made the argument that &ldquo;Hello, world!&rdquo; was a poor metric for comparing
-languages as well as a poor example to start with. Then there was the acedemic
-paper &ldquo;Hello World Considered Harmful&rdquo; (which turned out to be terrible).</p>
-
-<p>&ldquo;Hello, world!&rdquo; makes a litmus test to prove your system is doing the right thing.</p>
-
-<p>Immediately afterwards this simple example should be modified into something
-more complex, if only barely. I&rsquo;ve always called the next step &ldquo;Hello, Bob!&rdquo; and
-it was one of the very first programs I ever wrote. It probably looked something
-like this:</p>
-
-<pre><code class="language-basic">01 REM APPLESOFT BASIC - THEY DIDN'T HAVE FANCY LOWERCASE BACK THEN
-10 INPUT &quot;WHAT IS YOUR NAME? &quot;; NAME$
-20 PRINT &quot;HELLO, &quot; NAME$ &quot;!&quot;
-RUN
-</code></pre>
-
-<p>This example shows us user input, how variables work, and string concatenation.
-While this example is hardly more complex, most programs in the wild constantly
-use these three things.</p>
+<p>⦂∀</p>
 
 
         
 
+        
+        <div class="tags-list">
+          <span class="dark-red">Tags</span><span class="decorative-marker">//</span>
+          
+          <a class="post-tag post-tag-cucumber" href="http://anthonymcook.com/tags/cucumber">cucumber</a>,
+          
+          <a class="post-tag post-tag-feature-testing" href="http://anthonymcook.com/tags/feature-testing">feature testing</a>,
+          
+          <a class="post-tag post-tag-formatter" href="http://anthonymcook.com/tags/formatter">formatter</a>,
+          
+        </div>
         
 
         
@@ -198,18 +179,18 @@ use these three things.</p>
           <hr class="thin"/>
           <div class="paging-newer pure-u-1-5">
           
-            <a class="paging-link" href="/intro-to-blacklight/">
+            <a class="paging-link" href="/the-new-powerline/">
               <span class="dark-red">Newer</span>
-              <span class="decorative-marker">//</span>blacklight
+              <span class="decorative-marker">//</span>powerline
             </a>
           
           </div>
           <span class="paging-label pure-u-3-5">&#x21e0; Read More &#x21e2;</span>
           <div class="paging-older pure-u-1-5">
             
-            <a class="paging-link" href="/about/">
+            <a class="paging-link" href="/this-is-your-brain-on-vim/">
               <span class="dark-red">Older</span>
-              <span class="decorative-marker">//</span>this nomad
+              <span class="decorative-marker">//</span>Your brain on vim
             </a>
             
           </div>
@@ -227,8 +208,5 @@ use these three things.</p>
   
 
   
-<script data-no-instant>document.write('<script src="http://'
-        + (location.host || 'localhost').split(':')[0]
-		+ ':1313/livereload.js?mindelay=10"></'
-        + 'script>')</script></body>
+</body>
 </html>

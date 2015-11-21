@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Irb on digital. [nomad]</title>
+    <link>http://anthonymcook.com/tags/irb/</link>
+    <description>Recent content in Irb on digital. [nomad]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Dec 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://anthonymcook.com/tags/irb/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>IRB &amp; iTerm</title>
+      <link>http://anthonymcook.com/an-iterm-bookmark-for-irb/</link>
+      <pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/an-iterm-bookmark-for-irb/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;re like &lt;a href=&#34;http://twitter.com/anthony_m_cook&#34; target=&#34;_blank&#34;&gt;me&lt;/a&gt;, you use &lt;a href=&#34;http://en.wikipedia.org/wiki/Interactive_Ruby_Shell&#34; target=&#34;_blank&#34;&gt;irb&lt;/a&gt; for all kinds of things. From just running quick ruby experiments to figuring out how many &lt;a href=&#34;http://rubydoc.info/docs/ruby-core/1.9.2/Time&#34; target=&#34;_blank&#34;&gt;days&lt;/a&gt; (9364) you&amp;rsquo;ve been alive.&lt;/p&gt;
+
+&lt;p&gt;I created a bookmark in &lt;a href=&#34;http://iterm.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;iTerm&lt;/a&gt; to run &lt;a href=&#34;http://ruby-doc.org/docs/ProgrammingRuby/html/irb.html&#34; target=&#34;_blank&#34;&gt;irb&lt;/a&gt; when I hit &lt;a href=&#34;http://jrgraphix.net/r/Unicode/2300-23FF&#34; target=&#34;_blank&#34;&gt;⌘&lt;/a&gt;-control-0. This was fine until I realized it was using the system&amp;rsquo;s &lt;a href=&#34;http://stackoverflow.com/questions/3474875/why-does-mac-os-x-come-with-ruby-rails&#34; target=&#34;_blank&#34;&gt;ruby&lt;/a&gt; install, and not the &lt;a href=&#34;http://rubydoc.info/docs/ruby-core/1.9.2&#34; target=&#34;_blank&#34;&gt;version&lt;/a&gt; I installed with &lt;a href=&#34;http://rvm.beginrescueend.com/&#34; target=&#34;_blank&#34;&gt;RVM&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I eventually realized the problem was the system environment doesn&amp;rsquo;t know about my &lt;a href=&#34;http://dotfiles.org/&#34; target=&#34;_blank&#34;&gt;.bash_profile&lt;/a&gt;, and therefore my modified &lt;a href=&#34;http://www.linuxheadquarters.com/howto/basic/path.shtml&#34; target=&#34;_blank&#34;&gt;PATH&lt;/a&gt; variable nor the require &lt;a href=&#34;http://rvm.beginrescueend.com/rvm/install/&#34; target=&#34;_blank&#34;&gt;RVM magic&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, to get all that, this is the command to use to make sure you&amp;rsquo;re getting the same irb you expect from your commandline:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bash --login -c irb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br/&gt;
+Yay it works!&lt;br/&gt;
+⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

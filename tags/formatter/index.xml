@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Formatter on digital. [nomad]</title>
+    <link>http://anthonymcook.com/tags/formatter/</link>
+    <description>Recent content in Formatter on digital. [nomad]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Dec 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://anthonymcook.com/tags/formatter/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cukeplusplus</title>
+      <link>http://anthonymcook.com/cukeplusplus/</link>
+      <pubDate>Sat, 18 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/cukeplusplus/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;
+&lt;a href=&#34;https://github.com/acook/cukeplusplus&#34;&gt;
+&lt;div&gt;github.com&lt;/div&gt;
+cukeplusplus
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;p&gt;I was dissatisfied with existing Cucumber formatters and spent a few
+hours figuring out the API and dismantling the Pretty formatter in order
+to create this. Cukeplusplus is inspired by the easy to read colorized
+output of Emerge, Gentoo’s package manager.&lt;/p&gt;
+
+&lt;p&gt;It has no dependancies other than Cucumber itself, and I’m kind of in
+love with how it looks on my terminal. Honestly the code is a mess, it
+was written during a 32-hour coding session and my primary goal was
+useful output in the fastest time possible. So I’ll do some code
+cleanup, finish the Readme, and package it as a gem; then post some
+screenshots and a screencast!&lt;/p&gt;
+
+&lt;p&gt;If anyone wants to help out or has some suggestions, feel free to throw
+them my way, fork the code on Github and send me a pull request!&lt;/p&gt;
+
+&lt;p&gt;Planned features: Show more detail about the running step and compile
+statistics to catch particularly slow steps so we can optimize test
+running time. I’d like to add more colors, but I’m kinda digging the way
+it looks right now. I may add optional 256 color support, so I can use
+more shades of grey and make sure people can see the same attractive
+colors I see in my own terminal!&lt;/p&gt;
+
+&lt;p&gt;⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

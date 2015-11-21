@@ -126,5 +126,93 @@ If you figured out where your Python has installed Powerline at, and you can&amp
 </description>
     </item>
     
+    <item>
+      <title>Cukeplusplus</title>
+      <link>http://anthonymcook.com/cukeplusplus/</link>
+      <pubDate>Sat, 18 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/cukeplusplus/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;
+&lt;a href=&#34;https://github.com/acook/cukeplusplus&#34;&gt;
+&lt;div&gt;github.com&lt;/div&gt;
+cukeplusplus
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;p&gt;I was dissatisfied with existing Cucumber formatters and spent a few
+hours figuring out the API and dismantling the Pretty formatter in order
+to create this. Cukeplusplus is inspired by the easy to read colorized
+output of Emerge, Gentoo’s package manager.&lt;/p&gt;
+
+&lt;p&gt;It has no dependancies other than Cucumber itself, and I’m kind of in
+love with how it looks on my terminal. Honestly the code is a mess, it
+was written during a 32-hour coding session and my primary goal was
+useful output in the fastest time possible. So I’ll do some code
+cleanup, finish the Readme, and package it as a gem; then post some
+screenshots and a screencast!&lt;/p&gt;
+
+&lt;p&gt;If anyone wants to help out or has some suggestions, feel free to throw
+them my way, fork the code on Github and send me a pull request!&lt;/p&gt;
+
+&lt;p&gt;Planned features: Show more detail about the running step and compile
+statistics to catch particularly slow steps so we can optimize test
+running time. I’d like to add more colors, but I’m kinda digging the way
+it looks right now. I may add optional 256 color support, so I can use
+more shades of grey and make sure people can see the same attractive
+colors I see in my own terminal!&lt;/p&gt;
+
+&lt;p&gt;⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Your brain on vim</title>
+      <link>http://anthonymcook.com/this-is-your-brain-on-vim/</link>
+      <pubDate>Thu, 16 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/this-is-your-brain-on-vim/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;http://kevinw.github.com/2010/12/15/this-is-your-brain-on-vim&#34;&gt;
+&lt;div&gt;kevinw.github.com&lt;/div&gt;
+This is Your Brain on Vim
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;p&gt;Its insanity. I love it. ⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MacVim vs iTerm</title>
+      <link>http://anthonymcook.com/iterm2-vs-macvim/</link>
+      <pubDate>Thu, 16 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/iterm2-vs-macvim/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://40.media.tumblr.com/tumblr_ldk2dejdKO1qfucqto1_1280.png&#34;&gt; &lt;img src=&#34;http://40.media.tumblr.com/tumblr_ldk2dejdKO1qfucqto1_1280.png&#34; alt=&#34;&#34; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IRB &amp; iTerm</title>
+      <link>http://anthonymcook.com/an-iterm-bookmark-for-irb/</link>
+      <pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/an-iterm-bookmark-for-irb/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;re like &lt;a href=&#34;http://twitter.com/anthony_m_cook&#34; target=&#34;_blank&#34;&gt;me&lt;/a&gt;, you use &lt;a href=&#34;http://en.wikipedia.org/wiki/Interactive_Ruby_Shell&#34; target=&#34;_blank&#34;&gt;irb&lt;/a&gt; for all kinds of things. From just running quick ruby experiments to figuring out how many &lt;a href=&#34;http://rubydoc.info/docs/ruby-core/1.9.2/Time&#34; target=&#34;_blank&#34;&gt;days&lt;/a&gt; (9364) you&amp;rsquo;ve been alive.&lt;/p&gt;
+
+&lt;p&gt;I created a bookmark in &lt;a href=&#34;http://iterm.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;iTerm&lt;/a&gt; to run &lt;a href=&#34;http://ruby-doc.org/docs/ProgrammingRuby/html/irb.html&#34; target=&#34;_blank&#34;&gt;irb&lt;/a&gt; when I hit &lt;a href=&#34;http://jrgraphix.net/r/Unicode/2300-23FF&#34; target=&#34;_blank&#34;&gt;⌘&lt;/a&gt;-control-0. This was fine until I realized it was using the system&amp;rsquo;s &lt;a href=&#34;http://stackoverflow.com/questions/3474875/why-does-mac-os-x-come-with-ruby-rails&#34; target=&#34;_blank&#34;&gt;ruby&lt;/a&gt; install, and not the &lt;a href=&#34;http://rubydoc.info/docs/ruby-core/1.9.2&#34; target=&#34;_blank&#34;&gt;version&lt;/a&gt; I installed with &lt;a href=&#34;http://rvm.beginrescueend.com/&#34; target=&#34;_blank&#34;&gt;RVM&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I eventually realized the problem was the system environment doesn&amp;rsquo;t know about my &lt;a href=&#34;http://dotfiles.org/&#34; target=&#34;_blank&#34;&gt;.bash_profile&lt;/a&gt;, and therefore my modified &lt;a href=&#34;http://www.linuxheadquarters.com/howto/basic/path.shtml&#34; target=&#34;_blank&#34;&gt;PATH&lt;/a&gt; variable nor the require &lt;a href=&#34;http://rvm.beginrescueend.com/rvm/install/&#34; target=&#34;_blank&#34;&gt;RVM magic&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, to get all that, this is the command to use to make sure you&amp;rsquo;re getting the same irb you expect from your commandline:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bash --login -c irb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br/&gt;
+Yay it works!&lt;br/&gt;
+⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

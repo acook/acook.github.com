@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
   <title>
-    hello bob // digital. [nomad]
+    IRB &amp; iTerm // digital. [nomad]
   </title>
 
   <link href="http://gmpg.org/xfn/11" rel="profile">
@@ -16,11 +16,11 @@
 <meta name="author" content="">
 <meta name="generator" content="Hugo 0.14" />
 
-  <meta property="og:title" content="hello bob" />
+  <meta property="og:title" content="IRB &amp; iTerm" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="http://localhost:1313/hello_bob/" />
+<meta property="og:url" content="http://anthonymcook.com/an-iterm-bookmark-for-irb/" />
 
 
   
@@ -68,21 +68,13 @@
 
     <nav class="nav">
       <ul class="nav-list">
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="http://localhost:1313/">Home</a></li>
+        <li class="nav-item"><span class="nav-item-separator">//</span><a href="http://anthonymcook.com">Home</a></li>
         
       </ul>
 
       <h2 class="brand-tagline">nomadic posts</h2>
       <ul class="nav-list">
         
-        
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="/this_blog/">this_blog</a></li>
-        
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="/intro-to-blacklight/">blacklight</a></li>
-        
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="/hello_bob/">hello bob</a></li>
-        
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="/about/">this nomad</a></li>
         
         <li class="nav-item"><span class="nav-item-separator">//</span><a href="/the-new-powerline/">powerline</a></li>
         
@@ -115,14 +107,14 @@
       
       <section class="post pure-u-1 pure-u-md-3-4">
         <h1 class="post-title">
-          <a href="/hello_bob/">hello bob</a>
+          <a href="/an-iterm-bookmark-for-irb/">IRB &amp; iTerm</a>
         </h1>
         <h3 class="post-subtitle">
           
         </h3>
         
         <span class="post-date">
-          <span class="post-date-month"><sup>Nov</sup></span><span class="post-date-separator">/</span><span class="post-date-year">2015</span>
+          <span class="post-date-month"><sup>Dec</sup></span><span class="post-date-separator">/</span><span class="post-date-year">2010</span>
         </span>
         
         
@@ -136,61 +128,39 @@
 
         
 
-        <p>The gold standard in the first baby steps to learning a new programming language is the ubiquitous &ldquo;Hello world!&rdquo; program.</p>
+        <p>If you&rsquo;re like <a href="http://twitter.com/anthony_m_cook" target="_blank">me</a>, you use <a href="http://en.wikipedia.org/wiki/Interactive_Ruby_Shell" target="_blank">irb</a> for all kinds of things. From just running quick ruby experiments to figuring out how many <a href="http://rubydoc.info/docs/ruby-core/1.9.2/Time" target="_blank">days</a> (9364) you&rsquo;ve been alive.</p>
 
-<p>In some languages it&rsquo;s hardly more than the two words:</p>
+<p>I created a bookmark in <a href="http://iterm.sourceforge.net/" target="_blank">iTerm</a> to run <a href="http://ruby-doc.org/docs/ProgrammingRuby/html/irb.html" target="_blank">irb</a> when I hit <a href="http://jrgraphix.net/r/Unicode/2300-23FF" target="_blank">⌘</a>-control-0. This was fine until I realized it was using the system&rsquo;s <a href="http://stackoverflow.com/questions/3474875/why-does-mac-os-x-come-with-ruby-rails" target="_blank">ruby</a> install, and not the <a href="http://rubydoc.info/docs/ruby-core/1.9.2" target="_blank">version</a> I installed with <a href="http://rvm.beginrescueend.com/" target="_blank">RVM</a>.</p>
 
-<pre><code class="language-ruby"># ruby
-puts 'Hello world!'
+<p>I eventually realized the problem was the system environment doesn&rsquo;t know about my <a href="http://dotfiles.org/" target="_blank">.bash_profile</a>, and therefore my modified <a href="http://www.linuxheadquarters.com/howto/basic/path.shtml" target="_blank">PATH</a> variable nor the require <a href="http://rvm.beginrescueend.com/rvm/install/" target="_blank">RVM magic</a>.</p>
+
+<p>So, to get all that, this is the command to use to make sure you&rsquo;re getting the same irb you expect from your commandline:</p>
+
+<pre><code>bash --login -c irb
 </code></pre>
 
-<pre><code class="language-blacklight">;; blacklight
-'Hello world!' print
-</code></pre>
-
-<p>In others it&rsquo;s a little more verbose:</p>
-
-<pre><code class="language-java">// Java
-public class HelloWorld
-{
- public static void main(String[] args)
- {
-  System.out.println(&quot;Hello world!&quot;);
- }
-}
-</code></pre>
-
-<pre><code class="language-rust">// Rust
-fn main () {
-   println!(&quot;Hello world!&quot;);
-}
-</code></pre>
-
-<p>Some years back I read a convincing article (that I can no longer find) that
-made the argument that &ldquo;Hello, world!&rdquo; was a poor metric for comparing
-languages as well as a poor example to start with. Then there was the acedemic
-paper &ldquo;Hello World Considered Harmful&rdquo; (which turned out to be terrible).</p>
-
-<p>&ldquo;Hello, world!&rdquo; makes a litmus test to prove your system is doing the right thing.</p>
-
-<p>Immediately afterwards this simple example should be modified into something
-more complex, if only barely. I&rsquo;ve always called the next step &ldquo;Hello, Bob!&rdquo; and
-it was one of the very first programs I ever wrote. It probably looked something
-like this:</p>
-
-<pre><code class="language-basic">01 REM APPLESOFT BASIC - THEY DIDN'T HAVE FANCY LOWERCASE BACK THEN
-10 INPUT &quot;WHAT IS YOUR NAME? &quot;; NAME$
-20 PRINT &quot;HELLO, &quot; NAME$ &quot;!&quot;
-RUN
-</code></pre>
-
-<p>This example shows us user input, how variables work, and string concatenation.
-While this example is hardly more complex, most programs in the wild constantly
-use these three things.</p>
+<p><br/>
+Yay it works!<br/>
+⦂∀</p>
 
 
         
 
+        
+        <div class="tags-list">
+          <span class="dark-red">Tags</span><span class="decorative-marker">//</span>
+          
+          <a class="post-tag post-tag-os-x" href="http://anthonymcook.com/tags/os-x">OS X</a>,
+          
+          <a class="post-tag post-tag-iterm" href="http://anthonymcook.com/tags/iterm">iTerm</a>,
+          
+          <a class="post-tag post-tag-irb" href="http://anthonymcook.com/tags/irb">irb</a>,
+          
+          <a class="post-tag post-tag-ruby" href="http://anthonymcook.com/tags/ruby">ruby</a>,
+          
+          <a class="post-tag post-tag-rvm" href="http://anthonymcook.com/tags/rvm">rvm</a>,
+          
+        </div>
         
 
         
@@ -198,19 +168,14 @@ use these three things.</p>
           <hr class="thin"/>
           <div class="paging-newer pure-u-1-5">
           
-            <a class="paging-link" href="/intro-to-blacklight/">
+            <a class="paging-link" href="/iterm2-vs-macvim/">
               <span class="dark-red">Newer</span>
-              <span class="decorative-marker">//</span>blacklight
+              <span class="decorative-marker">//</span>MacVim vs iTerm
             </a>
           
           </div>
           <span class="paging-label pure-u-3-5">&#x21e0; Read More &#x21e2;</span>
           <div class="paging-older pure-u-1-5">
-            
-            <a class="paging-link" href="/about/">
-              <span class="dark-red">Older</span>
-              <span class="decorative-marker">//</span>this nomad
-            </a>
             
           </div>
         </div>
@@ -227,8 +192,5 @@ use these three things.</p>
   
 
   
-<script data-no-instant>document.write('<script src="http://'
-        + (location.host || 'localhost').split(':')[0]
-		+ ':1313/livereload.js?mindelay=10"></'
-        + 'script>')</script></body>
+</body>
 </html>
