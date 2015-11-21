@@ -1,4 +1,12 @@
 ---
-keep_files: public
+keep_files:
+  - public
 destination: public
-
+exclude:
+  - sass
+  - content
+  - archetypes
+  - themes
+  - static
+  - data
+  - layouts
