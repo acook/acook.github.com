@@ -1,0 +1,10 @@
+baseurl = "http://anthonymcook.com"
+languageCode = "en-us"
+title = "digital. [nomad]"
+
+MetaDataFormat = "yaml"
+editor = "vim"
+
+[params]
+sidebartitle = "digital. [nomad]"
+sidebartagline = "the digital frontier"

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>digital. [nomad]</title>
+    <link>http://anthonymcook.com/</link>
+    <description>Recent content on digital. [nomad]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Jan 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://anthonymcook.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>powerline</title>
+      <link>http://anthonymcook.com/the-new-powerline/</link>
+      <pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/the-new-powerline/</guid>
+      <description>
+
+&lt;aside&gt;&lt;strong&gt;EDIT:&lt;/strong&gt; &lt;em&gt;This post is modified from the original. Mostly readability improvements and changes necessitated by the new layout and backend engine. It has not been updated for the latest Powerline as I have long since switched to &lt;a href=&#34;https://github.com/bling/vim-airline&#34;&gt;Airline&lt;/a&gt;.&lt;/em&gt;&lt;/aside&gt;
+
+&lt;p&gt;While tweaking my configs, including fleshing out my .tmux.config and fixing bugs in my .vimrc I ran an update on my vim plugins. That&amp;rsquo;s when I noticed something was horribly wrong. Powerline wasn&amp;rsquo;t working anymore. It was throwing an error about Python. Python? What the hell? I don&amp;rsquo;t remember it requiring Python&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Then I discovered that it&amp;rsquo;d been completely rewritten and a lot had changed.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s clearly still Alpha quality software, so it will (probably) improve rapidly, but in the meantime there&amp;rsquo;s a lot of hurdles to jump through in order to get it even sort of working. Maybe I can save you a little time.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-basics:b588c49916508cfd3540e7ace30ddadd&#34;&gt;The Basics&lt;/h2&gt;
+
+&lt;p&gt;The new Powerline is useless without the below prerequisites, so make sure you install whichever ones you intend on using if you haven&amp;rsquo;t already, but there&amp;rsquo;s a few caveats you want to watch out for before you even really get to the point of making use of it.&lt;/p&gt;
+
+&lt;h2 id=&#34;utf-8-terminal-emulator:b588c49916508cfd3540e7ace30ddadd&#34;&gt;UTF-8 Terminal Emulator&lt;/h2&gt;
+
+&lt;p&gt;Okay let&amp;rsquo;s face it, if you&amp;rsquo;re on OSX, iTerm2 is amazing and you should be using it.&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s been some fixes to custom codepoint font support in iTerm in the last couple of weeks so its best if you grab a nightly or compile it yourself if you&amp;rsquo;re feeling really masochistic.&lt;/p&gt;
+
+&lt;p&gt;I recommend downloading a precompiled nightly until a new stable is released.&lt;/p&gt;
+
+&lt;aside&gt;&lt;strong&gt;EDIT:&lt;/strong&gt; &lt;em&gt;Latest stable should have full support.&lt;/em&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;Install it as usual, it probably won&amp;rsquo;t explode. But if it does, wait until the next iTerm nightly or grab an official release and mourn your utf symbols.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re on Linux then iTerm isn&amp;rsquo;t an option (sadly), so install rxvt-unicode or terminator or whatever you want, just make sure it has solid utf support.&lt;/p&gt;
+
+&lt;h2 id=&#34;vim:b588c49916508cfd3540e7ace30ddadd&#34;&gt;Vim&lt;/h2&gt;
+
+&lt;p&gt;Vim needs to be compiled Python support, if you&amp;rsquo;re on OSX then MacVim has you covered already. You can install it with Homebrew and you&amp;rsquo;re good to go. On Linux you&amp;rsquo;ll have to select a package that supports it or compile it yourself. For instance Ubuntu I use &lt;code&gt;vim-nox&lt;/code&gt; for non-gui and &lt;code&gt;vim-gtk&lt;/code&gt; for gui support. The latter has better color support and since only has a library overhead of about 30MB it might be worth it to you to install anyway. If you&amp;rsquo;re on Gentoo make sure your USE flags have &lt;code&gt;+python&lt;/code&gt; in the list.&lt;/p&gt;
+
+&lt;h2 id=&#34;python-and-the-powerline-module:b588c49916508cfd3540e7ace30ddadd&#34;&gt;Python (and the Powerline module)&lt;/h2&gt;
+
+&lt;p&gt;You&amp;rsquo;ll need some sort of Python 2.7ish install (as far as I can tell), and you&amp;rsquo;ll need pip installed as well. The version that comes with Homebrew is good, but you&amp;rsquo;ll have to add a configuration option to your .vimrc if you do.&lt;/p&gt;
+
+&lt;p&gt;First install pip if you don&amp;rsquo;t have it already, and then you can install the Python module:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ pip install https://github.com/Lokaltog/powerline/tarball/develop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Don&amp;rsquo;t even try to pip install powerline, the &amp;ldquo;powerline&amp;rdquo; package has nothing even slightly to do with this, its an unfortunate naming conflict.&lt;/p&gt;
+
+&lt;p&gt;Once that was done I had to add this to my &lt;code&gt;.vimrc&lt;/code&gt; to get it to work:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;python import sys; sys.path.append(&amp;quot;/usr/local/lib/python2.7/site-packages/&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But on OSX you might find the package here instead:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;python import sys; sys.path.append(&amp;quot;/Library/Python/2.7/site-packages&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;finding-python-s-site-packages:b588c49916508cfd3540e7ace30ddadd&#34;&gt;Finding Python&amp;rsquo;s &lt;code&gt;site-packages&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Your path might need to be different, if you can&amp;rsquo;t intuit it, you can have Python tell you where it hides its packages.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;First ensure that Python can find it by seeing if &lt;code&gt;powerline&lt;/code&gt; in the list of modules pip is aware of:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ pip freeze | grep powerline
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If its there then you can open up a python repl and have it tell you where the file is at:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import powerline
+powerline.__file__
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Once you have that, you can figure out the path to the site-packages directory that you need.&lt;/p&gt;
+
+&lt;h2 id=&#34;fonts:b588c49916508cfd3540e7ace30ddadd&#34;&gt;Fonts&lt;/h2&gt;
+
+&lt;p&gt;Part of Powerline&amp;rsquo;s aesthetic appeal comes partly from its custom UTF fonts. So you&amp;rsquo;ll need those to get it looking its best.&lt;/p&gt;
+
+&lt;p&gt;The codepoints have changed in the new version of Powerline. This means that &lt;strong&gt;your old fonts WILL NOT WORK&lt;/strong&gt;. Seriously, don&amp;rsquo;t even try it. You&amp;rsquo;ll just end up hating yourself. In fact, you might as well remove all your old custom Powerline fonts, they&amp;rsquo;re pretty much useless now.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re on OSX or Windows, you&amp;rsquo;ll have to &lt;a href=&#34;https://github.com/Lokaltog/powerline-fonts&#34;&gt;download the new ones&lt;/a&gt;. They&amp;rsquo;re not all there yet unfortunately, but the good news is &lt;a href=&#34;http://lokaltog.github.com/powerline/fontpatching.html&#34;&gt;you can patch them yourself&lt;/a&gt; which I&amp;rsquo;m not even going to go into, you have fun with that.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re on Linux, you might be in luck, try &lt;a href=&#34;http://lokaltog.github.com/powerline/overview.html#linux&#34;&gt;this bit of the install guide&lt;/a&gt; and you might never have to patch your fonts again!&lt;/p&gt;
+
+&lt;h2 id=&#34;configuration:b588c49916508cfd3540e7ace30ddadd&#34;&gt;Configuration&lt;/h2&gt;
+
+&lt;p&gt;Okay that covers the install of the requirements (I think.. let me know if I missed one). The rest is pretty straight forward.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://lokaltog.github.com/powerline/&#34;&gt;official install guide&lt;/a&gt; will explain the rest to you, but I&amp;rsquo;ll put some of it here for posterity.&lt;/p&gt;
+
+&lt;h3 id=&#34;vim-1:b588c49916508cfd3540e7ace30ddadd&#34;&gt;Vim&lt;/h3&gt;
+
+&lt;p&gt;You just need to drop this line into your .vimrc and you&amp;rsquo;ll be off to the races:&lt;/p&gt;
+
+&lt;p&gt;python from powerline.ext.vim import source_plugin; source_plugin()
+If you figured out where your Python has installed Powerline at, and you can&amp;rsquo;t get Python to work in Vim, you can use the absolute path like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-vim&#34;&gt;source {path}/powerline/ext/vim/source_plugin.vim
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;help-and-troubleshooting:b588c49916508cfd3540e7ace30ddadd&#34;&gt;Help and Troubleshooting&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://lokaltog.github.com/powerline/&#34;&gt;The official docs have different information.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Search the open AND closed &lt;a href=&#34;https://github.com/Lokaltog/powerline/issues&#34;&gt;github issues&lt;/a&gt;, seriously, there is loads of good advice there.&lt;/li&gt;
+&lt;li&gt;Ignore anything older than a month, since its probably about the old version of Powerline - and a completely different codebase.&lt;/li&gt;
+&lt;li&gt;Use Google&amp;rsquo;s site search syntax like this: &lt;code&gt;site:https://github.com/Lokaltog/powerline/issues&lt;/code&gt; to search powerline&amp;rsquo;s github issues.. yes I&amp;rsquo;m saying this twice, it was a big help to me.&lt;/li&gt;
+&lt;li&gt;I never got the Python version of Powerline to work for Tmux yet (appears to be a bug in the weather widget).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

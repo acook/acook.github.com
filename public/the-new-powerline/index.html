@@ -1,0 +1,271 @@
+
+<head>
+  <title>
+    powerline // digital. [nomad]
+  </title>
+
+  
+
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/base-min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+  
+  
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-min.css">
+  
+  
+
+  <link rel="stylesheet" href="/css/redlounge.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="digital. [nomad]" />
+
+  <link rel="stylesheet" href="/css/highlight.css"><script src="/js/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script>
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+  
+
+  <div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+  <div class="header">
+    
+
+    
+
+    <h1 class="brand-title">digital. [nomad]</h1>
+    <h2 class="brand-tagline">the digital frontier</h2>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><span class="nav-item-separator">//</span><a href="http://anthonymcook.com">Home</a></li>
+        
+      </ul>
+
+      <h2 class="brand-tagline">nomadic posts</h2>
+      <ul class="nav-list">
+        
+        
+        <li class="nav-item"><span class="nav-item-separator">//</span><a href="/the-new-powerline/">powerline</a></li>
+        
+
+      </ul>
+    </nav>
+
+    
+
+  </div>
+</div>
+
+
+    
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+      <a name="top"></a>
+      
+
+      
+      
+      <div id="toc" class="pure-u-1 pure-u-md-1-4">
+        <small class="toc-label">Contents</small>
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#the-basics:b588c49916508cfd3540e7ace30ddadd">The Basics</a></li>
+<li><a href="#utf-8-terminal-emulator:b588c49916508cfd3540e7ace30ddadd">UTF-8 Terminal Emulator</a></li>
+<li><a href="#vim:b588c49916508cfd3540e7ace30ddadd">Vim</a></li>
+<li><a href="#python-and-the-powerline-module:b588c49916508cfd3540e7ace30ddadd">Python (and the Powerline module)</a>
+<ul>
+<li><a href="#finding-python-s-site-packages:b588c49916508cfd3540e7ace30ddadd">Finding Python&rsquo;s <code>site-packages</code></a></li>
+</ul></li>
+<li><a href="#fonts:b588c49916508cfd3540e7ace30ddadd">Fonts</a></li>
+<li><a href="#configuration:b588c49916508cfd3540e7ace30ddadd">Configuration</a>
+<ul>
+<li><a href="#vim-1:b588c49916508cfd3540e7ace30ddadd">Vim</a></li>
+</ul></li>
+<li><a href="#help-and-troubleshooting:b588c49916508cfd3540e7ace30ddadd">Help and Troubleshooting</a></li>
+</ul></li>
+</ul>
+</nav>
+      </div>
+      
+      
+      <section class="post pure-u-1 pure-u-md-3-4">
+        <h1 class="post-title">
+          <a href="/the-new-powerline/">powerline</a>
+        </h1>
+        <h3 class="post-subtitle">
+          
+        </h3>
+        
+        <span class="post-date">
+          <span class="post-date-month"><sup>Jan</sup></span><span class="post-date-separator">/</span><span class="post-date-year">2013</span>
+        </span>
+        
+        
+        
+        
+
+        
+        
+
+        
+
+        
+
+        
+
+<aside><strong>EDIT:</strong> <em>This post is modified from the original. Mostly readability improvements and changes necessitated by the new layout and backend engine. It has not been updated for the latest Powerline as I have long since switched to <a href="https://github.com/bling/vim-airline">Airline</a>.</em></aside>
+
+<p>While tweaking my configs, including fleshing out my .tmux.config and fixing bugs in my .vimrc I ran an update on my vim plugins. That&rsquo;s when I noticed something was horribly wrong. Powerline wasn&rsquo;t working anymore. It was throwing an error about Python. Python? What the hell? I don&rsquo;t remember it requiring Python&hellip;</p>
+
+<p>Then I discovered that it&rsquo;d been completely rewritten and a lot had changed.</p>
+
+<p>It&rsquo;s clearly still Alpha quality software, so it will (probably) improve rapidly, but in the meantime there&rsquo;s a lot of hurdles to jump through in order to get it even sort of working. Maybe I can save you a little time.</p>
+
+<h2 id="the-basics:b588c49916508cfd3540e7ace30ddadd">The Basics</h2>
+
+<p>The new Powerline is useless without the below prerequisites, so make sure you install whichever ones you intend on using if you haven&rsquo;t already, but there&rsquo;s a few caveats you want to watch out for before you even really get to the point of making use of it.</p>
+
+<h2 id="utf-8-terminal-emulator:b588c49916508cfd3540e7ace30ddadd">UTF-8 Terminal Emulator</h2>
+
+<p>Okay let&rsquo;s face it, if you&rsquo;re on OSX, iTerm2 is amazing and you should be using it.</p>
+
+<p>There&rsquo;s been some fixes to custom codepoint font support in iTerm in the last couple of weeks so its best if you grab a nightly or compile it yourself if you&rsquo;re feeling really masochistic.</p>
+
+<p>I recommend downloading a precompiled nightly until a new stable is released.</p>
+
+<aside><strong>EDIT:</strong> <em>Latest stable should have full support.</em>
+</aside>
+
+<p>Install it as usual, it probably won&rsquo;t explode. But if it does, wait until the next iTerm nightly or grab an official release and mourn your utf symbols.</p>
+
+<p>If you&rsquo;re on Linux then iTerm isn&rsquo;t an option (sadly), so install rxvt-unicode or terminator or whatever you want, just make sure it has solid utf support.</p>
+
+<h2 id="vim:b588c49916508cfd3540e7ace30ddadd">Vim</h2>
+
+<p>Vim needs to be compiled Python support, if you&rsquo;re on OSX then MacVim has you covered already. You can install it with Homebrew and you&rsquo;re good to go. On Linux you&rsquo;ll have to select a package that supports it or compile it yourself. For instance Ubuntu I use <code>vim-nox</code> for non-gui and <code>vim-gtk</code> for gui support. The latter has better color support and since only has a library overhead of about 30MB it might be worth it to you to install anyway. If you&rsquo;re on Gentoo make sure your USE flags have <code>+python</code> in the list.</p>
+
+<h2 id="python-and-the-powerline-module:b588c49916508cfd3540e7ace30ddadd">Python (and the Powerline module)</h2>
+
+<p>You&rsquo;ll need some sort of Python 2.7ish install (as far as I can tell), and you&rsquo;ll need pip installed as well. The version that comes with Homebrew is good, but you&rsquo;ll have to add a configuration option to your .vimrc if you do.</p>
+
+<p>First install pip if you don&rsquo;t have it already, and then you can install the Python module:</p>
+
+<pre><code class="language-sh">$ pip install https://github.com/Lokaltog/powerline/tarball/develop
+</code></pre>
+
+<p>Don&rsquo;t even try to pip install powerline, the &ldquo;powerline&rdquo; package has nothing even slightly to do with this, its an unfortunate naming conflict.</p>
+
+<p>Once that was done I had to add this to my <code>.vimrc</code> to get it to work:</p>
+
+<pre><code class="language-python">python import sys; sys.path.append(&quot;/usr/local/lib/python2.7/site-packages/&quot;)
+</code></pre>
+
+<p>But on OSX you might find the package here instead:</p>
+
+<pre><code class="language-python">python import sys; sys.path.append(&quot;/Library/Python/2.7/site-packages&quot;)
+</code></pre>
+
+<h3 id="finding-python-s-site-packages:b588c49916508cfd3540e7ace30ddadd">Finding Python&rsquo;s <code>site-packages</code></h3>
+
+<p>Your path might need to be different, if you can&rsquo;t intuit it, you can have Python tell you where it hides its packages.</p>
+
+<ol>
+<li><p>First ensure that Python can find it by seeing if <code>powerline</code> in the list of modules pip is aware of:</p>
+
+<pre><code class="language-sh">$ pip freeze | grep powerline
+</code></pre></li>
+
+<li><p>If its there then you can open up a python repl and have it tell you where the file is at:</p>
+
+<pre><code class="language-python">import powerline
+powerline.__file__
+</code></pre></li>
+</ol>
+
+<p>Once you have that, you can figure out the path to the site-packages directory that you need.</p>
+
+<h2 id="fonts:b588c49916508cfd3540e7ace30ddadd">Fonts</h2>
+
+<p>Part of Powerline&rsquo;s aesthetic appeal comes partly from its custom UTF fonts. So you&rsquo;ll need those to get it looking its best.</p>
+
+<p>The codepoints have changed in the new version of Powerline. This means that <strong>your old fonts WILL NOT WORK</strong>. Seriously, don&rsquo;t even try it. You&rsquo;ll just end up hating yourself. In fact, you might as well remove all your old custom Powerline fonts, they&rsquo;re pretty much useless now.</p>
+
+<p>If you&rsquo;re on OSX or Windows, you&rsquo;ll have to <a href="https://github.com/Lokaltog/powerline-fonts">download the new ones</a>. They&rsquo;re not all there yet unfortunately, but the good news is <a href="http://lokaltog.github.com/powerline/fontpatching.html">you can patch them yourself</a> which I&rsquo;m not even going to go into, you have fun with that.</p>
+
+<p>If you&rsquo;re on Linux, you might be in luck, try <a href="http://lokaltog.github.com/powerline/overview.html#linux">this bit of the install guide</a> and you might never have to patch your fonts again!</p>
+
+<h2 id="configuration:b588c49916508cfd3540e7ace30ddadd">Configuration</h2>
+
+<p>Okay that covers the install of the requirements (I think.. let me know if I missed one). The rest is pretty straight forward.</p>
+
+<p>The <a href="http://lokaltog.github.com/powerline/">official install guide</a> will explain the rest to you, but I&rsquo;ll put some of it here for posterity.</p>
+
+<h3 id="vim-1:b588c49916508cfd3540e7ace30ddadd">Vim</h3>
+
+<p>You just need to drop this line into your .vimrc and you&rsquo;ll be off to the races:</p>
+
+<p>python from powerline.ext.vim import source_plugin; source_plugin()
+If you figured out where your Python has installed Powerline at, and you can&rsquo;t get Python to work in Vim, you can use the absolute path like this:</p>
+
+<pre><code class="language-vim">source {path}/powerline/ext/vim/source_plugin.vim
+</code></pre>
+
+<h2 id="help-and-troubleshooting:b588c49916508cfd3540e7ace30ddadd">Help and Troubleshooting</h2>
+
+<ul>
+<li><a href="http://lokaltog.github.com/powerline/">The official docs have different information.</a></li>
+<li>Search the open AND closed <a href="https://github.com/Lokaltog/powerline/issues">github issues</a>, seriously, there is loads of good advice there.</li>
+<li>Ignore anything older than a month, since its probably about the old version of Powerline - and a completely different codebase.</li>
+<li>Use Google&rsquo;s site search syntax like this: <code>site:https://github.com/Lokaltog/powerline/issues</code> to search powerline&rsquo;s github issues.. yes I&rsquo;m saying this twice, it was a big help to me.</li>
+<li>I never got the Python version of Powerline to work for Tmux yet (appears to be a bug in the weather widget).</li>
+</ul>
+
+
+        
+
+        
+
+        
+        <div class="paging pure-g">
+          <hr class="thin"/>
+          <div class="paging-newer pure-u-1-5">
+          
+          </div>
+          <span class="paging-label pure-u-3-5">&#x21e0; Read More &#x21e2;</span>
+          <div class="paging-older pure-u-1-5">
+            
+          </div>
+        </div>
+        
+      </section>
+      
+      
+      
+
+    </div>
+  </div>
+  
+
+  
+
+  
+</body>
+</html>
