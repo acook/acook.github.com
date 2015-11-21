@@ -1,3 +1,0 @@
-link rel="stylesheet" href="/css/highlight.css"
-script src="/js/highlight.pack.js"
-script hljs.initHighlightingOnLoad();
