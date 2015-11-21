@@ -11,9 +11,25 @@
 
     <nav class="nav">
       <ul class="nav-list">
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .Site.BaseURL }}">Home</a></li>
+        <li class="nav-item">
+          <a href="{{ .Site.BaseURL }}">
+            <span class="nav-item-separator">//</span>Home
+          </a>
+        </li>
         {{ range .Site.Menus.main }}
         <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.section }}
+        <li class="nav-item">
+          <a class="sidebar-nav-item
+            {{if or ($currentNode.IsMenuCurrent "section" .) ($currentNode.HasMenuCurrent "section" .) }}
+              active
+            {{end}}" href="{{.URL}}">
+            <span class="nav-item-separator">//</span>{{ .Name }}
+          </a>
+        </li>
         {{ end }}
       </ul>
 
@@ -21,7 +37,9 @@
       <ul class="nav-list">
         {{ $Site := .Site }}
         {{ range .Site.Pages }}
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        <li class="nav-item"><a href="{{ .RelPermalink }}">
+          <span class="nav-item-separator">//</span>{{ .Title }}
+        </a></li>
         {{ end }}
 
       </ul>

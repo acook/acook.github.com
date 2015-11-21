@@ -5,6 +5,8 @@ title = "digital. [nomad]"
 MetaDataFormat = "yaml"
 editor = "vim"
 
+SectionPagesMenu = "section"
+
 [params]
 sidebartitle = "digital. [nomad]"
 sidebartagline = "the digital frontier"

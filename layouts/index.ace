@@ -5,14 +5,20 @@ body
 
      div class="content pure-u-1 pure-u-md-3-4"
        a name="top"
-      {{ partial "listtop.html" . }}
+       {{ partial "listtop.html" . }}
 
-       div class="posts"
-         {{ $Site := .Site }}
-         {{ range .Site.Pages }}
-         li class="nav-item"
-          span class="nav-item-separator" //
-          a href="{{ .RelPermalink }}" {{ .Title }} &nbsp;
-         {{ end }}
+       {{ $Site := .Site }}
+       {{ range .Site.Pages.GroupBy "Section" }}
+         div class="posts {{ .Key }}"
+
+           h2.brand-tagline nomadic {{ .Key }}
+
+           ul
+             {{ range .Pages }}
+             li class="nav-item"
+               span class="nav-item-separator" //
+               a href="{{ .RelPermalink }}" {{ .Title }} &nbsp;
+             {{ end }}
+       {{ end }}
 
   {{ partial "bodyend.html" . }}
