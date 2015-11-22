@@ -3,8 +3,13 @@
   
   <url>
     <loc>http://anthonymcook.com/</loc>
-    <lastmod>2013-01-20T00:00:00+00:00</lastmod>
+    <lastmod>2013-10-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/douglas-engelbarts-mother-of-all-demos/</loc>
+    <lastmod>2013-10-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -200,6 +205,10 @@
   <url>
     <loc>http://anthonymcook.com/articles/an-iterm-bookmark-for-irb/</loc>
     <lastmod>2010-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/osx-5-second-timeout-for-domains-defined-in/</loc>
   </url>
   
   <url>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>/Etc/Hosts on digital. [nomad]</title>
+    <link>http://anthonymcook.com/tags/etc/hosts/</link>
+    <description>Recent content in /Etc/Hosts on digital. [nomad]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://anthonymcook.com/tags/etc/hosts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OSX /etc/hosts timeouts</title>
+      <link>http://anthonymcook.com/articles/osx-5-second-timeout-for-domains-defined-in/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/osx-5-second-timeout-for-domains-defined-in/</guid>
+      <description>
+
+&lt;h1 id=&#34;osx-5-second-timeout-for-domains-defined-in-etc-hosts:dc7e9c6db10425d7f06fda8d69f7cae7&#34;&gt;OSX: 5 second timeout for domains defined in /etc/hosts&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;This is mostly for my own reference, this document has been sitting in my drafts folder since &amp;hellip; like two years ago.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;First of all, OSX claims &lt;code&gt;.local&lt;/code&gt; for Bonjour and will treat them differently, so use &lt;code&gt;.dev&lt;/code&gt; or something instead.&lt;/p&gt;
+
+&lt;p&gt;To add a host called &lt;code&gt;myapp.dev&lt;/code&gt; and point it to &lt;code&gt;localhost&lt;/code&gt;, just do this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo dscl localhost -create /Local/Default/Hosts/mydev.dev IPAddress 127.0.0.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To see all the currently defined hosts and their IPs:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo dscl localhost -list /Local/Default/Hosts IPAddress
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And to remove a host:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo dscl localhost -delete /Local/Default/Hosts/mydev.dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if you declare both a IPv4 and IPv6 address in &lt;code&gt;/etc/hosts&lt;/code&gt; for a &lt;code&gt;.dev&lt;/code&gt; domain like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;27.0.0.1 myapp.dev
+::1 myapp.dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then it &lt;em&gt;should&lt;/em&gt; work correctly.&lt;/p&gt;
+
+&lt;h3 id=&#34;references:dc7e9c6db10425d7f06fda8d69f7cae7&#34;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://itand.me/mac-os-x-lion-local-domains-and-etchosts-oh-m&#34; target=&#34;_blank&#34;&gt;http://itand.me/mac-os-x-lion-local-domains-and-etchosts-oh-m&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/icebourg/itandme-archive/blob/master/posts/2011/08/mac-os-x-lion-local-domains-and-etchosts-oh-m.html&#34; target=&#34;_blank&#34;&gt;https://github.com/icebourg/itandme-archive/blob/master/posts/2011/08/mac-os-x-lion-local-domains-and-etchosts-oh-m.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.justincarmony.com/blog/2011/07/27/mac-os-x-lion-etc-hosts-bugs-and-dns-resolution/&#34; target=&#34;_blank&#34;&gt;http://www.justincarmony.com/blog/2011/07/27/mac-os-x-lion-etc-hosts-bugs-and-dns-resolution/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

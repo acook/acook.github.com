@@ -102,6 +102,10 @@
       <ul class="nav-list">
         
         
+        <li class="nav-item"><a href="/articles/douglas-engelbarts-mother-of-all-demos/">
+          <span class="nav-item-separator">//</span>Mother of All Demos
+        </a></li>
+        
         <li class="nav-item"><a href="/articles/the-new-powerline/">
           <span class="nav-item-separator">//</span>powerline
         </a></li>
@@ -116,10 +120,6 @@
         
         <li class="nav-item"><a href="/articles/postgres-on-osx-issues/">
           <span class="nav-item-separator">//</span>Postgres on OSX issues
-        </a></li>
-        
-        <li class="nav-item"><a href="/shorts/redis-autostart-preference-pane-for-osx/">
-          <span class="nav-item-separator">//</span>Redis autostart preference pane for OSX
         </a></li>
         
 
