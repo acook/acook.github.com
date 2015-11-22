@@ -33,10 +33,10 @@
         {{ end }}
       </ul>
 
-      <h2 class="brand-tagline">nomadic posts</h2>
+      <h2 class="brand-tagline">recent</h2>
       <ul class="nav-list">
         {{ $Site := .Site }}
-        {{ range .Site.Pages }}
+        {{ range first 5 .Site.Pages }}
         <li class="nav-item"><a href="{{ .RelPermalink }}">
           <span class="nav-item-separator">//</span>{{ .Title }}
         </a></li>
