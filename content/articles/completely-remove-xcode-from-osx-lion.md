@@ -1,0 +1,36 @@
+---
+slug: completely-remove-xcode-from-osx-lion
+fulldate: Thu Jan 12 2012 09:30:39 GMT-0600 (CST)
+tags:
+title: Completely remove Xcode from OSX Lion
+id: 15724101736
+link: http://anthonymcook.com/post/15724101736/completely-remove-xcode-from-osx-lion
+raw: {"blog_name":"anthonymcook","id":15724101736,"post_url":"http://anthonymcook.com/post/15724101736/completely-remove-xcode-from-osx-lion","slug":"completely-remove-xcode-from-osx-lion","type":"text","date":"2012-01-12 15:30:39 GMT","timestamp":1326382239,"state":"published","format":"markdown","reblog_key":"tmY58A0e","tags":[],"short_url":"http://tmblr.co/Z8I8zxEfEi1e","summary":"Completely remove Xcode from OSX Lion","recommended_source":null,"recommended_color":null,"highlighted":[],"note_count":0,"title":"Completely remove Xcode from OSX Lion","body":"<p>First you want to try running this:</p>\n\n<pre><code>sudo /Developer/Library/uninstall-devtools -mode=all\nsudo rm -rf /Developer\n</code></pre>\n\n<p>Repeat above for any other directories beginning with <code>Developer</code> in your root directory. For some reason I had two: <code>Developer</code> and <code>Developer-3.2.6</code>.</p>\n\n<p>Some systems may have a <code>/Library/Developer/Shared</code> directory also, so make sure you check for that directory, it will have its own <code>uninstall-devtools</code> script.</p>\n\n<p>After that delete the install app (this will make sure the AppStore knows its been uninstalled):</p>\n\n<pre><code>sudo rm -rf /Applications/Install Xcode.app\n</code></pre>\n\n<p>Some people may also find deleting the AppStore cache helps, but <strong>only</strong> do this if the above doesn&rsquo;t work, remember to replace &ldquo;your username&rdquo; with the actual directory name:</p>\n\n<pre><code>sudo rm -rf /Library/Caches\nsudo rm -rf /User/your username/Library/Caches/com.apple.appstore\n</code></pre>\n\n<p>Done!</p>\n\n<p>And let me know if you have any other tips.</p>","reblog":{"tree_html":"","comment":"<p>First you want to try running this:</p>\n\n<pre><code>sudo /Developer/Library/uninstall-devtools -mode=all\nsudo rm -rf /Developer\n</code></pre>\n\n<p>Repeat above for any other directories beginning with <code>Developer</code> in your root directory. For some reason I had two: <code>Developer</code> and <code>Developer-3.2.6</code>.</p>\n\n<p>Some systems may have a <code>/Library/Developer/Shared</code> directory also, so make sure you check for that directory, it will have its own <code>uninstall-devtools</code> script.</p>\n\n<p>After that delete the install app (this will make sure the AppStore knows its been uninstalled):</p>\n\n<pre><code>sudo rm -rf /Applications/Install Xcode.app\n</code></pre>\n\n<p>Some people may also find deleting the AppStore cache helps, but <strong>only</strong> do this if the above doesn’t work, remember to replace “your username” with the actual directory name:</p>\n\n<pre><code>sudo rm -rf /Library/Caches\nsudo rm -rf /User/your username/Library/Caches/com.apple.appstore\n</code></pre>\n\n<p>Done!</p>\n\n<p>And let me know if you have any other tips.</p>"},"trail":[{"blog":{"name":"anthonymcook","active":true,"theme":{"avatar_shape":"circle","background_color":"#FAFAFA","body_font":"Helvetica Neue","header_bounds":"","header_image":"https://secure.assets.tumblr.com/images/default_header/optica_pattern_05.png?_v=671444c5f47705cce40d8aefd23df3b1","header_image_focused":"https://secure.assets.tumblr.com/images/default_header/optica_pattern_05_focused_v3.png?_v=671444c5f47705cce40d8aefd23df3b1","header_image_scaled":"https://secure.assets.tumblr.com/images/default_header/optica_pattern_05_focused_v3.png?_v=671444c5f47705cce40d8aefd23df3b1","header_stretch":true,"link_color":"#529ECC","show_avatar":true,"show_description":true,"show_header_image":true,"show_title":true,"title_color":"#444444","title_font":"Gibson","title_font_weight":"bold"}},"post":{"id":"15724101736"},"content_raw":"<p>First you want to try running this:</p>\n\n<pre><code>sudo /Developer/Library/uninstall-devtools -mode=all\nsudo rm -rf /Developer\n</code></pre>\n\n<p>Repeat above for any other directories beginning with <code>Developer</code> in your root directory. For some reason I had two: <code>Developer</code> and <code>Developer-3.2.6</code>.</p>\n\n<p>Some systems may have a <code>/Library/Developer/Shared</code> directory also, so make sure you check for that directory, it will have its own <code>uninstall-devtools</code> script.</p>\n\n<p>After that delete the install app (this will make sure the AppStore knows its been uninstalled):</p>\n\n<pre><code>sudo rm -rf /Applications/Install Xcode.app\n</code></pre>\n\n<p>Some people may also find deleting the AppStore cache helps, but <strong>only</strong> do this if the above doesn’t work, remember to replace “your username” with the actual directory name:</p>\n\n<pre><code>sudo rm -rf /Library/Caches\nsudo rm -rf /User/your username/Library/Caches/com.apple.appstore\n</code></pre>\n\n<p>Done!</p>\n\n<p>And let me know if you have any other tips.</p>","content":"<p>First you want to try running this:</p>\n\n<pre><code>sudo /Developer/Library/uninstall-devtools -mode=all\nsudo rm -rf /Developer\n</code></pre>\n\n<p>Repeat above for any other directories beginning with <code>Developer</code> in your root directory. For some reason I had two: <code>Developer</code> and <code>Developer-3.2.6</code>.</p>\n\n<p>Some systems may have a <code>/Library/Developer/Shared</code> directory also, so make sure you check for that directory, it will have its own <code>uninstall-devtools</code> script.</p>\n\n<p>After that delete the install app (this will make sure the AppStore knows its been uninstalled):</p>\n\n<pre><code>sudo rm -rf /Applications/Install Xcode.app\n</code></pre>\n\n<p>Some people may also find deleting the AppStore cache helps, but <strong>only</strong> do this if the above doesn’t work, remember to replace “your username” with the actual directory name:</p>\n\n<pre><code>sudo rm -rf /Library/Caches\nsudo rm -rf /User/your username/Library/Caches/com.apple.appstore\n</code></pre>\n\n<p>Done!</p>\n\n<p>And let me know if you have any other tips.</p>","is_current_item":true,"is_root_item":true}]}
+date: 2012-01-12
+---
+
+
+<p>First you want to try running this:</p>
+
+<pre><code>sudo /Developer/Library/uninstall-devtools -mode=all
+sudo rm -rf /Developer
+</code></pre>
+
+<p>Repeat above for any other directories beginning with <code>Developer</code> in your root directory. For some reason I had two: <code>Developer</code> and <code>Developer-3.2.6</code>.</p>
+
+<p>Some systems may have a <code>/Library/Developer/Shared</code> directory also, so make sure you check for that directory, it will have its own <code>uninstall-devtools</code> script.</p>
+
+<p>After that delete the install app (this will make sure the AppStore knows its been uninstalled):</p>
+
+<pre><code>sudo rm -rf /Applications/Install Xcode.app
+</code></pre>
+
+<p>Some people may also find deleting the AppStore cache helps, but <strong>only</strong> do this if the above doesn&rsquo;t work, remember to replace &ldquo;your username&rdquo; with the actual directory name:</p>
+
+<pre><code>sudo rm -rf /Library/Caches
+sudo rm -rf /User/your username/Library/Caches/com.apple.appstore
+</code></pre>
+
+<p>Done!</p>
+
+<p>And let me know if you have any other tips.</p>

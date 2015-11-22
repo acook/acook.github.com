@@ -1,7 +1,8 @@
 ---
 slug: installing-ruby-192-rails-3-and-mysql-on
 fulldate: Wed Jun 15 2011 18:46:00 GMT-0500 (CDT)
-tags: fuckit
+tags:
+  - fuckit
 title: Ruby on Windows
 id: 6569752851
 link: http://anthonymcook.com/post/6569752851/installing-ruby-192-rails-3-and-mysql-on
