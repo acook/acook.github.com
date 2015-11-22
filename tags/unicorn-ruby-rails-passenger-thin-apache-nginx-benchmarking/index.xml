@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unicorn Ruby Rails Passenger Thin Apache Nginx Benchmarking on digital. [nomad]</title>
+    <link>http://anthonymcook.com/tags/unicorn-ruby-rails-passenger-thin-apache-nginx-benchmarking/</link>
+    <description>Recent content in Unicorn Ruby Rails Passenger Thin Apache Nginx Benchmarking on digital. [nomad]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Mar 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://anthonymcook.com/tags/unicorn-ruby-rails-passenger-thin-apache-nginx-benchmarking/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Rails webserver research</title>
+      <link>http://anthonymcook.com/articles/rails-webserver-research/</link>
+      <pubDate>Sat, 19 Mar 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/rails-webserver-research/</guid>
+      <description>&lt;h1&gt;Summary&lt;/h1&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://unicorn.bogomips.org/&#34; target=&#34;_blank&#34;&gt;Unicorn&lt;/a&gt;&amp;rsquo;s deployment strategy is superior to Passenger&amp;rsquo;s, it allows upgrades of application code and even of the Unicorn binary itself without downtime. Oh yeah, and its also faster and uses less memory than passenger.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nginx.org/&#34; target=&#34;_blank&#34;&gt;Nninx&lt;/a&gt; seems to be easier to configure and its purported to be faster and use less memory than apache.&lt;/li&gt;
+&lt;/ul&gt;&lt;h1&gt;Side notes&lt;/h1&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://code.macournoyer.com/thin/&#34; target=&#34;_blank&#34;&gt;Thin&lt;/a&gt; is great for serving up tiny, fast requests, and has better memory usage than anything else.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.modrails.com/&#34; target=&#34;_blank&#34;&gt;Passenger&lt;/a&gt; has some cases where it may periodically respond to some requests when its overloaded.&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Server Benchmarking&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://code.google.com/p/httperf/&#34; target=&#34;_blank&#34;&gt;httperf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.xenoclast.org/autobench/&#34; target=&#34;_blank&#34;&gt;autobench&lt;/a&gt; is a perl wrapper for httperf that adds features.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://openwebload.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;OpenWebLoad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://httpd.apache.org/docs/2.0/programs/ab.html&#34; target=&#34;_blank&#34;&gt;apachebench&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://loadimpact.com/&#34; target=&#34;_blank&#34;&gt;LoadImpact&lt;/a&gt; is a pay-for service for testing servers.&lt;/li&gt;
+&lt;/ul&gt;&lt;h1&gt;References&lt;/h1&gt;
+
+&lt;h2&gt;Setup Guide for nginx and Unicorn&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2010: &lt;a href=&#34;http://techbot.me/2010/08/deployment-recipes-deploying-monitoring-and-securing-your-rails-application-to-a-clean-ubuntu-10-04-install-using-nginx-and-unicorn/&#34; target=&#34;_blank&#34;&gt;http://techbot.me/2010/08/deployment-recipes-deploying-monitoring-and-securing-your-rails-application-to-a-clean-ubuntu-10-04-install-using-nginx-and-unicorn/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2011: &lt;a href=&#34;http://brandontilley.com/2011/01/29/serving-rails-apps-with-rvm-nginx-unicorn-and-upstart.html&#34; target=&#34;_blank&#34;&gt;http://brandontilley.com/2011/01/29/serving-rails-apps-with-rvm-nginx-unicorn-and-upstart.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Passenger, Thin, Unicorn&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2009: &lt;a href=&#34;https://github.com/blog/517-unicorn&#34; target=&#34;_blank&#34;&gt;https://github.com/blog/517-unicorn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2010: &lt;a href=&#34;http://snaprails.tumblr.com/post/489274578/ruby-web-servers-benchmark&#34; target=&#34;_blank&#34;&gt;http://snaprails.tumblr.com/post/489274578/ruby-web-servers-benchmark&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2010: &lt;a href=&#34;http://engineering.twitter.com/2010/03/unicorn-power.html&#34; target=&#34;_blank&#34;&gt;http://engineering.twitter.com/2010/03/unicorn-power.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Info on Unicorn&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2010: &lt;a href=&#34;http://www.engineyard.com/blog/2010/everything-you-need-to-know-about-unicorn/&#34; target=&#34;_blank&#34;&gt;http://www.engineyard.com/blog/2010/everything-you-need-to-know-about-unicorn/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Info on Passenger (note the nginx graph)&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2010: &lt;a href=&#34;http://blog.phusion.nl/2010/10/18/phusion-passenger-3-0-0-final-released/&#34; target=&#34;_blank&#34;&gt;http://blog.phusion.nl/2010/10/18/phusion-passenger-3-0-0-final-released/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Web servers&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2011: &lt;a href=&#34;http://xenforo.com/community/threads/apache-vs-nginx-vs-lighttpd.12484/&#34; target=&#34;_blank&#34;&gt;http://xenforo.com/community/threads/apache-vs-nginx-vs-lighttpd.12484/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2010: &lt;a href=&#34;http://www.mariusv.com/nginx-vs-apache-1-0/&#34; target=&#34;_blank&#34;&gt;http://www.mariusv.com/nginx-vs-apache-1-0/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2010: &lt;a href=&#34;http://serverfault.com/questions/143238/nginx-vs-apache-as-reverse-proxy-which-one-to-choose&#34; target=&#34;_blank&#34;&gt;http://serverfault.com/questions/143238/nginx-vs-apache-as-reverse-proxy-which-one-to-choose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2010: &lt;a href=&#34;http://stackoverflow.com/questions/475386/apache-vs-nginx-vs-lighttpd-which-is-simpler-to-configure-and-administer&#34; target=&#34;_blank&#34;&gt;http://stackoverflow.com/questions/475386/apache-vs-nginx-vs-lighttpd-which-is-simpler-to-configure-and-administer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Popular services&amp;rsquo; server choices&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://engineering.twitter.com/2010/03/unicorn-power.html&#34; target=&#34;_blank&#34;&gt;Twitter uses Apache with Unicorn&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/blog/517-unicorn&#34; target=&#34;_blank&#34;&gt;GitHub uses nginx with Unicorn&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;h1&gt;More Cool Stuff&lt;/h1&gt;
+
+&lt;h2&gt;JRuby vs Ruby&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2011: &lt;a href=&#34;http://torquebox.org/news/2011/02/23/benchmarking-torquebox/&#34; target=&#34;_blank&#34;&gt;http://torquebox.org/news/2011/02/23/benchmarking-torquebox/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2011: &lt;a href=&#34;http://torquebox.org/news/2011/03/14/benchmarking-torquebox-round2/&#34; target=&#34;_blank&#34;&gt;http://torquebox.org/news/2011/03/14/benchmarking-torquebox-round2/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s worth pointing out that Unicorn comes out ahead of the other non-JRuby servers in all the benchmarks that are anywhere near a real-world situation.&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Passenger in development&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2010: &lt;a href=&#34;http://blog.phusion.nl/2010/07/01/the-road-to-passenger-3-technology-preview-3-closing-the-gap-between-development-and-production-rethinking-the-word-easy/&#34; target=&#34;_blank&#34;&gt;http://blog.phusion.nl/2010/07/01/the-road-to-passenger-3-technology-preview-3-closing-the-gap-between-development-and-production-rethinking-the-word-easy/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Twitter uses MySQL for storing Tweets, and Cassandra for statistics and datamining&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2010: &lt;a href=&#34;http://engineering.twitter.com/2010/07/cassandra-at-twitter-today.html&#34; target=&#34;_blank&#34;&gt;http://engineering.twitter.com/2010/07/cassandra-at-twitter-today.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

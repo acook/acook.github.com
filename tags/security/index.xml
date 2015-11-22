@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on digital. [nomad]</title>
+    <link>http://anthonymcook.com/tags/security/</link>
+    <description>Recent content in Security on digital. [nomad]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jan 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://anthonymcook.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Living Social security holes</title>
+      <link>http://anthonymcook.com/articles/living-social-security-holes/</link>
+      <pubDate>Fri, 21 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/living-social-security-holes/</guid>
+      <description>
+
+&lt;aside class=&#34;url&#34;&gt;
+&lt;a href=&#34;https://web.archive.org/web/20120120184246/http://www.deepgreencrystals.com/archives/2011/01/living-social-h.html&#34;&gt;
+&lt;div&gt;content excerpted from&lt;/div&gt;
+deepgreencrystals.com
+&lt;/a&gt;
+&lt;/aside&gt;
+
+&lt;h1 id=&#34;aka-the-importance-of-server-side-validation:9daa542174f74b414ee356624a30020c&#34;&gt;AKA the importance of server-side validation.&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Ok, I am in the software business and all software has bugs. Some software has more bugs than others. Some software is just simply poorly designed. Especially in areas where the application at first blush is pretty simple and anyone can hack one together in a weekend. Sometimes these hacked together weekend projects take off and become wildly popular. That is when you suddenly realize the value of professional software engineers (or not).
+&lt;br&gt;&lt;br&gt;
+One such overnight success story is the site Living Social (full disclosure I run a competing platform at Tippr.com). While the site has been a consumer success, they have had more than their fair share of technical challenges. Initially these technical challenges had to do with scaling to meet consumer demand ( a good problem to have). Now unfortunately there are serious security and commerce transaction holes being exposed. Unfortunately Living Social is not just a site with funny pictures of cats. It is a commerce site dealing with hundreds of millions of dollars of transactions on behalf of their merchants and customers. Bugs in commerce sites can lead to GIGANTIC losses for everyone involved. This is not just &amp;ldquo;whoops the site is down&amp;rdquo; stuff. This is REAL MONEY.
+&lt;br&gt;&lt;br&gt;
+Here is the latest problem. Living Social doesn&amp;rsquo;t do server side quantity validation (at least they didn&amp;rsquo;t yesterday). Who cares you say? Well Amazon.com for one. Their latest offer of a $20 gift certificate for $10 has the explicit restriction of ONE per customer and no gifts. You see, Amazon actually only wants to discount their product for new customers or existing customers only on $20 of merchandise. If Amazon knew there was a way to buy say 100 vouchers and receive $2000 of Amazon merchandise for $1000, they would probably blow a gasket. Jeff you better sit down. Because Living Social only validates restrictions on order quantity in the client, and not the server, there is a simple inspect element command in many browsers that lets you change the &amp;ldquo;1&amp;rdquo; to any number you want.
+&lt;br&gt;&lt;br&gt;
+I won&amp;rsquo;t go into all the details of how to perform this hack in your own client and I am only posting this near the end of the Amazon offer because I don&amp;rsquo;t wish this liability to be any worse than it already is. Unfortunately I have received notification of this vulnerability from multiple sources today. Based on the feedback I am getting on the extensive use of this hack on this particular offer, I hazard to guess that thousands of people have exploited it. From the magnitude of the exposure, I wouldn&amp;rsquo;t be surprised if 50-75% of the total purchases of this deal were in violation of the one per person rule (meaning that amazon only got a hundred thousand or so unique customers not over a million).
+&lt;br&gt;&lt;br&gt;
+Bugs are unfortunately a fact of life in software. But this particular vulnerability is not a bug. It is a DESIGN flaw. Programmers took a short cut by putting quantity validation in the client. They hacked the site together and are holding it together with bailing wire. I hope for the benefit of Living Social merchants and advertisers, they take some of their $175M and hire some top notch commerce architects. This didn&amp;rsquo;t need to happen.
+&lt;br&gt;&lt;br&gt;
+Don&amp;rsquo;t let anyone tell you software is easy. Don&amp;rsquo;t trust your business to software cobbled together as a hobby that just happened to take off. Don&amp;rsquo;t underestimate the value of good software engineering. At scale, when you are selling real volume and doing serious business, the details matter.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;UPDATE 10:58PM
+&lt;br&gt;&lt;br&gt;
+Thank you to all of you who have written and sent further proof of this and other vulnerabilities in the Living Social system.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;which confirm the hack and show purchased vouchers hitting the credit card and in a user account.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;In addition, I received two MORE ways to circumvent the limits by using the browser back button and a simple e-mail address hack (no I won&amp;rsquo;t explain). A reader with the first hack purchased 7 vouchers and a guy with the second hack purchased 5 vouchers.
+&lt;br&gt;&lt;br&gt;
+Business Insider has also made a note of this hack and contacted the company. The CEO claims that they &amp;ldquo;intentionally&amp;rdquo; designed their system this way (uhm, ok Tim) and that the server takes care of everything later at settlement. Well I am sure the server does that NOW that the vulnerability is public and I am glad for Amazon&amp;rsquo;s sake that the site is working overtime to fix this problem. Tim further suggests that the problem is not wide spread and that client side hacks are not showing up in the number sold. The screen shots above tell a different story. I have an inbox full in screen shots like that. One person with 100 vouchers in their account. That is not a client side hack that was ignored by the server. 100 of the over million sold were certainly sold to one person. The number sold on the live site that ticks along as people purchase is certainly overstating the unique purchasers by some significant amount. Maybe I just have alot of hacker friends and my 50-75% overstatement is off. When LS runs their &amp;ldquo;server side reconciliation&amp;rdquo; and washes out all the gamers (as they claim they will), I wonder if they will issue the &amp;ldquo;adjusted&amp;rdquo; number sold. I suspect not, especially if it tarnishes in any way their &amp;ldquo;biggest day ever&amp;rdquo;.
+&lt;br&gt;&lt;br&gt;
+But this post is not about Living Social sales. It is about quality software development and doing right by your business partners in the deal business. If there were alot of gamers, Amazon just gave 50% off on over $25M worth of merchandise that they probably would have sold at full price to these same people anyway. Amazon are incredible at measuring the ROI on any promotion. If this one turns out to be a dud, I doubt they would admit it publicly, but they will know.
+&lt;br&gt;&lt;br&gt;
+Daily deals done right on a quality software platform with appropriate controls can be the most effective customer acquisition tool an advertiser has. Done poorly they can degrade your brand and erode your value proposition. I hope this Amazon promotion ends up the former not the later.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;aside&gt;
+&lt;strong&gt;EDIT:&lt;/strong&gt;
+&lt;em&gt;There have since been some follow up articles from other blogs and news outlets.&lt;/em&gt;
+&lt;/aside&gt;
+
+&lt;aside class=&#34;url&#34;&gt;
+&lt;a href=&#34;http://www.businessinsider.com/livingsocial-server-flaw-2011-1&#34;&gt;
+&lt;div&gt;businessinsider.com&lt;/div&gt;
+LivingSocial Server Flaw
+&lt;/a&gt;
+&lt;/aside&gt;
+
+&lt;aside class=&#34;url&#34;&gt;
+&lt;a href=&#34; https://news.ycombinator.com/item?id=2122693 &#34;&gt;
+&lt;div&gt;hacker news @ news.ycombinator.com&lt;/div&gt;
+LivingSocial Hacked
+&lt;/a&gt;
+&lt;/aside&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <title>
+    &#34;Lessons Learned&#34; by Devver // digital. [nomad]
+  </title>
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="generator" content="Hugo 0.14" />
+
+  <meta property="og:title" content="&#34;Lessons Learned&#34; by Devver" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="http://anthonymcook.com/articles/learning-from-failing-startups-lessons-learned/" />
+
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/base-min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+  
+  
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-min.css">
+  
+  
+
+  <link rel="stylesheet" href="/css/redlounge.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png?v=2">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="digital. [nomad]" />
+
+  <link rel="stylesheet" href="/css/highlight.css"><script src="/js/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script>
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+  
+
+  <div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+  <div class="header">
+    
+
+    
+
+    <h1 class="brand-title">digital. [nomad]</h1>
+    <h2 class="brand-tagline">the digital frontier</h2>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="http://anthonymcook.com">
+            <span class="nav-item-separator">//</span>Home
+          </a>
+        </li>
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="sidebar-nav-item
+            
+              active
+            " href="/articles/">
+            <span class="nav-item-separator">//</span>articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="sidebar-nav-item
+            " href="/images/">
+            <span class="nav-item-separator">//</span>images
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="sidebar-nav-item
+            " href="/shorts/">
+            <span class="nav-item-separator">//</span>shorts
+          </a>
+        </li>
+        
+      </ul>
+
+      <h2 class="brand-tagline">nomadic posts</h2>
+      <ul class="nav-list">
+        
+        
+        <li class="nav-item"><a href="/articles/the-new-powerline/">
+          <span class="nav-item-separator">//</span>powerline
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/set-up-and-deploy-your-rails-app-to-heroku/">
+          <span class="nav-item-separator">//</span>Rails on Heroku
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/html5-and-client-side-storage-stack/">
+          <span class="nav-item-separator">//</span>Client-Side Storage
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/getting-more-information-about-ruby-objects/">
+          <span class="nav-item-separator">//</span>deep inspect
+        </a></li>
+        
+        <li class="nav-item"><a href="/images/i-generated-an-ablazejs-image-using-another/">
+          <span class="nav-item-separator">//</span>Ablaze.js &amp; Facebook
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/cmdr-command-ruby/">
+          <span class="nav-item-separator">//</span>CMDR
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/get-the-delete-key-working-in-irb-on-osx-with-two/">
+          <span class="nav-item-separator">//</span>IRB &amp; OSX DELETE
+        </a></li>
+        
+        <li class="nav-item"><a href="/images/flowchart-legend/">
+          <span class="nav-item-separator">//</span>Flowchart Legend
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/support-from-your-peers-is-something-you-need-to/">
+          <span class="nav-item-separator">//</span>Support from your Peers
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/rtfm-of-the-day-the-cd-command/">
+          <span class="nav-item-separator">//</span>RTFM: cd
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/pixen-vs-seashore-and-firefox-vs-chrome/">
+          <span class="nav-item-separator">//</span>Pixen vs Seashore and Firefox vs Chrome
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/rails-31-stable-branch-compass-sass-and-the/">
+          <span class="nav-item-separator">//</span>Rails 3.1 Beta &amp; Compass
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/making-your-life-easier-by-throwing-money-at-the/">
+          <span class="nav-item-separator">//</span>Throwing money at the problem
+        </a></li>
+        
+        <li class="nav-item"><a href="/shorts/semantic-versioning/">
+          <span class="nav-item-separator">//</span>Semantic Versioning
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/checking-out-individual-files-from-an-arbitrary/">
+          <span class="nav-item-separator">//</span>arbitrary revision
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/i-was-updating-rvm-and-it-said-my-name/">
+          <span class="nav-item-separator">//</span>RVM knows my name
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/my-life-with-the-thrill-kill-ipad-kult/">
+          <span class="nav-item-separator">//</span>iPad2
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/how-to-get-statistics-from-output-of-diff/">
+          <span class="nav-item-separator">//</span>diffstat
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/semantic-web-css-and-css-file-structure/">
+          <span class="nav-item-separator">//</span>Semantic CSS Strategies
+        </a></li>
+        
+        <li class="nav-item"><a href="/shorts/heres-an-outdated-screenshot-of-a-completely/">
+          <span class="nav-item-separator">//</span>Quote from PDX.RB
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/rails-webserver-research/">
+          <span class="nav-item-separator">//</span>Rails webserver research
+        </a></li>
+        
+        <li class="nav-item"><a href="/images/for-everyone-who-exalts-the-features-will-be/">
+          <span class="nav-item-separator">//</span>featurecreep
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/learning-from-failing-startups-lessons-learned/">
+          <span class="nav-item-separator">//</span>&#34;Lessons Learned&#34; by Devver
+        </a></li>
+        
+        <li class="nav-item"><a href="/shorts/webserver-in-bash-with-under-100-lines-of-code/">
+          <span class="nav-item-separator">//</span>Webserver in Bash with Under 100 Lines of code
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/living-social-security-holes/">
+          <span class="nav-item-separator">//</span>Living Social security holes
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/my-fork-of-gitx/">
+          <span class="nav-item-separator">//</span>GitX
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/whatever-i-am-doing-a-lot-of-other-people-have/">
+          <span class="nav-item-separator">//</span>Living in a Cave
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/cukeplusplus/">
+          <span class="nav-item-separator">//</span>Cukeplusplus
+        </a></li>
+        
+        <li class="nav-item"><a href="/images/iterm2-vs-macvim/">
+          <span class="nav-item-separator">//</span>MacVim vs iTerm
+        </a></li>
+        
+        <li class="nav-item"><a href="/shorts/this-is-your-brain-on-vim/">
+          <span class="nav-item-separator">//</span>Your brain on vim
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/an-iterm-bookmark-for-irb/">
+          <span class="nav-item-separator">//</span>IRB &amp; iTerm
+        </a></li>
+        
+        <li class="nav-item"><a href="/shorts/top-10-reasons-the-ruby-programming-language-sucks/">
+          <span class="nav-item-separator">//</span>Top 10 Reasons the Ruby Programming Language Sucks
+        </a></li>
+        
+
+      </ul>
+    </nav>
+
+    
+
+  </div>
+</div>
+
+
+    
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+      <a name="top"></a>
+      
+
+      
+      
+      <div id="toc" class="pure-u-1 pure-u-md-1-4">
+        <small class="toc-label">Contents</small>
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#learning-from-failed-startups:5e125ae7b645ad66b943f5f13529d8c6">Learning From Failed Startups</a></li>
+</ul>
+</nav>
+      </div>
+      
+      
+      <section class="post pure-u-1 pure-u-md-3-4">
+        <h1 class="post-title">
+          <a href="/articles/learning-from-failing-startups-lessons-learned/">&#34;Lessons Learned&#34; by Devver</a>
+        </h1>
+        <h3 class="post-subtitle">
+          
+        </h3>
+        
+        <span class="post-date">
+          <span class="post-date-month"><sup>Feb</sup></span><span class="post-date-separator">/</span><span class="post-date-year">2011</span>
+        </span>
+        
+        
+        
+        
+
+        
+        
+
+        
+
+        
+
+        
+
+<h1 id="learning-from-failed-startups:5e125ae7b645ad66b943f5f13529d8c6">Learning From Failed Startups</h1>
+
+<aside>
+<strong>EDIT:</strong><em>This is excerpted from
+<a href=" http://devver.wordpress.com/2010/04/26/lessons-learned ">Devver's blog</a>
+for posterity.</em>
+</aside>
+
+<blockquote>
+<p>we were hesitant to ask for feedback and help. We quickly found that
+people are incredibly helpful and generous with their time. Users were
+willing to take a chance and use our products while giving us valuable
+feedback. Fellow Rubyists gave us ideas and helped us with technical
+problems. Mentors made time for meetings and introduced us to others who
+could assist us. And other entrepreneurs, both new and seasoned, were
+happy to share stories, compare experiences, and offer support.</p>
+</blockquote>
+
+<p>&hellip;</p>
+
+<blockquote>
+<p>We embraced working remotely: we hired Avdi to work in Pennsylvania
+while Dan and I lived in Boulder and later on, Dan moved to Washington,
+DC. There are many benefits to having a distributed team, but two stood
+out in our experience. First, we could hire top talent without having to
+worry about location (in fact, our flexibility regarding location was
+very attractive to most candidates we interviewed). Secondly, being in
+different locations allowed every team member to work with minimal
+distractions, which is invaluable when it comes to efficiently writing
+good code.
+<br><br>
+That said, communication was a challenge. To ensure we were all synced
+up, we had a daily standup as well as a weekly review. When Dan moved to
+DC, he and I scheduled another weekly meeting with no set agenda to just
+bring up all the issues, large and small, that were on our minds. We
+also all got together in the same location every few months to work in
+the same room and rekindle our team energy.</p>
+
+<p><br><br>
+Also, pair programming was difficult to do remotely and we never came up
+with a great solution. As a result, we spent less than a day pairing a
+week on average.</p>
+
+<p><br><br>
+The most significant drawback to a remote team is the administrative
+hassle. It’s a pain to manage payroll, unemployment, insurance, etc in
+one state. It’s a freaking nightmare to manage in three states (well,
+two states and a district), even though we paid a payroll service to
+take care of it. Apparently, once your startup gets larger, there are
+companies that will manage this with minimal hassle, but for a small
+team, it was a major annoyance and distraction.”</p>
+</blockquote>
+
+<p>&hellip;</p>
+
+<blockquote>
+<p>we should have focused more on customer development and finding a
+minimum viable product (MVP)”</p>
+</blockquote>
+
+<p>&hellip;</p>
+
+<blockquote>
+<p>Our mistake at that point was to go “heads down” and focus on building
+the accelerator while minimizing our contact with users and customers
+(after all, we knew how great it was and time spent talking to customers
+was time we could be hacking!). We should have asking, “Is there an even
+simpler version of this product that we can deliver sooner to learn more
+about pricing, market size, and technical challenges?”</p>
+</blockquote>
+
+<aside class="url">
+<a href="http://devver.wordpress.com/2010/04/26/lessons-learned">
+<div>read the full post</div>
+Lessons Learned
+</a>
+</aside>
+
+
+        
+
+        
+        <div class="tags-list">
+          <span class="dark-red">Tags</span><span class="decorative-marker">//</span>
+          
+          <a class="post-tag post-tag-startups" href="http://anthonymcook.com/tags/startups">startups</a>,
+          
+          <a class="post-tag post-tag-ruby" href="http://anthonymcook.com/tags/ruby">ruby</a>,
+          
+        </div>
+        
+
+        
+        <div class="paging pure-g">
+          <hr class="thin"/>
+          <div class="paging-newer pure-u-1-5">
+          
+            <a class="paging-link" href="/images/for-everyone-who-exalts-the-features-will-be/">
+              <span class="dark-red">Newer</span>
+              <span class="decorative-marker">//</span>featurecreep
+            </a>
+          
+          </div>
+          <span class="paging-label pure-u-3-5">&#x21e0; Read More &#x21e2;</span>
+          <div class="paging-older pure-u-1-5">
+            
+            <a class="paging-link" href="/shorts/webserver-in-bash-with-under-100-lines-of-code/">
+              <span class="dark-red">Older</span>
+              <span class="decorative-marker">//</span>Webserver in Bash with Under 100 Lines of code
+            </a>
+            
+          </div>
+        </div>
+        
+      </section>
+      
+      
+      
+
+    </div>
+  </div>
+  
+
+  
+
+  
+</body>
+</html>

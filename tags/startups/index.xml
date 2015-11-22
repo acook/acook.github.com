@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Startups on digital. [nomad]</title>
+    <link>http://anthonymcook.com/tags/startups/</link>
+    <description>Recent content in Startups on digital. [nomad]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 Feb 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://anthonymcook.com/tags/startups/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>&#34;Lessons Learned&#34; by Devver</title>
+      <link>http://anthonymcook.com/articles/learning-from-failing-startups-lessons-learned/</link>
+      <pubDate>Tue, 15 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/learning-from-failing-startups-lessons-learned/</guid>
+      <description>
+
+&lt;h1 id=&#34;learning-from-failed-startups:5e125ae7b645ad66b943f5f13529d8c6&#34;&gt;Learning From Failed Startups&lt;/h1&gt;
+
+&lt;aside&gt;
+&lt;strong&gt;EDIT:&lt;/strong&gt;&lt;em&gt;This is excerpted from
+&lt;a href=&#34; http://devver.wordpress.com/2010/04/26/lessons-learned &#34;&gt;Devver&#39;s blog&lt;/a&gt;
+for posterity.&lt;/em&gt;
+&lt;/aside&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;we were hesitant to ask for feedback and help. We quickly found that
+people are incredibly helpful and generous with their time. Users were
+willing to take a chance and use our products while giving us valuable
+feedback. Fellow Rubyists gave us ideas and helped us with technical
+problems. Mentors made time for meetings and introduced us to others who
+could assist us. And other entrepreneurs, both new and seasoned, were
+happy to share stories, compare experiences, and offer support.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We embraced working remotely: we hired Avdi to work in Pennsylvania
+while Dan and I lived in Boulder and later on, Dan moved to Washington,
+DC. There are many benefits to having a distributed team, but two stood
+out in our experience. First, we could hire top talent without having to
+worry about location (in fact, our flexibility regarding location was
+very attractive to most candidates we interviewed). Secondly, being in
+different locations allowed every team member to work with minimal
+distractions, which is invaluable when it comes to efficiently writing
+good code.
+&lt;br&gt;&lt;br&gt;
+That said, communication was a challenge. To ensure we were all synced
+up, we had a daily standup as well as a weekly review. When Dan moved to
+DC, he and I scheduled another weekly meeting with no set agenda to just
+bring up all the issues, large and small, that were on our minds. We
+also all got together in the same location every few months to work in
+the same room and rekindle our team energy.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;
+Also, pair programming was difficult to do remotely and we never came up
+with a great solution. As a result, we spent less than a day pairing a
+week on average.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;
+The most significant drawback to a remote team is the administrative
+hassle. It’s a pain to manage payroll, unemployment, insurance, etc in
+one state. It’s a freaking nightmare to manage in three states (well,
+two states and a district), even though we paid a payroll service to
+take care of it. Apparently, once your startup gets larger, there are
+companies that will manage this with minimal hassle, but for a small
+team, it was a major annoyance and distraction.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;we should have focused more on customer development and finding a
+minimum viable product (MVP)”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Our mistake at that point was to go “heads down” and focus on building
+the accelerator while minimizing our contact with users and customers
+(after all, we knew how great it was and time spent talking to customers
+was time we could be hacking!). We should have asking, “Is there an even
+simpler version of this product that we can deliver sooner to learn more
+about pricing, market size, and technical challenges?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;aside class=&#34;url&#34;&gt;
+&lt;a href=&#34;http://devver.wordpress.com/2010/04/26/lessons-learned&#34;&gt;
+&lt;div&gt;read the full post&lt;/div&gt;
+Lessons Learned
+&lt;/a&gt;
+&lt;/aside&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Living in a Cave</title>
+      <link>http://anthonymcook.com/articles/whatever-i-am-doing-a-lot-of-other-people-have/</link>
+      <pubDate>Wed, 19 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/whatever-i-am-doing-a-lot-of-other-people-have/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/20120103005750/http://www.themomorohoax.com/2010/02/01/are-you-living-in-a-cave&#34;&gt;
+&lt;div&gt;themomorohoax.com&lt;/div&gt;
+Are you Living in a Cave?
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Too many startup people act like they are sitting in a cave inventing
+something utterly new.
+&lt;br&gt;&lt;br&gt;
+ Chances are, they’re not.
+&lt;br&gt;&lt;br&gt;
+ I constantly find myself amazed when I recommend a blog post, or a
+tactic to someone and they are like “Oh, that’s just what I need! I
+never thought to search for that.” Even more amazing is when someone
+labors day and night trying to figure out how to make a successful app
+yet has never heard of something like a/b testing.
+&lt;br&gt;&lt;br&gt;
+ I feel like these people must be living in caves.
+&lt;br&gt;&lt;br&gt;
+ One of the fun parts of the University of Chicago was that we
+constantly had to do research. This, plus being a programmer, entirely
+convinced me of the following:
+&lt;br&gt;&lt;br&gt;
+ “Whatever I am doing, a lot of other people have probably also tried
+to do it. Some of them have probably been way more successful than I
+have been so far. Some of them have probably written books or blog
+posts about how they successfully did what I am doing now. I can find
+these books and blog posts on Google and then apply what they say.”
+&lt;br&gt;&lt;br&gt;
+ The four sentences above are somehow not common knowledge, in my
+experience. I have no idea why.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Google, APIs, books, blogs, and most importantly &lt;em&gt;other people&lt;/em&gt; are my
+external memory and processing units. We are all part of the same
+beowulf cluster! Use the fantastic abilities of the other nodes around
+you!&lt;/p&gt;
+
+&lt;p&gt;⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

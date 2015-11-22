@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <title>
+    Client-Side Storage // digital. [nomad]
+  </title>
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="generator" content="Hugo 0.14" />
+
+  <meta property="og:title" content="Client-Side Storage" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="http://localhost:1313/html5-and-client-side-storage-stack/" />
+
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/base-min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+  
+  
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-min.css">
+  
+  
+
+  <link rel="stylesheet" href="/css/redlounge.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png?v=2">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="digital. [nomad]" />
+
+  <link rel="stylesheet" href="/css/highlight.css"><script src="/js/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script>
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+  
+
+  <div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+  <div class="header">
+    
+
+    
+
+    <h1 class="brand-title">digital. [nomad]</h1>
+    <h2 class="brand-tagline">the digital frontier</h2>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="http://localhost:1313/">
+            <span class="nav-item-separator">//</span>Home
+          </a>
+        </li>
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="sidebar-nav-item
+            " href="/articles/">
+            <span class="nav-item-separator">//</span>articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="sidebar-nav-item
+            " href="/images/">
+            <span class="nav-item-separator">//</span>images
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="sidebar-nav-item
+            " href="/shorts/">
+            <span class="nav-item-separator">//</span>shorts
+          </a>
+        </li>
+        
+      </ul>
+
+      <h2 class="brand-tagline">nomadic posts</h2>
+      <ul class="nav-list">
+        
+        
+        <li class="nav-item"><a href="/articles/the-new-powerline/">
+          <span class="nav-item-separator">//</span>powerline
+        </a></li>
+        
+        <li class="nav-item"><a href="/html5-and-client-side-storage-stack/">
+          <span class="nav-item-separator">//</span>Client-Side Storage
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/getting-more-information-about-ruby-objects/">
+          <span class="nav-item-separator">//</span>deep inspect
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/cmdr-command-ruby/">
+          <span class="nav-item-separator">//</span>CMDR
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/get-the-delete-key-working-in-irb-on-osx-with-two/">
+          <span class="nav-item-separator">//</span>IRB &amp; OSX DELETE
+        </a></li>
+        
+        <li class="nav-item"><a href="/images/flowchart-legend/">
+          <span class="nav-item-separator">//</span>Flowchart Legend
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/checking-out-individual-files-from-an-arbitrary/">
+          <span class="nav-item-separator">//</span>arbitrary revision
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/how-to-get-statistics-from-output-of-diff/">
+          <span class="nav-item-separator">//</span>diffstat
+        </a></li>
+        
+        <li class="nav-item"><a href="/shorts/heres-an-outdated-screenshot-of-a-completely/">
+          <span class="nav-item-separator">//</span>Quote from PDX.RB
+        </a></li>
+        
+        <li class="nav-item"><a href="/images/for-everyone-who-exalts-the-features-will-be/">
+          <span class="nav-item-separator">//</span>featurecreep
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/cukeplusplus/">
+          <span class="nav-item-separator">//</span>Cukeplusplus
+        </a></li>
+        
+        <li class="nav-item"><a href="/images/iterm2-vs-macvim/">
+          <span class="nav-item-separator">//</span>MacVim vs iTerm
+        </a></li>
+        
+        <li class="nav-item"><a href="/shorts/this-is-your-brain-on-vim/">
+          <span class="nav-item-separator">//</span>Your brain on vim
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/an-iterm-bookmark-for-irb/">
+          <span class="nav-item-separator">//</span>IRB &amp; iTerm
+        </a></li>
+        
+        <li class="nav-item"><a href="/i-generated-an-ablazejs-image-using-another/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/i-was-updating-rvm-and-it-said-my-name/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/installing-ruby-192-rails-3-and-mysql-on/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/learning-from-failing-startups-lessons-learned/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/living-social-security-holes/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/making-your-life-easier-by-throwing-money-at-the/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/my-life-with-the-thrill-kill-ipad-kult/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/my-fork-of-gitx/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/pixen-vs-seashore-and-firefox-vs-chrome/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/rails-31-stable-branch-compass-sass-and-the/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/rails-webserver-research/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/rtfm-of-the-day-the-cd-command/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/semantic-versioning/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/semantic-web-css-and-css-file-structure/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/set-up-and-deploy-your-rails-app-to-heroku/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/support-from-your-peers-is-something-you-need-to/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/top-10-reasons-the-ruby-programming-language-sucks/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/webserver-in-bash-with-under-100-lines-of-code/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+        <li class="nav-item"><a href="/whatever-i-am-doing-a-lot-of-other-people-have/">
+          <span class="nav-item-separator">//</span>
+        </a></li>
+        
+
+      </ul>
+    </nav>
+
+    
+
+  </div>
+</div>
+
+
+    
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+      <a name="top"></a>
+      
+
+      
+      
+      <div id="toc" class="pure-u-1 pure-u-md-1-4">
+        <small class="toc-label">Contents</small>
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#requirements:e0fca4bfbc5c3cdad728b0e6ea30874a">Requirements</a></li>
+<li><a href="#client-side-tools:e0fca4bfbc5c3cdad728b0e6ea30874a">Client-Side Tools</a></li>
+<li><a href="#server-side-tools:e0fca4bfbc5c3cdad728b0e6ea30874a">Server-Side Tools</a></li>
+</ul></li>
+</ul>
+</nav>
+      </div>
+      
+      
+      <section class="post pure-u-1 pure-u-md-3-4">
+        <h1 class="post-title">
+          <a href="/html5-and-client-side-storage-stack/">Client-Side Storage</a>
+        </h1>
+        <h3 class="post-subtitle">
+          
+        </h3>
+        
+        <span class="post-date">
+          <span class="post-date-month"><sup>Sep</sup></span><span class="post-date-separator">/</span><span class="post-date-year">2011</span>
+        </span>
+        
+        
+        
+        
+
+        
+        
+
+        
+
+        
+
+        
+
+<p>I&rsquo;m resurrecting an old project of mine now that technology has caught up.
+Even so, it&rsquo;s amazing how much time I&rsquo;ve had to spend just trying to find the right tools to use to fulfill my requirements.</p>
+
+<h2 id="requirements:e0fca4bfbc5c3cdad728b0e6ea30874a">Requirements</h2>
+
+<ul>
+<li><strong>Cross-Browser</strong>: Needs to work in every modern browser, including mobile.</li>
+<li><strong>Persistant offline storage</strong>:
+In order to support all browsers I must also support the following technologies:
+
+<ul>
+<li>IndexedDB</li>
+<li>WebSQL</li>
+<li>localStorage</li>
+<li>Some fallback if none of the above are available..</li>
+</ul></li>
+<li><strong>Gracefully degrade</strong> functionality on less capable browsers.</li>
+<li>Encourage users to <strong>modernize</strong> their web experience.</li>
+<li><strong>Optimize</strong> layout according to the viewable space in the browser.</li>
+<li><strong>Sane</strong>, consistant starting point for styling pages.</li>
+<li>A <strong>clean</strong>, extensible way of interacting with Javascript.</li>
+</ul>
+
+<h2 id="client-side-tools:e0fca4bfbc5c3cdad728b0e6ea30874a">Client-Side Tools</h2>
+
+<ul>
+<li><a href="http://www.initializr.com/" target="_blank">Initializr</a> - Provides a nice frontend scaffold:
+
+<ul>
+<li><a href="http://www.modernizr.com/" target="_blank">Modernizr</a>: Detect browser capabilities.</li>
+<li><a href="http://jquery.com/" target="_blank">Jquery</a>: Improves and tidies interactions with Javascript objects.</li>
+<li><a href="https://github.com/scottjehl/Respond#readme" target="_blank">Respond.js</a>: Responsive web, layout optimized to viewable space.</li>
+<li><a href="http://html5boilerplate.com/" target="_blank">HTML5Boilerplate</a>: Sane and consistant default stylesheet.</li>
+</ul></li>
+<li><a href="http://westcoastlogic.com/lawnchair/" target="_blank">Lawnchair</a>: Provides a cohesive API for client-side offline storage.</li>
+</ul>
+
+<h2 id="server-side-tools:e0fca4bfbc5c3cdad728b0e6ea30874a">Server-Side Tools</h2>
+
+<p>Right now I&rsquo;m using some other tools to create a functional prototype of the user experience:</p>
+
+<ul>
+<li><a href="https://github.com/blahed/frank#readme" target="_blank">Frank</a>: A static website generator.</li>
+<li><a href="http://haml-lang.com/" target="_blank">Haml</a>: Because HTML&rsquo;s syntax sucks.</li>
+<li><a href="http://sass-lang.com/" target="_blank">Sass</a>: Because CSS&rsquo;s syntax both sucks and is lacking in many areas.</li>
+<li><del><a href="http://mustache.github.com/" target="_blank">Mustache</a>: Because logic doesn&rsquo;t belong in views.</del> - Frank is having issues loading Mustache templates, even after I spent some time <a href="https://github.com/acook/frank" target="_blank">hacking</a> at it.</li>
+<li><a href="http://jashkenas.github.com/coffee-script/" target="_blank">Coffeescript</a>: Because Javascript is great, but its syntax sucks.</li>
+</ul>
+
+<p>I&rsquo;m not sold on Frank yet, there was some other static site generators I was considering so if Frank starts getting in my way I&rsquo;ll give them a try.</p>
+
+<p>⦂∀</p>
+
+
+        
+
+        
+
+        
+        <div class="paging pure-g">
+          <hr class="thin"/>
+          <div class="paging-newer pure-u-1-5">
+          
+            <a class="paging-link" href="/articles/the-new-powerline/">
+              <span class="dark-red">Newer</span>
+              <span class="decorative-marker">//</span>powerline
+            </a>
+          
+          </div>
+          <span class="paging-label pure-u-3-5">&#x21e0; Read More &#x21e2;</span>
+          <div class="paging-older pure-u-1-5">
+            
+            <a class="paging-link" href="/articles/getting-more-information-about-ruby-objects/">
+              <span class="dark-red">Older</span>
+              <span class="decorative-marker">//</span>deep inspect
+            </a>
+            
+          </div>
+        </div>
+        
+      </section>
+      
+      
+      
+
+    </div>
+  </div>
+  
+
+  
+
+  
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

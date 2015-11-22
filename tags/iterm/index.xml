@@ -11,10 +11,10 @@
     
     <item>
       <title>IRB &amp; iTerm</title>
-      <link>http://anthonymcook.com/an-iterm-bookmark-for-irb/</link>
+      <link>http://anthonymcook.com/articles/an-iterm-bookmark-for-irb/</link>
       <pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://anthonymcook.com/an-iterm-bookmark-for-irb/</guid>
+      <guid>http://anthonymcook.com/articles/an-iterm-bookmark-for-irb/</guid>
       <description>&lt;p&gt;If you&amp;rsquo;re like &lt;a href=&#34;http://twitter.com/anthony_m_cook&#34; target=&#34;_blank&#34;&gt;me&lt;/a&gt;, you use &lt;a href=&#34;http://en.wikipedia.org/wiki/Interactive_Ruby_Shell&#34; target=&#34;_blank&#34;&gt;irb&lt;/a&gt; for all kinds of things. From just running quick ruby experiments to figuring out how many &lt;a href=&#34;http://rubydoc.info/docs/ruby-core/1.9.2/Time&#34; target=&#34;_blank&#34;&gt;days&lt;/a&gt; (9364) you&amp;rsquo;ve been alive.&lt;/p&gt;
 
 &lt;p&gt;I created a bookmark in &lt;a href=&#34;http://iterm.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;iTerm&lt;/a&gt; to run &lt;a href=&#34;http://ruby-doc.org/docs/ProgrammingRuby/html/irb.html&#34; target=&#34;_blank&#34;&gt;irb&lt;/a&gt; when I hit &lt;a href=&#34;http://jrgraphix.net/r/Unicode/2300-23FF&#34; target=&#34;_blank&#34;&gt;⌘&lt;/a&gt;-control-0. This was fine until I realized it was using the system&amp;rsquo;s &lt;a href=&#34;http://stackoverflow.com/questions/3474875/why-does-mac-os-x-come-with-ruby-rails&#34; target=&#34;_blank&#34;&gt;ruby&lt;/a&gt; install, and not the &lt;a href=&#34;http://rubydoc.info/docs/ruby-core/1.9.2&#34; target=&#34;_blank&#34;&gt;version&lt;/a&gt; I installed with &lt;a href=&#34;http://rvm.beginrescueend.com/&#34; target=&#34;_blank&#34;&gt;RVM&lt;/a&gt;.&lt;/p&gt;

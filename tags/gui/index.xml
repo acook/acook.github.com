@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gui on digital. [nomad]</title>
+    <link>http://anthonymcook.com/tags/gui/</link>
+    <description>Recent content in Gui on digital. [nomad]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jan 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://anthonymcook.com/tags/gui/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GitX</title>
+      <link>http://anthonymcook.com/articles/my-fork-of-gitx/</link>
+      <pubDate>Fri, 21 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/my-fork-of-gitx/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;https://github.com/acook/gitx&#34;&gt;
+&lt;div&gt;github.com&lt;/div&gt;
+GitX
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;p&gt;This codebase combines a lot of awesome features from several forks of
+GitX and I use it almost every day. There’s a binary build in the
+download section packaged up in a DMG and ready to play with.&lt;/p&gt;
+
+&lt;p&gt;Key features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Auto-reloading of repos when they change&lt;/li&gt;
+&lt;li&gt;File history&lt;/li&gt;
+&lt;li&gt;Blame&lt;/li&gt;
+&lt;li&gt;Syntax hilighting of files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In addition to the features of GitX that have been around a while:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Browsable file hierarchies as they existed per commit&lt;/li&gt;
+&lt;li&gt;Graphical branching and commit history&lt;/li&gt;
+&lt;li&gt;Merge local and remote branches&lt;/li&gt;
+&lt;li&gt;Add and fetch remote repositories&lt;/li&gt;
+&lt;li&gt;Partial-file (patch level) staging and discarding&lt;/li&gt;
+&lt;li&gt;Diff between commits, branches, repos, staged and unstaged files&lt;/li&gt;
+&lt;li&gt;Write commit messages and commit changes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Keep in mind that I’m not an Objective-C developer, and I only made
+minor tweaks and judgement calls on what features to keep between forks
+when I merged them. The work here is derived from half a dozen forks and
+the work of many more developers.&lt;/p&gt;
+
+&lt;p&gt;There’s constantly more work being done on GitX by tons of people, so
+check out what they’re doing on &lt;a href=&#34;https://github.com/acook/gitx/network&#34;&gt;Github&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

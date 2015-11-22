@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fuckit on digital. [nomad]</title>
+    <link>http://localhost:1313/tags/fuckit/</link>
+    <description>Recent content in Fuckit on digital. [nomad]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/tags/fuckit/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ruby on Windows</title>
+      <link>http://localhost:1313/installing-ruby-192-rails-3-and-mysql-on/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/installing-ruby-192-rails-3-and-mysql-on/</guid>
+      <description>&lt;p&gt;&lt;aside&gt;INSTALLING RUBY 1.9.2, RAILS 3, AND MYSQL ON WINDOWS&lt;/Aside&gt;&lt;/p&gt;
+
+&lt;h2&gt;Ruby&lt;/h2&gt;
+
+&lt;p&gt;&lt;ol&gt;&lt;li&gt;Download the current Ruby Installer for Windows:&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rubyforge.org/frs/download.php/74298/rubyinstaller-1.9.2-p180.exe&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://rubyforge.org/frs/download.php/74298/rubyinstaller-1.9.2-p180.exe&#34;&gt;http://rubyforge.org/frs/download.php/74298/rubyinstaller-1.9.2-p180.exe&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;or check for latest at &lt;a href=&#34;http://rubyinstaller.org/downloads/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://rubyinstaller.org/downloads/&#34;&gt;http://rubyinstaller.org/downloads/&lt;/a&gt;&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;Run the installer &lt;/li&gt;
+&lt;li&gt;Select &lt;/li&gt;
+&lt;li&gt;Download the DevKit&lt;/li&gt;
+&lt;li&gt;sfsf&lt;/li&gt;
+&lt;li&gt;adfkljbdf&lt;/li&gt;
+&lt;/ol&gt;&lt;h2&gt;MySQL&lt;/h2&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;ol&gt;&lt;li&gt;Download the MySQL Installer for Windows:&lt;/li&gt;
+&lt;li&gt;current: &lt;a href=&#34;http://dev.mysql.com/downloads/mirror.php?id=402461&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://dev.mysql.com/downloads/mirror.php?id=402461&#34;&gt;http://dev.mysql.com/downloads/mirror.php?id=402461&lt;/a&gt;&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;all: &lt;a href=&#34;http://dev.mysql.com/downloads/mysql/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://dev.mysql.com/downloads/mysql/&#34;&gt;http://dev.mysql.com/downloads/mysql/&lt;/a&gt;&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;run installer&lt;/li&gt;
+&lt;li&gt;copy &amp;ldquo;C:\Program Files\MySQL\MySQL Server 5.1\libmysql.dll&amp;rdquo; C:\ruby19\bin&lt;/li&gt;
+&lt;li&gt;Draw a pentagram and sprinkle the blood of a chicken counter clockwise around the edge &amp;hellip;&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;⦂∀&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

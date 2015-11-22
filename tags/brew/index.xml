@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Brew on digital. [nomad]</title>
+    <link>http://anthonymcook.com/tags/brew/</link>
+    <description>Recent content in Brew on digital. [nomad]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Aug 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://anthonymcook.com/tags/brew/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>IRB &amp; OSX DELETE</title>
+      <link>http://anthonymcook.com/articles/get-the-delete-key-working-in-irb-on-osx-with-two/</link>
+      <pubDate>Tue, 23 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/get-the-delete-key-working-in-irb-on-osx-with-two/</guid>
+      <description>&lt;aside&gt;&lt;strong&gt;EDIT:&lt;/strong&gt; &lt;em&gt;I mean forward-delete not backspace. This is function+delete on my MacBook and the standard delete key in the navigation cluster on my shiny &lt;a href=&#34;http://www.daskeyboard.com/model-s-ultimate/&#34; target=&#34;_blank&#34;&gt;Das Keyboard&lt;/a&gt;.&lt;/em&gt;&lt;/aside&gt;
+
+&lt;p&gt;Its been driving me nuts. The delete key doesn&amp;rsquo;t work in IRB (or &lt;a href=&#34;https://github.com/pry/pry#readme&#34; target=&#34;_blank&#34;&gt;Pry&lt;/a&gt;) on OSX!&lt;/p&gt;
+
+&lt;p&gt;Anyway, today I took a couple of minutes and tried this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install readline
+rvm install 1.9.2  --with-readline-dir=/usr/local/Cellar/readline/6.2.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It works now. That&amp;rsquo;s seriously all I had to do. No patching required!&lt;/p&gt;
+
+&lt;p&gt;This is like the day I got the number pad working in all of Vim on OSX. And that was a wonderful day!&lt;/p&gt;
+
+&lt;p&gt;Its possible that &lt;a href=&#34;http://beginrescueend.com/packages/readline/&#34; target=&#34;_blank&#34;&gt;installing readline with rvm&lt;/a&gt; might have the same effect, but I wanted readline to be readily available to other applications I installed as well.&lt;/p&gt;
+
+&lt;p&gt;Use whatever the current version of readline is for you. Do &lt;code&gt;ls /usr/local/Cellar/readline/&lt;/code&gt; to find it.&lt;/p&gt;
+
+&lt;p&gt;⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

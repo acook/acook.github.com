@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shorts on digital. [nomad]</title>
+    <link>http://anthonymcook.com/shorts/</link>
+    <description>Recent content in Shorts on digital. [nomad]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Jun 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://anthonymcook.com/shorts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Semantic Versioning</title>
+      <link>http://anthonymcook.com/shorts/semantic-versioning/</link>
+      <pubDate>Thu, 30 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/shorts/semantic-versioning/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;http://semver.org&#34;&gt;
+&lt;div&gt;semver.org&lt;/div&gt;
+Semantic Versioning
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;p&gt;I don’t agree with this 100%, but still this is a well written document
+and a great default starting place for figuring out what you do want.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quote from PDX.RB</title>
+      <link>http://anthonymcook.com/shorts/heres-an-outdated-screenshot-of-a-completely/</link>
+      <pubDate>Tue, 05 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/shorts/heres-an-outdated-screenshot-of-a-completely/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Here’s an outdated screenshot of a completely artificial benchmark
+which proves my point!
+— Ian Dees&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Webserver in Bash with Under 100 Lines of code</title>
+      <link>http://anthonymcook.com/shorts/webserver-in-bash-with-under-100-lines-of-code/</link>
+      <pubDate>Thu, 03 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/shorts/webserver-in-bash-with-under-100-lines-of-code/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;http://fak3r.com/2008/09/04/howto-webserver-in-100-lines-of-bash&#34;&gt;
+&lt;div&gt;fak3r.com&lt;/div&gt;
+HOWTO: webserver in 100 lines of Bash
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;p&gt;I haven’t tested this, but its kinda hilarious. Uses bash for logic and
+basic Unix apps to run.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Your brain on vim</title>
+      <link>http://anthonymcook.com/shorts/this-is-your-brain-on-vim/</link>
+      <pubDate>Thu, 16 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/shorts/this-is-your-brain-on-vim/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;http://kevinw.github.com/2010/12/15/this-is-your-brain-on-vim&#34;&gt;
+&lt;div&gt;kevinw.github.com&lt;/div&gt;
+This is Your Brain on Vim
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;p&gt;Its insanity. I love it. ⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Top 10 Reasons the Ruby Programming Language Sucks</title>
+      <link>http://anthonymcook.com/shorts/top-10-reasons-the-ruby-programming-language-sucks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/shorts/top-10-reasons-the-ruby-programming-language-sucks/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;http://www.slideshare.net/vishnu/the-top-10-reasons-the-ruby-programming-language-sucks&#34;&gt;
+&lt;div&gt;slideshare.net&lt;/div&gt;
+The Top 10 Reasons the Ruby Programming Language Sucks
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;p&gt;Very old, ancient in fact, but still makes a lot of great points.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

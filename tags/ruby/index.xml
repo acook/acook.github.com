@@ -6,15 +6,196 @@
     <description>Recent content in Ruby on digital. [nomad]</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Dec 2010 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Aug 2011 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://anthonymcook.com/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>IRB &amp; OSX DELETE</title>
+      <link>http://anthonymcook.com/articles/get-the-delete-key-working-in-irb-on-osx-with-two/</link>
+      <pubDate>Tue, 23 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/get-the-delete-key-working-in-irb-on-osx-with-two/</guid>
+      <description>&lt;aside&gt;&lt;strong&gt;EDIT:&lt;/strong&gt; &lt;em&gt;I mean forward-delete not backspace. This is function+delete on my MacBook and the standard delete key in the navigation cluster on my shiny &lt;a href=&#34;http://www.daskeyboard.com/model-s-ultimate/&#34; target=&#34;_blank&#34;&gt;Das Keyboard&lt;/a&gt;.&lt;/em&gt;&lt;/aside&gt;
+
+&lt;p&gt;Its been driving me nuts. The delete key doesn&amp;rsquo;t work in IRB (or &lt;a href=&#34;https://github.com/pry/pry#readme&#34; target=&#34;_blank&#34;&gt;Pry&lt;/a&gt;) on OSX!&lt;/p&gt;
+
+&lt;p&gt;Anyway, today I took a couple of minutes and tried this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install readline
+rvm install 1.9.2  --with-readline-dir=/usr/local/Cellar/readline/6.2.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It works now. That&amp;rsquo;s seriously all I had to do. No patching required!&lt;/p&gt;
+
+&lt;p&gt;This is like the day I got the number pad working in all of Vim on OSX. And that was a wonderful day!&lt;/p&gt;
+
+&lt;p&gt;Its possible that &lt;a href=&#34;http://beginrescueend.com/packages/readline/&#34; target=&#34;_blank&#34;&gt;installing readline with rvm&lt;/a&gt; might have the same effect, but I wanted readline to be readily available to other applications I installed as well.&lt;/p&gt;
+
+&lt;p&gt;Use whatever the current version of readline is for you. Do &lt;code&gt;ls /usr/local/Cellar/readline/&lt;/code&gt; to find it.&lt;/p&gt;
+
+&lt;p&gt;⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rails webserver research</title>
+      <link>http://anthonymcook.com/articles/rails-webserver-research/</link>
+      <pubDate>Sat, 19 Mar 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/rails-webserver-research/</guid>
+      <description>&lt;h1&gt;Summary&lt;/h1&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://unicorn.bogomips.org/&#34; target=&#34;_blank&#34;&gt;Unicorn&lt;/a&gt;&amp;rsquo;s deployment strategy is superior to Passenger&amp;rsquo;s, it allows upgrades of application code and even of the Unicorn binary itself without downtime. Oh yeah, and its also faster and uses less memory than passenger.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nginx.org/&#34; target=&#34;_blank&#34;&gt;Nninx&lt;/a&gt; seems to be easier to configure and its purported to be faster and use less memory than apache.&lt;/li&gt;
+&lt;/ul&gt;&lt;h1&gt;Side notes&lt;/h1&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://code.macournoyer.com/thin/&#34; target=&#34;_blank&#34;&gt;Thin&lt;/a&gt; is great for serving up tiny, fast requests, and has better memory usage than anything else.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.modrails.com/&#34; target=&#34;_blank&#34;&gt;Passenger&lt;/a&gt; has some cases where it may periodically respond to some requests when its overloaded.&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Server Benchmarking&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://code.google.com/p/httperf/&#34; target=&#34;_blank&#34;&gt;httperf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.xenoclast.org/autobench/&#34; target=&#34;_blank&#34;&gt;autobench&lt;/a&gt; is a perl wrapper for httperf that adds features.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://openwebload.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;OpenWebLoad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://httpd.apache.org/docs/2.0/programs/ab.html&#34; target=&#34;_blank&#34;&gt;apachebench&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://loadimpact.com/&#34; target=&#34;_blank&#34;&gt;LoadImpact&lt;/a&gt; is a pay-for service for testing servers.&lt;/li&gt;
+&lt;/ul&gt;&lt;h1&gt;References&lt;/h1&gt;
+
+&lt;h2&gt;Setup Guide for nginx and Unicorn&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2010: &lt;a href=&#34;http://techbot.me/2010/08/deployment-recipes-deploying-monitoring-and-securing-your-rails-application-to-a-clean-ubuntu-10-04-install-using-nginx-and-unicorn/&#34; target=&#34;_blank&#34;&gt;http://techbot.me/2010/08/deployment-recipes-deploying-monitoring-and-securing-your-rails-application-to-a-clean-ubuntu-10-04-install-using-nginx-and-unicorn/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2011: &lt;a href=&#34;http://brandontilley.com/2011/01/29/serving-rails-apps-with-rvm-nginx-unicorn-and-upstart.html&#34; target=&#34;_blank&#34;&gt;http://brandontilley.com/2011/01/29/serving-rails-apps-with-rvm-nginx-unicorn-and-upstart.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Passenger, Thin, Unicorn&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2009: &lt;a href=&#34;https://github.com/blog/517-unicorn&#34; target=&#34;_blank&#34;&gt;https://github.com/blog/517-unicorn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2010: &lt;a href=&#34;http://snaprails.tumblr.com/post/489274578/ruby-web-servers-benchmark&#34; target=&#34;_blank&#34;&gt;http://snaprails.tumblr.com/post/489274578/ruby-web-servers-benchmark&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2010: &lt;a href=&#34;http://engineering.twitter.com/2010/03/unicorn-power.html&#34; target=&#34;_blank&#34;&gt;http://engineering.twitter.com/2010/03/unicorn-power.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Info on Unicorn&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2010: &lt;a href=&#34;http://www.engineyard.com/blog/2010/everything-you-need-to-know-about-unicorn/&#34; target=&#34;_blank&#34;&gt;http://www.engineyard.com/blog/2010/everything-you-need-to-know-about-unicorn/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Info on Passenger (note the nginx graph)&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2010: &lt;a href=&#34;http://blog.phusion.nl/2010/10/18/phusion-passenger-3-0-0-final-released/&#34; target=&#34;_blank&#34;&gt;http://blog.phusion.nl/2010/10/18/phusion-passenger-3-0-0-final-released/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Web servers&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2011: &lt;a href=&#34;http://xenforo.com/community/threads/apache-vs-nginx-vs-lighttpd.12484/&#34; target=&#34;_blank&#34;&gt;http://xenforo.com/community/threads/apache-vs-nginx-vs-lighttpd.12484/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2010: &lt;a href=&#34;http://www.mariusv.com/nginx-vs-apache-1-0/&#34; target=&#34;_blank&#34;&gt;http://www.mariusv.com/nginx-vs-apache-1-0/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2010: &lt;a href=&#34;http://serverfault.com/questions/143238/nginx-vs-apache-as-reverse-proxy-which-one-to-choose&#34; target=&#34;_blank&#34;&gt;http://serverfault.com/questions/143238/nginx-vs-apache-as-reverse-proxy-which-one-to-choose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2010: &lt;a href=&#34;http://stackoverflow.com/questions/475386/apache-vs-nginx-vs-lighttpd-which-is-simpler-to-configure-and-administer&#34; target=&#34;_blank&#34;&gt;http://stackoverflow.com/questions/475386/apache-vs-nginx-vs-lighttpd-which-is-simpler-to-configure-and-administer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Popular services&amp;rsquo; server choices&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://engineering.twitter.com/2010/03/unicorn-power.html&#34; target=&#34;_blank&#34;&gt;Twitter uses Apache with Unicorn&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/blog/517-unicorn&#34; target=&#34;_blank&#34;&gt;GitHub uses nginx with Unicorn&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;h1&gt;More Cool Stuff&lt;/h1&gt;
+
+&lt;h2&gt;JRuby vs Ruby&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2011: &lt;a href=&#34;http://torquebox.org/news/2011/02/23/benchmarking-torquebox/&#34; target=&#34;_blank&#34;&gt;http://torquebox.org/news/2011/02/23/benchmarking-torquebox/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2011: &lt;a href=&#34;http://torquebox.org/news/2011/03/14/benchmarking-torquebox-round2/&#34; target=&#34;_blank&#34;&gt;http://torquebox.org/news/2011/03/14/benchmarking-torquebox-round2/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s worth pointing out that Unicorn comes out ahead of the other non-JRuby servers in all the benchmarks that are anywhere near a real-world situation.&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Passenger in development&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2010: &lt;a href=&#34;http://blog.phusion.nl/2010/07/01/the-road-to-passenger-3-technology-preview-3-closing-the-gap-between-development-and-production-rethinking-the-word-easy/&#34; target=&#34;_blank&#34;&gt;http://blog.phusion.nl/2010/07/01/the-road-to-passenger-3-technology-preview-3-closing-the-gap-between-development-and-production-rethinking-the-word-easy/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;Twitter uses MySQL for storing Tweets, and Cassandra for statistics and datamining&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;2010: &lt;a href=&#34;http://engineering.twitter.com/2010/07/cassandra-at-twitter-today.html&#34; target=&#34;_blank&#34;&gt;http://engineering.twitter.com/2010/07/cassandra-at-twitter-today.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>&#34;Lessons Learned&#34; by Devver</title>
+      <link>http://anthonymcook.com/articles/learning-from-failing-startups-lessons-learned/</link>
+      <pubDate>Tue, 15 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/learning-from-failing-startups-lessons-learned/</guid>
+      <description>
+
+&lt;h1 id=&#34;learning-from-failed-startups:5e125ae7b645ad66b943f5f13529d8c6&#34;&gt;Learning From Failed Startups&lt;/h1&gt;
+
+&lt;aside&gt;
+&lt;strong&gt;EDIT:&lt;/strong&gt;&lt;em&gt;This is excerpted from
+&lt;a href=&#34; http://devver.wordpress.com/2010/04/26/lessons-learned &#34;&gt;Devver&#39;s blog&lt;/a&gt;
+for posterity.&lt;/em&gt;
+&lt;/aside&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;we were hesitant to ask for feedback and help. We quickly found that
+people are incredibly helpful and generous with their time. Users were
+willing to take a chance and use our products while giving us valuable
+feedback. Fellow Rubyists gave us ideas and helped us with technical
+problems. Mentors made time for meetings and introduced us to others who
+could assist us. And other entrepreneurs, both new and seasoned, were
+happy to share stories, compare experiences, and offer support.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We embraced working remotely: we hired Avdi to work in Pennsylvania
+while Dan and I lived in Boulder and later on, Dan moved to Washington,
+DC. There are many benefits to having a distributed team, but two stood
+out in our experience. First, we could hire top talent without having to
+worry about location (in fact, our flexibility regarding location was
+very attractive to most candidates we interviewed). Secondly, being in
+different locations allowed every team member to work with minimal
+distractions, which is invaluable when it comes to efficiently writing
+good code.
+&lt;br&gt;&lt;br&gt;
+That said, communication was a challenge. To ensure we were all synced
+up, we had a daily standup as well as a weekly review. When Dan moved to
+DC, he and I scheduled another weekly meeting with no set agenda to just
+bring up all the issues, large and small, that were on our minds. We
+also all got together in the same location every few months to work in
+the same room and rekindle our team energy.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;
+Also, pair programming was difficult to do remotely and we never came up
+with a great solution. As a result, we spent less than a day pairing a
+week on average.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;
+The most significant drawback to a remote team is the administrative
+hassle. It’s a pain to manage payroll, unemployment, insurance, etc in
+one state. It’s a freaking nightmare to manage in three states (well,
+two states and a district), even though we paid a payroll service to
+take care of it. Apparently, once your startup gets larger, there are
+companies that will manage this with minimal hassle, but for a small
+team, it was a major annoyance and distraction.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;we should have focused more on customer development and finding a
+minimum viable product (MVP)”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Our mistake at that point was to go “heads down” and focus on building
+the accelerator while minimizing our contact with users and customers
+(after all, we knew how great it was and time spent talking to customers
+was time we could be hacking!). We should have asking, “Is there an even
+simpler version of this product that we can deliver sooner to learn more
+about pricing, market size, and technical challenges?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;aside class=&#34;url&#34;&gt;
+&lt;a href=&#34;http://devver.wordpress.com/2010/04/26/lessons-learned&#34;&gt;
+&lt;div&gt;read the full post&lt;/div&gt;
+Lessons Learned
+&lt;/a&gt;
+&lt;/aside&gt;
+</description>
+    </item>
+    
+    <item>
       <title>IRB &amp; iTerm</title>
-      <link>http://anthonymcook.com/an-iterm-bookmark-for-irb/</link>
+      <link>http://anthonymcook.com/articles/an-iterm-bookmark-for-irb/</link>
       <pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://anthonymcook.com/an-iterm-bookmark-for-irb/</guid>
+      <guid>http://anthonymcook.com/articles/an-iterm-bookmark-for-irb/</guid>
       <description>&lt;p&gt;If you&amp;rsquo;re like &lt;a href=&#34;http://twitter.com/anthony_m_cook&#34; target=&#34;_blank&#34;&gt;me&lt;/a&gt;, you use &lt;a href=&#34;http://en.wikipedia.org/wiki/Interactive_Ruby_Shell&#34; target=&#34;_blank&#34;&gt;irb&lt;/a&gt; for all kinds of things. From just running quick ruby experiments to figuring out how many &lt;a href=&#34;http://rubydoc.info/docs/ruby-core/1.9.2/Time&#34; target=&#34;_blank&#34;&gt;days&lt;/a&gt; (9364) you&amp;rsquo;ve been alive.&lt;/p&gt;
 
 &lt;p&gt;I created a bookmark in &lt;a href=&#34;http://iterm.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;iTerm&lt;/a&gt; to run &lt;a href=&#34;http://ruby-doc.org/docs/ProgrammingRuby/html/irb.html&#34; target=&#34;_blank&#34;&gt;irb&lt;/a&gt; when I hit &lt;a href=&#34;http://jrgraphix.net/r/Unicode/2300-23FF&#34; target=&#34;_blank&#34;&gt;⌘&lt;/a&gt;-control-0. This was fine until I realized it was using the system&amp;rsquo;s &lt;a href=&#34;http://stackoverflow.com/questions/3474875/why-does-mac-os-x-come-with-ruby-rails&#34; target=&#34;_blank&#34;&gt;ruby&lt;/a&gt; install, and not the &lt;a href=&#34;http://rubydoc.info/docs/ruby-core/1.9.2&#34; target=&#34;_blank&#34;&gt;version&lt;/a&gt; I installed with &lt;a href=&#34;http://rvm.beginrescueend.com/&#34; target=&#34;_blank&#34;&gt;RVM&lt;/a&gt;.&lt;/p&gt;
@@ -29,6 +210,21 @@
 &lt;p&gt;&lt;br/&gt;
 Yay it works!&lt;br/&gt;
 ⦂∀&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Top 10 Reasons the Ruby Programming Language Sucks</title>
+      <link>http://anthonymcook.com/shorts/top-10-reasons-the-ruby-programming-language-sucks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/shorts/top-10-reasons-the-ruby-programming-language-sucks/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;http://www.slideshare.net/vishnu/the-top-10-reasons-the-ruby-programming-language-sucks&#34;&gt;
+&lt;div&gt;slideshare.net&lt;/div&gt;
+The Top 10 Reasons the Ruby Programming Language Sucks
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;p&gt;Very old, ancient in fact, but still makes a lot of great points.&lt;/p&gt;
 </description>
     </item>
     

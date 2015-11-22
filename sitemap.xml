@@ -8,28 +8,162 @@
   </url>
   
   <url>
-    <loc>http://anthonymcook.com/the-new-powerline/</loc>
+    <loc>http://anthonymcook.com/articles/the-new-powerline/</loc>
     <lastmod>2013-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://anthonymcook.com/cukeplusplus/</loc>
+    <loc>http://anthonymcook.com/articles/set-up-and-deploy-your-rails-app-to-heroku/</loc>
+    <lastmod>2011-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/html5-and-client-side-storage-stack/</loc>
+    <lastmod>2011-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/getting-more-information-about-ruby-objects/</loc>
+    <lastmod>2011-09-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/images/i-generated-an-ablazejs-image-using-another/</loc>
+    <lastmod>2011-09-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/cmdr-command-ruby/</loc>
+    <lastmod>2011-08-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/get-the-delete-key-working-in-irb-on-osx-with-two/</loc>
+    <lastmod>2011-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/images/flowchart-legend/</loc>
+    <lastmod>2011-08-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/support-from-your-peers-is-something-you-need-to/</loc>
+    <lastmod>2011-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/rtfm-of-the-day-the-cd-command/</loc>
+    <lastmod>2011-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/pixen-vs-seashore-and-firefox-vs-chrome/</loc>
+    <lastmod>2011-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/rails-31-stable-branch-compass-sass-and-the/</loc>
+    <lastmod>2011-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/making-your-life-easier-by-throwing-money-at-the/</loc>
+    <lastmod>2011-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/shorts/semantic-versioning/</loc>
+    <lastmod>2011-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/checking-out-individual-files-from-an-arbitrary/</loc>
+    <lastmod>2011-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/i-was-updating-rvm-and-it-said-my-name/</loc>
+    <lastmod>2011-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/my-life-with-the-thrill-kill-ipad-kult/</loc>
+    <lastmod>2011-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/how-to-get-statistics-from-output-of-diff/</loc>
+    <lastmod>2011-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/semantic-web-css-and-css-file-structure/</loc>
+    <lastmod>2011-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/shorts/heres-an-outdated-screenshot-of-a-completely/</loc>
+    <lastmod>2011-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/rails-webserver-research/</loc>
+    <lastmod>2011-03-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/images/for-everyone-who-exalts-the-features-will-be/</loc>
+    <lastmod>2011-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/learning-from-failing-startups-lessons-learned/</loc>
+    <lastmod>2011-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/shorts/webserver-in-bash-with-under-100-lines-of-code/</loc>
+    <lastmod>2011-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/living-social-security-holes/</loc>
+    <lastmod>2011-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/my-fork-of-gitx/</loc>
+    <lastmod>2011-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/whatever-i-am-doing-a-lot-of-other-people-have/</loc>
+    <lastmod>2011-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/articles/cukeplusplus/</loc>
     <lastmod>2010-12-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://anthonymcook.com/this-is-your-brain-on-vim/</loc>
+    <loc>http://anthonymcook.com/images/iterm2-vs-macvim/</loc>
     <lastmod>2010-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://anthonymcook.com/iterm2-vs-macvim/</loc>
+    <loc>http://anthonymcook.com/shorts/this-is-your-brain-on-vim/</loc>
     <lastmod>2010-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://anthonymcook.com/an-iterm-bookmark-for-irb/</loc>
+    <loc>http://anthonymcook.com/articles/an-iterm-bookmark-for-irb/</loc>
     <lastmod>2010-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://anthonymcook.com/shorts/top-10-reasons-the-ruby-programming-language-sucks/</loc>
   </url>
   
 </urlset>
