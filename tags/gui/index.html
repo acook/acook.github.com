@@ -98,7 +98,7 @@
         
       </ul>
 
-      <h2 class="brand-tagline">nomadic posts</h2>
+      <h2 class="brand-tagline">recent</h2>
       <ul class="nav-list">
         
         
@@ -120,114 +120,6 @@
         
         <li class="nav-item"><a href="/images/i-generated-an-ablazejs-image-using-another/">
           <span class="nav-item-separator">//</span>Ablaze.js &amp; Facebook
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/cmdr-command-ruby/">
-          <span class="nav-item-separator">//</span>CMDR
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/get-the-delete-key-working-in-irb-on-osx-with-two/">
-          <span class="nav-item-separator">//</span>IRB &amp; OSX DELETE
-        </a></li>
-        
-        <li class="nav-item"><a href="/images/flowchart-legend/">
-          <span class="nav-item-separator">//</span>Flowchart Legend
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/support-from-your-peers-is-something-you-need-to/">
-          <span class="nav-item-separator">//</span>Support from your Peers
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/rtfm-of-the-day-the-cd-command/">
-          <span class="nav-item-separator">//</span>RTFM: cd
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/pixen-vs-seashore-and-firefox-vs-chrome/">
-          <span class="nav-item-separator">//</span>Pixen vs Seashore and Firefox vs Chrome
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/rails-31-stable-branch-compass-sass-and-the/">
-          <span class="nav-item-separator">//</span>Rails 3.1 Beta &amp; Compass
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/making-your-life-easier-by-throwing-money-at-the/">
-          <span class="nav-item-separator">//</span>Throwing money at the problem
-        </a></li>
-        
-        <li class="nav-item"><a href="/shorts/semantic-versioning/">
-          <span class="nav-item-separator">//</span>Semantic Versioning
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/checking-out-individual-files-from-an-arbitrary/">
-          <span class="nav-item-separator">//</span>arbitrary revision
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/i-was-updating-rvm-and-it-said-my-name/">
-          <span class="nav-item-separator">//</span>RVM knows my name
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/my-life-with-the-thrill-kill-ipad-kult/">
-          <span class="nav-item-separator">//</span>iPad2
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/how-to-get-statistics-from-output-of-diff/">
-          <span class="nav-item-separator">//</span>diffstat
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/semantic-web-css-and-css-file-structure/">
-          <span class="nav-item-separator">//</span>Semantic CSS Strategies
-        </a></li>
-        
-        <li class="nav-item"><a href="/shorts/heres-an-outdated-screenshot-of-a-completely/">
-          <span class="nav-item-separator">//</span>Quote from PDX.RB
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/rails-webserver-research/">
-          <span class="nav-item-separator">//</span>Rails webserver research
-        </a></li>
-        
-        <li class="nav-item"><a href="/images/for-everyone-who-exalts-the-features-will-be/">
-          <span class="nav-item-separator">//</span>featurecreep
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/learning-from-failing-startups-lessons-learned/">
-          <span class="nav-item-separator">//</span>&#34;Lessons Learned&#34; by Devver
-        </a></li>
-        
-        <li class="nav-item"><a href="/shorts/webserver-in-bash-with-under-100-lines-of-code/">
-          <span class="nav-item-separator">//</span>Webserver in Bash with Under 100 Lines of code
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/living-social-security-holes/">
-          <span class="nav-item-separator">//</span>Living Social security holes
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/my-fork-of-gitx/">
-          <span class="nav-item-separator">//</span>GitX
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/whatever-i-am-doing-a-lot-of-other-people-have/">
-          <span class="nav-item-separator">//</span>Living in a Cave
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/cukeplusplus/">
-          <span class="nav-item-separator">//</span>Cukeplusplus
-        </a></li>
-        
-        <li class="nav-item"><a href="/images/iterm2-vs-macvim/">
-          <span class="nav-item-separator">//</span>MacVim vs iTerm
-        </a></li>
-        
-        <li class="nav-item"><a href="/shorts/this-is-your-brain-on-vim/">
-          <span class="nav-item-separator">//</span>Your brain on vim
-        </a></li>
-        
-        <li class="nav-item"><a href="/articles/an-iterm-bookmark-for-irb/">
-          <span class="nav-item-separator">//</span>IRB &amp; iTerm
-        </a></li>
-        
-        <li class="nav-item"><a href="/shorts/top-10-reasons-the-ruby-programming-language-sucks/">
-          <span class="nav-item-separator">//</span>Top 10 Reasons the Ruby Programming Language Sucks
         </a></li>
         
 
