@@ -6,15 +6,16 @@
     <description>Recent content in Fuckit on digital. [nomad]</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 15 Jun 2011 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/fuckit/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ruby on Windows</title>
-      <link>http://localhost:1313/installing-ruby-192-rails-3-and-mysql-on/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>http://localhost:1313/articles/installing-ruby-192-rails-3-and-mysql-on/</link>
+      <pubDate>Wed, 15 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/installing-ruby-192-rails-3-and-mysql-on/</guid>
-      <description>&lt;p&gt;&lt;aside&gt;INSTALLING RUBY 1.9.2, RAILS 3, AND MYSQL ON WINDOWS&lt;/Aside&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/articles/installing-ruby-192-rails-3-and-mysql-on/</guid>
+      <description>&lt;aside&gt;INSTALLING RUBY 1.9.2, RAILS 3, AND MYSQL ON WINDOWS&lt;/aside&gt;
 
 &lt;h2&gt;Ruby&lt;/h2&gt;
 

@@ -127,6 +127,265 @@ If you figured out where your Python has installed Powerline at, and you can&amp
     </item>
     
     <item>
+      <title>Access Growl&#39;s log on OSX</title>
+      <link>http://anthonymcook.com/articles/access-growls-log-on-osx/</link>
+      <pubDate>Sun, 09 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/access-growls-log-on-osx/</guid>
+      <description>&lt;p&gt;Open a terminal and drop this in:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;touch ~/Library/Logs/Growl.log
+defaults write com.Growl.GrowlHelperApp GrowlLoggingEnabled -bool YES
+defaults write com.Growl.GrowlHelperApp GrowlLogType 1
+defaults write com.Growl.GrowlHelperApp &amp;quot;Custom log history 1&amp;quot; $HOME/Library/Logs/Growl.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then you&amp;rsquo;ll find the log file at &lt;code&gt;$HOME/Library/Logs/Growl.log&lt;/code&gt; and you can parse it or do whatever, like display messages on your desktop with GeekTools or something.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;:A&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Killing SSH</title>
+      <link>http://anthonymcook.com/articles/how-to-kill-an-ssh-session-to-a-remote-server/</link>
+      <pubDate>Tue, 04 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/how-to-kill-an-ssh-session-to-a-remote-server/</guid>
+      <description>
+
+&lt;h1 id=&#34;howto-kill-an-ssh-session:e57ea8577ac6527631da9776eba42235&#34;&gt;HOWTO: Kill an SSH Session&lt;/h1&gt;
+
+&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;http://www.cyberciti.biz/faq/openssh-linux-unix-osx-kill-hung-ssh-session/&#34;&gt;
+&lt;div&gt;gleaned from cyberciti.biz&lt;/div&gt;
+Kill Hung SSH Session
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;p&gt;Often I&amp;rsquo;m using SSH and my connection drops, or I close my laptop and it disconnects from the wifi. When I get back to my SSH sessions, its locked and unresponsive. Eventually it will time out, but it takes a while.&lt;/p&gt;
+
+&lt;p&gt;Enter: SSH Escape Characters.&lt;/p&gt;
+
+&lt;p&gt;They only work immediately after a newline, and all start with a tilde. The disconnect character is the period (or dot).&lt;/p&gt;
+
+&lt;p&gt;So all you have to do is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[enter]~.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And voila, it&amp;rsquo;ll end your session without &lt;code&gt;kill&lt;/code&gt; or closing your terminal.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a complete list of escape characters from the SSH man page:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; .      Disconnect.
+ ^Z     Background ssh.
+ #      List forwarded connections.
+ &amp;amp;      Background ssh at logout when waiting for forwarded connection / X11 sessions to terminate.
+ ?      Display a list of escape characters.
+ B      Send a BREAK to the remote system (only useful for SSH protocol version 2 and if the peer supports it).
+ C      Open command line.  Currently this allows the addition of port forwardings using the -L, -R and -D options (see above).  It also allows the cancellation of existing remote port-forwardings using -KR[bind_address:]port.
+         !command allows the user to execute a local command if the PermitLocalCommand option is enabled in ssh_config(5).  Basic help is available, using the -h option.
+ R      Request rekeying of the connection (only useful for SSH protocol version 2 and if the peer supports it).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;:A&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Postgres on OSX issues</title>
+      <link>http://anthonymcook.com/articles/postgres-on-osx-issues/</link>
+      <pubDate>Mon, 03 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/postgres-on-osx-issues/</guid>
+      <description>&lt;p&gt;So I was running into this obnoxious error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;psql: FATAL:  role &#34;postgres&#34; does not exist
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;No matter what I did. It basically means that the user is missing. So I had to create the user by hand. First I initialized the database as my current user:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;initdb -D /usr/local/pgsql/data
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And then I made sure the daemon was running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;postgres -D /usr/local/pgsql/data &amp;gt;logfile 2&amp;gt;&amp;amp;1 &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then I opened a postgres terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;psql template1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And created the postgres user:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;create user postgres with password &#39;&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally, I gave the postgres user superuser privileges so it can create databases and whatever in my development environment.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alter role postgres with superuser;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Done!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Redis autostart preference pane for OSX</title>
+      <link>http://anthonymcook.com/shorts/redis-autostart-preference-pane-for-osx/</link>
+      <pubDate>Mon, 03 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/shorts/redis-autostart-preference-pane-for-osx/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;https://github.com/dquimper/Redis.prefPane&#34;&gt;
+&lt;div&gt;github.com&lt;/div&gt;
+Redis.prefpane
+&lt;/a&gt;&lt;/aside&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OSX-like Natural Scrolling on Windows</title>
+      <link>http://anthonymcook.com/articles/osx-like-natural-scrolling-on-windows/</link>
+      <pubDate>Mon, 15 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/osx-like-natural-scrolling-on-windows/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;http://one-cheekymonkey.blogspot.com/2012/01/reverse-mouse-scroll-direction-in.html&#34;&gt;
+&lt;div&gt;one-cheekymonkey.blogspot.com&lt;/div&gt;
+Reverse Mouse Scroll Direction
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;p&gt;I’m going to forget this next time it happens, so I’m putting here for
+posterity.&lt;/p&gt;
+
+&lt;p&gt;Navigate to
+&lt;code&gt;HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\HID&lt;/code&gt;, and look
+for an entry that resembles &lt;code&gt;VID\_…&lt;/code&gt; Open the &lt;code&gt;Device Parameters&lt;/code&gt; key
+under each child entry and reverse the boolean value for the
+&lt;code&gt;FlipFlopWheel&lt;/code&gt;.&lt;/p&gt;
+
+&lt;aside&gt;These days I use &lt;code&gt;FlipFlip.exe&lt;/code&gt; (see below) which automates all this for me.
+This is still useful for knowing how it works and how it fix it manually.&lt;/aside&gt;
+
+&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;https://github.com/jamie-pate/flipflop-windows-wheel&#34;&gt;
+&lt;div&gt;github.com&lt;/div&gt;
+FlipFlop Windows Wheel
+&lt;/a&gt;&lt;/aside&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Things Startups Need</title>
+      <link>http://anthonymcook.com/articles/cdixon-tumblr-things-startups-do-and-dont-need/</link>
+      <pubDate>Fri, 12 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/cdixon-tumblr-things-startups-do-and-dont-need/</guid>
+      <description>
+
+&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34; http://nonchalantrepreneur.com/post/311546950/things-startups-do-and-dont-need &#34;&gt;
+&lt;div&gt;http://nonchalantrepreneur.com/&lt;/div&gt;
+Things Startups Do and Don&#39;t Need
+&lt;/a&gt;&lt;/aside&gt;
+
+&lt;blockquote&gt;
+&lt;h2 id=&#34;things-startups-do-need:56ecf96322c3bcad71a958626d7dda19&#34;&gt;Things startups do need&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sunny office&lt;/li&gt;
+&lt;li&gt;Windows that open&lt;/li&gt;
+&lt;li&gt;Democratically controlled music system&lt;/li&gt;
+&lt;li&gt;Two forms of internet access&lt;/li&gt;
+&lt;li&gt;Beer on fridays&lt;/li&gt;
+&lt;li&gt;EVDO cards&lt;/li&gt;
+&lt;li&gt;Video game system&lt;/li&gt;
+&lt;li&gt;Good coffee maker&lt;/li&gt;
+&lt;li&gt;Proximity to public transportation&lt;/li&gt;
+&lt;li&gt;Proximity to park&lt;/li&gt;
+&lt;li&gt;Heating that goes all night&lt;/li&gt;
+&lt;li&gt;Health care plans…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fuck Make</title>
+      <link>http://anthonymcook.com/articles/make-colons-and-paths-a-journey-through-hell/</link>
+      <pubDate>Thu, 09 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/make-colons-and-paths-a-journey-through-hell/</guid>
+      <description>
+
+&lt;h1 id=&#34;make-colons-and-paths-a-journey-through-hell:ea25e1573aedad13419e1d14918d6754&#34;&gt;Make, Colons, and Paths: A Journey Through Hell&lt;/h1&gt;
+
+&lt;aside&gt;tl;dr: If you use timestamps on your deploys, make sure they don&amp;rsquo;t contain colons or &lt;code&gt;make&lt;/code&gt; will explode. Including Ruby extensions.&lt;/aside&gt;
+
+&lt;p&gt;We were running into this error while running &lt;code&gt;bundle install&lt;/code&gt; on Ubuntu:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/local/rvm/rubies/ruby-1.9.3-p194/bin/ruby extconf.rb
+checking for ffi.h... no
+checking for ffi.h in /usr/local/include... no
+checking for rb_thread_blocking_region()... yes
+checking for ruby_native_thread_p()... yes
+checking for rb_thread_call_with_gvl()... yes
+creating extconf.h
+creating Makefile
+
+make
+Makefile:158: *** target pattern contains no `%&#39;.  Stop.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The confusing part was when we ran &lt;code&gt;gem install ffi&lt;/code&gt; it ran without a problem.
+Googling around told us nothing about why ffi would be failing to build.&lt;/p&gt;
+
+&lt;p&gt;We had run across &lt;a href=&#34;http://lists.trolltech.com/qt-interest/2005-02/thread01024-0.html&#34; target=&#34;_blank&#34;&gt;a post about QT&lt;/a&gt; where a similar error was encountered.&lt;/p&gt;
+
+&lt;p&gt;Then I found a &lt;a href=&#34;http://stackoverflow.com/questions/2052406/escaping-colons-in-filenames-in-a-makefile&#34; target=&#34;_blank&#34;&gt;StackOverflow question&lt;/a&gt; which references &lt;a href=&#34;http://www.mail-archive.com/bug-make@gnu.org/msg03318.html&#34; target=&#34;_blank&#34;&gt;a GNU mailing list thread&lt;/a&gt; that explains the complete impossibility of &lt;code&gt;make&lt;/code&gt; being able to parse a Makefile containing colons.&lt;/p&gt;
+
+&lt;p&gt;It turns out we &lt;em&gt;did&lt;/em&gt; have colons in the filename: We were using %T in the timestamps on our integration server, thus &lt;code&gt;make&lt;/code&gt; was choking.&lt;/p&gt;
+
+&lt;p&gt;The fix was simple, we just replaced the %T with a non-colon-delimited time string and everything worked just fine.&lt;/p&gt;
+
+&lt;p&gt;Done!&lt;/p&gt;
+
+&lt;p&gt;:A&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Completely remove Xcode from OSX Lion</title>
+      <link>http://anthonymcook.com/articles/completely-remove-xcode-from-osx-lion/</link>
+      <pubDate>Thu, 12 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/articles/completely-remove-xcode-from-osx-lion/</guid>
+      <description>&lt;p&gt;First you want to try running this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /Developer/Library/uninstall-devtools -mode=all
+sudo rm -rf /Developer
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Repeat above for any other directories beginning with &lt;code&gt;Developer&lt;/code&gt; in your root directory. For some reason I had two: &lt;code&gt;Developer&lt;/code&gt; and &lt;code&gt;Developer-3.2.6&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Some systems may have a &lt;code&gt;/Library/Developer/Shared&lt;/code&gt; directory also, so make sure you check for that directory, it will have its own &lt;code&gt;uninstall-devtools&lt;/code&gt; script.&lt;/p&gt;
+
+&lt;p&gt;After that delete the install app (this will make sure the AppStore knows its been uninstalled):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo rm -rf /Applications/Install Xcode.app
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Some people may also find deleting the AppStore cache helps, but &lt;strong&gt;only&lt;/strong&gt; do this if the above doesn&amp;rsquo;t work, remember to replace &amp;ldquo;your username&amp;rdquo; with the actual directory name:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo rm -rf /Library/Caches
+sudo rm -rf /User/your username/Library/Caches/com.apple.appstore
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Done!&lt;/p&gt;
+
+&lt;p&gt;And let me know if you have any other tips.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Rails on Heroku</title>
       <link>http://anthonymcook.com/articles/set-up-and-deploy-your-rails-app-to-heroku/</link>
       <pubDate>Thu, 22 Sep 2011 00:00:00 +0000</pubDate>
@@ -415,283 +674,6 @@ rvm install 1.9.2  --with-readline-dir=/usr/local/Cellar/readline/6.2.1
 &lt;p&gt;Its possible that &lt;a href=&#34;http://beginrescueend.com/packages/readline/&#34; target=&#34;_blank&#34;&gt;installing readline with rvm&lt;/a&gt; might have the same effect, but I wanted readline to be readily available to other applications I installed as well.&lt;/p&gt;
 
 &lt;p&gt;Use whatever the current version of readline is for you. Do &lt;code&gt;ls /usr/local/Cellar/readline/&lt;/code&gt; to find it.&lt;/p&gt;
-
-&lt;p&gt;⦂∀&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Flowchart Legend</title>
-      <link>http://anthonymcook.com/images/flowchart-legend/</link>
-      <pubDate>Fri, 19 Aug 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://anthonymcook.com/images/flowchart-legend/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://40.media.tumblr.com/tumblr_lq7apjjy721qfucqto1_1280.jpg&#34;&gt;
-&lt;img src=&#34;http://40.media.tumblr.com/tumblr_lq7apjjy721qfucqto1_1280.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Support from your Peers</title>
-      <link>http://anthonymcook.com/articles/support-from-your-peers-is-something-you-need-to/</link>
-      <pubDate>Tue, 16 Aug 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://anthonymcook.com/articles/support-from-your-peers-is-something-you-need-to/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Support from your peers is something you need to earn by looking at
-what’s important to them. The person that is showing you resistance
-may have a great idea you can help facilitate and quickly he goes from
-rival to ally. I would like to add that being an effective leader will
-directly depend on how you are received at the peer level today and
-earning their respect is essential.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Blake Thomas in an interview with Maria Dubov at MMD and a good friend
-of mine.&lt;/p&gt;
-
-&lt;p&gt;He was just in town last week, it was first time I’d seen him since I’d
-moved to Portland from Chicago.&lt;/p&gt;
-
-&lt;p&gt;Read the whole interview here:&lt;/p&gt;
-
-&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;http://www.mmdtech.com/2011/08/planning-your-next-promotion-blake-thomas-tells-his-story&#34;&gt;
-&lt;div&gt;mmdtech.com&lt;/div&gt;
-Planning Your Next Promotion
-&lt;/a&gt;&lt;/aside&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>RTFM: cd</title>
-      <link>http://anthonymcook.com/articles/rtfm-of-the-day-the-cd-command/</link>
-      <pubDate>Sun, 14 Aug 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://anthonymcook.com/articles/rtfm-of-the-day-the-cd-command/</guid>
-      <description>&lt;p&gt;Okay maybe this is just me, but I have never been inclined to look up the &lt;a href=&#34;http://www.linuxcommand.org/man_pages/cd1.html&#34; title=&#34;Look around, its in there.. somewhere&#34; target=&#34;_blank&#34;&gt;man page&lt;/a&gt; for the &lt;code&gt;cd&lt;/code&gt; command before today.&lt;/p&gt;
-
-&lt;p&gt;But when I did, I found two things of interest:&lt;/p&gt;
-
-&lt;p&gt;&lt;ul&gt;&lt;li&gt;$OLDPWD : is set by the system when you use &lt;code&gt;cd&lt;/code&gt;, it contains the path you last &lt;code&gt;cd&lt;/code&gt;ed from&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cd -&lt;/code&gt; : shorthand for &lt;code&gt;cd $OLDPWD&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;It&amp;rsquo;s pretty simple but here&amp;rsquo;s a usage example on OSX:&lt;/p&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;~/Projects/config $ cd /Applications
-/Applications $ rm -rf Firefox.app
-/Applications $ cd -
-/Users/acook/Projects/config
-~/Projects/config $ git status
-# On branch master
-nothing to commit (working directory clean)
-~/Projects/config $ cd -
-/Applications $
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So its really just an easy way to swap back and forth between directories, easier than using &lt;code&gt;popd&lt;/code&gt; and &lt;code&gt;pushd&lt;/code&gt;, which only let you swap once.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve been meaning to write a script to handle directory history, hmm, maybe I will do that today while I am thinking about it..&lt;/p&gt;
-
-&lt;p&gt;⦂∀&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Pixen vs Seashore and Firefox vs Chrome</title>
-      <link>http://anthonymcook.com/articles/pixen-vs-seashore-and-firefox-vs-chrome/</link>
-      <pubDate>Sun, 14 Aug 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://anthonymcook.com/articles/pixen-vs-seashore-and-firefox-vs-chrome/</guid>
-      <description>&lt;p&gt;So I was just playing with some ideas to create my own Tumblr theme, an I noticed a few differences between the above mentioned applications.&lt;/p&gt;
-
-&lt;p&gt;This isn&amp;rsquo;t a debate about which is better, this is just a couple of oddities I&amp;rsquo;ve noticed.&lt;/p&gt;
-
-&lt;h1&gt;&lt;a href=&#34;http://www.macupdate.com/app/mac/13363/pixen&#34; target=&#34;_blank&#34;&gt;Pixen&lt;/a&gt; vs &lt;a href=&#34;http://seashore.sourceforge.net/The_Seashore_Project/About.html&#34; target=&#34;_blank&#34;&gt;Seashore&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;These are &lt;em&gt;very&lt;/em&gt; different applications and I&amp;rsquo;m using them for very specific tasks, which one may be better suited for than the other.&lt;/p&gt;
-
-&lt;h2&gt;Pixen&lt;/h2&gt;
-
-&lt;p&gt;&lt;ul&gt;&lt;li&gt;When you save a GIF, it automatically assumes an alpha channel.&lt;/li&gt;
-&lt;li&gt;Resizing your canvas is simple: &lt;code&gt;Edit/Resize Canvas&amp;hellip;&lt;/code&gt; and enter your dimensions&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;Seashore&lt;/h2&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;ul&gt;&lt;li&gt;No alpha channel when you save a GIF. &lt;/li&gt;
-&lt;li&gt;Even when the background of your image is transparent. &lt;/li&gt;
-&lt;li&gt;In fact I don&amp;rsquo;t see an option to save GIFs with an alpha channel at all. (!?)&lt;/li&gt;
-&lt;li&gt;After some hunting and experimenting I discovered how to resize my canvas: &lt;code&gt;Image/Image Boundaries&amp;hellip;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;You can&amp;rsquo;t just set your dimensions, you have to tell it &lt;em&gt;where&lt;/em&gt; to expand/contract.&lt;/li&gt;
-&lt;li&gt;That&amp;rsquo;s more powerful, its great, but it doesn&amp;rsquo;t explain that or warn you if you just enter your dimensions and hit &amp;ldquo;Set&amp;rdquo;. Nothing happens at all.&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;My Opinion&lt;/h2&gt;&lt;/p&gt;
-
-&lt;p&gt;Seashore is clearly a more stable and powerful application, Pixen is designed for pixel drawing and animation, that&amp;rsquo;s about it. The advantage to Pixen&amp;rsquo;s narrow mindset is that they made it intuitive to use and have sane defaults.&lt;/p&gt;
-
-&lt;p&gt;This is a lesson to me, and I must remember it. And the lesson is in simplicity and what we can learn from it.&lt;/p&gt;
-
-&lt;h1&gt;&lt;a href=&#34;http://www.mozilla.com/en-US/firefox/fx/&#34; target=&#34;_blank&#34;&gt;Firefox&lt;/a&gt; vs &lt;a href=&#34;http://www.google.com/chrome/&#34; target=&#34;_blank&#34;&gt;Chrome&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;This is very zoomed in, because I&amp;rsquo;m working with pixels here.&lt;/p&gt;
-
-&lt;h2&gt;Firefox PNG and Font Rendering&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://38.media.tumblr.com/tumblr_lpxx4uF0Bs1qetbyr.png&#34; alt=&#34;&#34;/&gt;&lt;/p&gt;
-
-&lt;h2&gt;Chrome PNG and Font Rendering&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://31.media.tumblr.com/tumblr_lpxx7cAhHV1qetbyr.png&#34; alt=&#34;&#34;/&gt;&lt;/p&gt;
-
-&lt;h2&gt;My Opinion&lt;/h2&gt;
-
-&lt;p&gt;Judgement call? Firefox beats the pants off of Chrome as far as repeating image rendering. It treats the entire element as a single image and dithers accordingly. That&amp;rsquo;s a fantastic way to do it. You can actually just barely see the dividing line between the top and bottom of the Firefox image, that&amp;rsquo;s because those are two different &lt;code&gt;p&lt;/code&gt;-tags.&lt;/p&gt;
-
-&lt;p&gt;The font rendering is pretty similar, but again I have to give it to Firefox here. At huge scales, their fonts look cleaner.&lt;/p&gt;
-
-&lt;p&gt;At normal scales I can&amp;rsquo;t consciously tell the difference between the image nor font rendering. But still, I&amp;rsquo;d like to see those features implemented in Chrome.&lt;/p&gt;
-
-&lt;p&gt;I use both browsers regularly, and strongly prefer Chrome, but there&amp;rsquo;s still certainly things to be learned from other browsers.&lt;/p&gt;
-
-&lt;p&gt;⦂∀&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Rails 3.1 Beta &amp; Compass</title>
-      <link>http://anthonymcook.com/articles/rails-31-stable-branch-compass-sass-and-the/</link>
-      <pubDate>Thu, 21 Jul 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://anthonymcook.com/articles/rails-31-stable-branch-compass-sass-and-the/</guid>
-      <description>&lt;p&gt;I put together a new Rails application to try out the new version of Rails, and during the course of testing it I came across an odd problem..&lt;/p&gt;
-
-&lt;p&gt;My pages were unstyled.&lt;/p&gt;
-
-&lt;p&gt;Checking Chrome&amp;rsquo;s devtools, I noticed the CSS files were all 404ing. Chrome and Rails obviously knew what the files were supposed to be. But they just weren&amp;rsquo;t &lt;em&gt;where&lt;/em&gt; they were supposed to be.&lt;/p&gt;
-
-&lt;h2&gt;Background&lt;/h2&gt;
-
-&lt;p&gt;I set up my environment with the following gems (besides the defaults):&lt;/p&gt;
-
-&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;https://github.com/indirect/haml-rails&#34; title=&#34;Because HTML sucks.&#34; target=&#34;_blank&#34;&gt;haml-rails&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/chriseppstein/compass&#34; title=&#34;Because why not?&#34; target=&#34;_blank&#34;&gt;compass&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mbleigh/acts-as-taggable-on&#34; title=&#34;How far tagging has come since the original, right?&#34; target=&#34;_blank&#34;&gt;acts-as-taggable-on&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rtomayko/rdiscount&#34; title=&#34;Have you seen the benchmarks for this compared to the old BlueCloth? Holy shit.&#34; target=&#34;_blank&#34;&gt;rdiscount&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/vigetlabs/acts_as_markup&#34; title=&#34;A nice little under appreciated gem for making Markdown and related fields better playmates with Rails&#34; target=&#34;_blank&#34;&gt;acts_as_markup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mceachen/closure_tree&#34; title=&#34;I&#39;m pretty sure this is voodoo, and I like it.&#34; target=&#34;_blank&#34;&gt;closure_tree&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/plataformatec/devise&#34; title=&#34;The new standard in Rails Authentication. I&#39;ll never have to write an auth system again.&#34; target=&#34;_blank&#34;&gt;devise&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;and the development/testing gems:&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;https://github.com/dchelimsky/rspec-rails&#34; title=&#34;Because Test::Unit sucks.&#34; target=&#34;_blank&#34;&gt;rspec-rails&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/btakita/rr&#34; title=&#34;I prefer the syntax over RSpec&#34; target=&#34;_blank&#34;&gt;rr&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/thoughtbot/factory_girl_rails&#34; title=&#34;Because fixtures REALLY suck.&#34; target=&#34;_blank&#34;&gt;factory_girl_rails&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/blackwinter/wirble&#34; title=&#34;The colors Duke, the colors!&#34; target=&#34;_blank&#34;&gt;wirble&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/indirect/rails3-generators&#34; title=&#34;Generators for Factory Girl!&#34; target=&#34;_blank&#34;&gt;rails3-generators&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mark-moseley/ruby-debug&#34; title=&#34;Damn bugs, get off my app!&#34; target=&#34;_blank&#34;&gt;ruby-debug19&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;Probing the Innards&lt;/h2&gt;&lt;/p&gt;
-
-&lt;p&gt;After encountering the error I checked my git status and it told me the files were being created in &lt;code&gt;public/stylesheets&lt;/code&gt; - the old path, rather than the shiny new &lt;code&gt;public/assets&lt;/code&gt; of the Rails 3.1 Asset Pipeline.&lt;/p&gt;
-
-&lt;p&gt;First thing I did was start googling the errors I was encountering. I wasn&amp;rsquo;t getting a satisfactory lead from that so I started looking at what could be interfering with the asset pipeline.&lt;/p&gt;
-
-&lt;p&gt;All signs pointed to Compass.&lt;/p&gt;
-
-&lt;h2&gt;Compass and Rails 3.1&lt;/h2&gt;
-
-&lt;p&gt;Compass was blindsided by the massive changes to Rails with the 3.1 update, and since its not the official release yet they haven&amp;rsquo;t 100% caught up yet.&lt;/p&gt;
-
-&lt;p&gt;There&amp;rsquo;s tons of articles, posts, and bugs to be found on it right now.&lt;/p&gt;
-
-&lt;p&gt;The first thing I tried was having bundler pull from Compass&amp;rsquo;s github:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;gem &#39;compass&#39;, :git =&amp;gt; &#39;https://github.com/chriseppstein/compass.git&#39;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, that still didn&amp;rsquo;t fix the problem, but I decided to leave it in.&lt;/p&gt;
-
-&lt;h2&gt;The Fix&lt;/h2&gt;
-
-&lt;p&gt;Then I started going through Compass&amp;rsquo;s documentation and found the &lt;a href=&#34;http://compass-style.org/help/tutorials/configuration-reference/&#34; target=&#34;_blank&#34;&gt;configuration options&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Eureka!&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;d previously done:
-&lt;code&gt;css_dir = &#39;public/assets&#39;&lt;/code&gt;
-And now with:
-&lt;code&gt;sass_dir = &#39;app/assets/stylesheets&#39;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;It works!&lt;/p&gt;
-
-&lt;p&gt;Hopefully this bug will get fixed in Compass soon.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Throwing money at the problem</title>
-      <link>http://anthonymcook.com/articles/making-your-life-easier-by-throwing-money-at-the/</link>
-      <pubDate>Fri, 01 Jul 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://anthonymcook.com/articles/making-your-life-easier-by-throwing-money-at-the/</guid>
-      <description>
-
-&lt;h1 id=&#34;making-your-life-easier-by-throwing-money-at-the-problem:27a84e99e907313b4351b197337b3ac2&#34;&gt;Making your Life Easier by Throwing Money at the Problem&lt;/h1&gt;
-
-&lt;p&gt;Okay, first off, throwing money at your problems isn&amp;rsquo;t usually the solution (unless your problems are unpaid bills, then its very effective).&lt;/p&gt;
-
-&lt;p&gt;However, its surprising how much difference a little thing here and there can make.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m talking of course about power cables.&lt;/p&gt;
-
-&lt;h4 id=&#34;ldquo-power-cables-rdquo:27a84e99e907313b4351b197337b3ac2&#34;&gt;&amp;ldquo;Power cables?!&amp;rdquo;&lt;/h4&gt;
-
-&lt;p&gt;Right. Power cables. I have a laptop I use for work, it&amp;rsquo;s a great little shiny 13&amp;quot; 2.7ghz &lt;a href=&#34;http://www.apple.com/macbookpro/specs-13inch.html&#34; title=&#34;I&#39;m seriously considering getting an SSD&#34; target=&#34;_blank&#34;&gt;MacBook Pro&lt;/a&gt;. I also use Portland&amp;rsquo;s rather unpredictable public transit system. So in the morning when my brain is still &lt;a href=&#34;http://en.wikipedia.org/wiki/Power-on_self-test&#34; title=&#34;otherwise known as Power On Self Test&#34; target=&#34;_blank&#34;&gt;POSTing&lt;/a&gt;, I try to keep my morning routine as streamlined as possible.&lt;/p&gt;
-
-&lt;p&gt;For some reason the one thing that that seemed to slow me down was winding up my laptop cable.&lt;/p&gt;
-
-&lt;p&gt;Realistically, there&amp;rsquo;s been a handful of times I&amp;rsquo;ve left home or work without it, but there was one time back in 2008..&lt;/p&gt;
-
-&lt;p&gt;I was going on a trip to Australia, I brought only my phone (which I knew would be useless once I got there) and my little first-gen Asus EeePc. I land in LA to switch planes, but due to delays leaving O&#39;Hare, the flight had left before I ever arrived. So I was stranded in LA. I pull out my Eee and record a silly little video blog, and get online for a while. Then I realized the horrible truth.. I&amp;rsquo;d left my dammed power cable somewhere.&lt;/p&gt;
-
-&lt;p&gt;It turned out it&amp;rsquo;d fallen out of my bag in a friend&amp;rsquo;s car on the way to the airport. I was basically without internet, computer or phone for a week in a foreign country. Hardly the end of the world, but I&amp;rsquo;ve been a bit paranoid about power cables ever since.&lt;/p&gt;
-
-&lt;p&gt;So recently due to a cable issue, one of my coworkers picked up an additional cable for me, and I found another one floating around. So now I have one cable at home, one at my desk at work, and one (glitchy) cable in my bag just in case.&lt;/p&gt;
-
-&lt;p&gt;Now my mornings and running to catch my bus after committing that last change are easier. One less thing to worry about.&lt;/p&gt;
-
-&lt;p&gt;Going to the Apple store they will cost you around $80. Ouch. You can get them for less than $20 if you look though, I just looked on Google Shopping, new and used ones there.&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s just a little something I&amp;rsquo;ve found helps me.
-What is something you could do to streamline your mornings?&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Semantic Versioning</title>
-      <link>http://anthonymcook.com/shorts/semantic-versioning/</link>
-      <pubDate>Thu, 30 Jun 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://anthonymcook.com/shorts/semantic-versioning/</guid>
-      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;http://semver.org&#34;&gt;
-&lt;div&gt;semver.org&lt;/div&gt;
-Semantic Versioning
-&lt;/a&gt;&lt;/aside&gt;
-
-&lt;p&gt;I don’t agree with this 100%, but still this is a well written document
-and a great default starting place for figuring out what you do want.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>arbitrary revision</title>
-      <link>http://anthonymcook.com/articles/checking-out-individual-files-from-an-arbitrary/</link>
-      <pubDate>Wed, 29 Jun 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://anthonymcook.com/articles/checking-out-individual-files-from-an-arbitrary/</guid>
-      <description>&lt;p&gt;Just a quick tip.&lt;/p&gt;
-
-&lt;p&gt;Do you want to look at a file in a different branch where tests are passing to see if the problem is in that file? Or maybe you want to rollback a change in git to a particular previous version?&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s easy, once you have the commit SHA:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git checkout &amp;lt;sha&amp;gt; /path/to/file.rb
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Done!&lt;/p&gt;
 
 &lt;p&gt;⦂∀&lt;/p&gt;
 </description>

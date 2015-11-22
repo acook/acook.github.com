@@ -6,8 +6,21 @@
     <description>Recent content in Shorts on digital. [nomad]</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jun 2011 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Dec 2012 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://anthonymcook.com/shorts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Redis autostart preference pane for OSX</title>
+      <link>http://anthonymcook.com/shorts/redis-autostart-preference-pane-for-osx/</link>
+      <pubDate>Mon, 03 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://anthonymcook.com/shorts/redis-autostart-preference-pane-for-osx/</guid>
+      <description>&lt;aside class=&#34;url&#34;&gt;&lt;a href=&#34;https://github.com/dquimper/Redis.prefPane&#34;&gt;
+&lt;div&gt;github.com&lt;/div&gt;
+Redis.prefpane
+&lt;/a&gt;&lt;/aside&gt;
+</description>
+    </item>
     
     <item>
       <title>Semantic Versioning</title>

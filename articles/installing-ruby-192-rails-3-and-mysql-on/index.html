@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <title>
+    Ruby on Windows // digital. [nomad]
+  </title>
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="generator" content="Hugo 0.14" />
+
+  <meta property="og:title" content="Ruby on Windows" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="http://localhost:1313/articles/installing-ruby-192-rails-3-and-mysql-on/" />
+
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/base-min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+  
+  
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-min.css">
+  
+  
+
+  <link rel="stylesheet" href="/css/redlounge.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png?v=2">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="digital. [nomad]" />
+
+  <link rel="stylesheet" href="/css/highlight.css"><script src="/js/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script>
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+  
+
+  <div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+  <div class="header">
+    
+
+    
+
+    <h1 class="brand-title">digital. [nomad]</h1>
+    <h2 class="brand-tagline">the digital frontier</h2>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="http://localhost:1313/">
+            <span class="nav-item-separator">//</span>Home
+          </a>
+        </li>
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="sidebar-nav-item
+            
+              active
+            " href="/articles/">
+            <span class="nav-item-separator">//</span>articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="sidebar-nav-item
+            " href="/images/">
+            <span class="nav-item-separator">//</span>images
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="sidebar-nav-item
+            " href="/shorts/">
+            <span class="nav-item-separator">//</span>shorts
+          </a>
+        </li>
+        
+      </ul>
+
+      <h2 class="brand-tagline">recent</h2>
+      <ul class="nav-list">
+        
+        
+        <li class="nav-item"><a href="/articles/this_blog/">
+          <span class="nav-item-separator">//</span>this_blog
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/intro-to-blacklight/">
+          <span class="nav-item-separator">//</span>blacklight
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/hello_bob/">
+          <span class="nav-item-separator">//</span>hello bob
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/about/">
+          <span class="nav-item-separator">//</span>this nomad
+        </a></li>
+        
+        <li class="nav-item"><a href="/articles/the-new-powerline/">
+          <span class="nav-item-separator">//</span>powerline
+        </a></li>
+        
+
+      </ul>
+    </nav>
+
+    
+
+  </div>
+</div>
+
+
+    
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+      <a name="top"></a>
+      
+
+      
+      
+      
+      <section class="post pure-u-1 pure-u-md-3-4">
+        <h1 class="post-title">
+          <a href="/articles/installing-ruby-192-rails-3-and-mysql-on/">Ruby on Windows</a>
+        </h1>
+        <h3 class="post-subtitle">
+          
+        </h3>
+        
+        <span class="post-date">
+          <span class="post-date-month"><sup>Jun</sup></span><span class="post-date-separator">/</span><span class="post-date-year">2011</span>
+        </span>
+        
+        
+        
+        
+
+        
+        
+
+        
+
+        
+
+        <aside>INSTALLING RUBY 1.9.2, RAILS 3, AND MYSQL ON WINDOWS</aside>
+
+<h2>Ruby</h2>
+
+<p><ol><li>Download the current Ruby Installer for Windows:</li>
+<li><a href="http://rubyforge.org/frs/download.php/74298/rubyinstaller-1.9.2-p180.exe" target="_blank"><a href="http://rubyforge.org/frs/download.php/74298/rubyinstaller-1.9.2-p180.exe">http://rubyforge.org/frs/download.php/74298/rubyinstaller-1.9.2-p180.exe</a></a></li>
+<li>or check for latest at <a href="http://rubyinstaller.org/downloads/" target="_blank"><a href="http://rubyinstaller.org/downloads/">http://rubyinstaller.org/downloads/</a></a> </li>
+<li>Run the installer </li>
+<li>Select </li>
+<li>Download the DevKit</li>
+<li>sfsf</li>
+<li>adfkljbdf</li>
+</ol><h2>MySQL</h2></p>
+
+<p><ol><li>Download the MySQL Installer for Windows:</li>
+<li>current: <a href="http://dev.mysql.com/downloads/mirror.php?id=402461" target="_blank"><a href="http://dev.mysql.com/downloads/mirror.php?id=402461">http://dev.mysql.com/downloads/mirror.php?id=402461</a></a> </li>
+<li>all: <a href="http://dev.mysql.com/downloads/mysql/" target="_blank"><a href="http://dev.mysql.com/downloads/mysql/">http://dev.mysql.com/downloads/mysql/</a></a> </li>
+<li>run installer</li>
+<li>copy &ldquo;C:\Program Files\MySQL\MySQL Server 5.1\libmysql.dll&rdquo; C:\ruby19\bin</li>
+<li>Draw a pentagram and sprinkle the blood of a chicken counter clockwise around the edge &hellip;</li>
+</ol><p>⦂∀</p></p>
+
+
+        
+
+        
+        <div class="tags-list">
+          <span class="dark-red">Tags</span><span class="decorative-marker">//</span>
+          
+          <a class="post-tag post-tag-fuckit" href="http://localhost:1313//tags/fuckit">fuckit</a>,
+          
+        </div>
+        
+
+        
+        <div class="paging pure-g">
+          <hr class="thin"/>
+          <div class="paging-newer pure-u-1-5">
+          
+            <a class="paging-link" href="/articles/checking-out-individual-files-from-an-arbitrary/">
+              <span class="dark-red">Newer</span>
+              <span class="decorative-marker">//</span>arbitrary revision
+            </a>
+          
+          </div>
+          <span class="paging-label pure-u-3-5">&#x21e0; Read More &#x21e2;</span>
+          <div class="paging-older pure-u-1-5">
+            
+            <a class="paging-link" href="/articles/i-was-updating-rvm-and-it-said-my-name/">
+              <span class="dark-red">Older</span>
+              <span class="decorative-marker">//</span>RVM knows my name
+            </a>
+            
+          </div>
+        </div>
+        
+      </section>
+      
+      
+      
+
+    </div>
+  </div>
+  
+
+  
+
+  
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

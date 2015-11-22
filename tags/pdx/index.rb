@@ -106,20 +106,20 @@
           <span class="nav-item-separator">//</span>powerline
         </a></li>
         
-        <li class="nav-item"><a href="/articles/set-up-and-deploy-your-rails-app-to-heroku/">
-          <span class="nav-item-separator">//</span>Rails on Heroku
+        <li class="nav-item"><a href="/articles/access-growls-log-on-osx/">
+          <span class="nav-item-separator">//</span>Access Growl&#39;s log on OSX
         </a></li>
         
-        <li class="nav-item"><a href="/articles/html5-and-client-side-storage-stack/">
-          <span class="nav-item-separator">//</span>Client-Side Storage
+        <li class="nav-item"><a href="/articles/how-to-kill-an-ssh-session-to-a-remote-server/">
+          <span class="nav-item-separator">//</span>Killing SSH
         </a></li>
         
-        <li class="nav-item"><a href="/articles/getting-more-information-about-ruby-objects/">
-          <span class="nav-item-separator">//</span>deep inspect
+        <li class="nav-item"><a href="/articles/postgres-on-osx-issues/">
+          <span class="nav-item-separator">//</span>Postgres on OSX issues
         </a></li>
         
-        <li class="nav-item"><a href="/images/i-generated-an-ablazejs-image-using-another/">
-          <span class="nav-item-separator">//</span>Ablaze.js &amp; Facebook
+        <li class="nav-item"><a href="/shorts/redis-autostart-preference-pane-for-osx/">
+          <span class="nav-item-separator">//</span>Redis autostart preference pane for OSX
         </a></li>
         
 

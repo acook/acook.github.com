@@ -108,20 +108,20 @@
           <span class="nav-item-separator">//</span>powerline
         </a></li>
         
-        <li class="nav-item"><a href="/articles/set-up-and-deploy-your-rails-app-to-heroku/">
-          <span class="nav-item-separator">//</span>Rails on Heroku
+        <li class="nav-item"><a href="/articles/access-growls-log-on-osx/">
+          <span class="nav-item-separator">//</span>Access Growl&#39;s log on OSX
         </a></li>
         
-        <li class="nav-item"><a href="/articles/html5-and-client-side-storage-stack/">
-          <span class="nav-item-separator">//</span>Client-Side Storage
+        <li class="nav-item"><a href="/articles/how-to-kill-an-ssh-session-to-a-remote-server/">
+          <span class="nav-item-separator">//</span>Killing SSH
         </a></li>
         
-        <li class="nav-item"><a href="/articles/getting-more-information-about-ruby-objects/">
-          <span class="nav-item-separator">//</span>deep inspect
+        <li class="nav-item"><a href="/articles/postgres-on-osx-issues/">
+          <span class="nav-item-separator">//</span>Postgres on OSX issues
         </a></li>
         
-        <li class="nav-item"><a href="/images/i-generated-an-ablazejs-image-using-another/">
-          <span class="nav-item-separator">//</span>Ablaze.js &amp; Facebook
+        <li class="nav-item"><a href="/shorts/redis-autostart-preference-pane-for-osx/">
+          <span class="nav-item-separator">//</span>Redis autostart preference pane for OSX
         </a></li>
         
 
@@ -166,6 +166,209 @@
             </article>
 			<div class="read-more-link">
 				<a href="/articles/the-new-powerline/"><span class="read-more-slashes">//</span>Read More...</a>
+			</div>
+          </section>
+        
+          <section  class="post">
+            <header class="post-header">
+            
+            <h1 class="post-title">
+              <a href="/articles/access-growls-log-on-osx/">Access Growl&#39;s log on OSX</a>
+            </h1>
+            </header>
+            <p class="post-meta">
+            	
+		          <span class="post-date">
+		            <span class="post-date-day"><sup>9</sup></span><span class="post-date-separator">/</span><span class="post-date-month">Dec</span> <span class="post-date-year">2012</span>
+		          </span>
+      				
+      				
+      					
+      				
+              
+                <span class="post-reading-time"><i class="fa fa-clock-o"></i> <em>1 min. read</em></span>
+              
+      				
+            </p>
+            <article class="post-summary">
+            	Open a terminal and drop this in: touch ~/Library/Logs/Growl.log defaults write com.Growl.GrowlHelperApp GrowlLoggingEnabled -bool YES defaults write com.Growl.GrowlHelperApp GrowlLogType 1 defaults write com.Growl.GrowlHelperApp &quot;Custom log history 1&quot; $HOME/Library/Logs/Growl.log Then you&rsquo;ll find the log file at $HOME/Library/Logs/Growl.log and you can parse it or do whatever, like display messages on your desktop with GeekTools or something. :A
+            </article>
+			<div class="read-more-link">
+				<a href="/articles/access-growls-log-on-osx/"><span class="read-more-slashes">//</span>Read More...</a>
+			</div>
+          </section>
+        
+          <section  class="post">
+            <header class="post-header">
+            
+            <h1 class="post-title">
+              <a href="/articles/how-to-kill-an-ssh-session-to-a-remote-server/">Killing SSH</a>
+            </h1>
+            </header>
+            <p class="post-meta">
+            	
+		          <span class="post-date">
+		            <span class="post-date-day"><sup>4</sup></span><span class="post-date-separator">/</span><span class="post-date-month">Dec</span> <span class="post-date-year">2012</span>
+		          </span>
+      				
+      				
+      					
+      				
+              
+                <span class="post-reading-time"><i class="fa fa-clock-o"></i> <em>2 min. read</em></span>
+              
+      				
+            </p>
+            <article class="post-summary">
+            	HOWTO: Kill an SSH Session gleaned from cyberciti.biz Kill Hung SSH Session Often I&rsquo;m using SSH and my connection drops, or I close my laptop and it disconnects from the wifi. When I get back to my SSH sessions, its locked and unresponsive. Eventually it will time out, but it takes a while. Enter: SSH Escape Characters. They only work immediately after a newline, and all start with a tilde. The disconnect character is the period (or dot).
+            </article>
+			<div class="read-more-link">
+				<a href="/articles/how-to-kill-an-ssh-session-to-a-remote-server/"><span class="read-more-slashes">//</span>Read More...</a>
+			</div>
+          </section>
+        
+          <section  class="post">
+            <header class="post-header">
+            
+            <h1 class="post-title">
+              <a href="/articles/postgres-on-osx-issues/">Postgres on OSX issues</a>
+            </h1>
+            </header>
+            <p class="post-meta">
+            	
+		          <span class="post-date">
+		            <span class="post-date-day"><sup>3</sup></span><span class="post-date-separator">/</span><span class="post-date-month">Dec</span> <span class="post-date-year">2012</span>
+		          </span>
+      				
+      				
+      					
+      				
+              
+                <span class="post-reading-time"><i class="fa fa-clock-o"></i> <em>1 min. read</em></span>
+              
+      				
+            </p>
+            <article class="post-summary">
+            	So I was running into this obnoxious error: psql: FATAL: role "postgres" does not exist No matter what I did. It basically means that the user is missing. So I had to create the user by hand. First I initialized the database as my current user: initdb -D /usr/local/pgsql/data And then I made sure the daemon was running: postgres -D /usr/local/pgsql/data &gt;logfile 2&gt;&amp;1 &amp; Then I opened a postgres terminal: psql template1 And created the postgres user: create user postgres with password ''; Finally, I gave the postgres user superuser privileges so it can create databases and whatever in my development environment.
+            </article>
+			<div class="read-more-link">
+				<a href="/articles/postgres-on-osx-issues/"><span class="read-more-slashes">//</span>Read More...</a>
+			</div>
+          </section>
+        
+          <section  class="post">
+            <header class="post-header">
+            
+            <h1 class="post-title">
+              <a href="/articles/osx-like-natural-scrolling-on-windows/">OSX-like Natural Scrolling on Windows</a>
+            </h1>
+            </header>
+            <p class="post-meta">
+            	
+		          <span class="post-date">
+		            <span class="post-date-day"><sup>15</sup></span><span class="post-date-separator">/</span><span class="post-date-month">Oct</span> <span class="post-date-year">2012</span>
+		          </span>
+      				
+      				
+      					
+      				
+              
+                <span class="post-reading-time"><i class="fa fa-clock-o"></i> <em>1 min. read</em></span>
+              
+      				
+            </p>
+            <article class="post-summary">
+            	one-cheekymonkey.blogspot.com Reverse Mouse Scroll Direction I’m going to forget this next time it happens, so I’m putting here for posterity. Navigate to HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\HID, and look for an entry that resembles VID\_… Open the Device Parameters key under each child entry and reverse the boolean value for the FlipFlopWheel. These days I use FlipFlip.exe (see below) which automates all this for me. This is still useful for knowing how it works and how it fix it manually.
+            </article>
+			<div class="read-more-link">
+				<a href="/articles/osx-like-natural-scrolling-on-windows/"><span class="read-more-slashes">//</span>Read More...</a>
+			</div>
+          </section>
+        
+          <section  class="post">
+            <header class="post-header">
+            
+            <h1 class="post-title">
+              <a href="/articles/cdixon-tumblr-things-startups-do-and-dont-need/">Things Startups Need</a>
+            </h1>
+            </header>
+            <p class="post-meta">
+            	
+		          <span class="post-date">
+		            <span class="post-date-day"><sup>12</sup></span><span class="post-date-separator">/</span><span class="post-date-month">Oct</span> <span class="post-date-year">2012</span>
+		          </span>
+      				
+      				
+      					
+      				
+              
+                <span class="post-reading-time"><i class="fa fa-clock-o"></i> <em>1 min. read</em></span>
+              
+      				
+            </p>
+            <article class="post-summary">
+            	http://nonchalantrepreneur.com/ Things Startups Do and Don't Need Things startups do need Sunny office Windows that open Democratically controlled music system Two forms of internet access Beer on fridays EVDO cards Video game system Good coffee maker Proximity to public transportation Proximity to park Heating that goes all night Health care plans…
+            </article>
+			<div class="read-more-link">
+				<a href="/articles/cdixon-tumblr-things-startups-do-and-dont-need/"><span class="read-more-slashes">//</span>Read More...</a>
+			</div>
+          </section>
+        
+          <section  class="post">
+            <header class="post-header">
+            
+            <h1 class="post-title">
+              <a href="/articles/make-colons-and-paths-a-journey-through-hell/">Fuck Make</a>
+            </h1>
+            </header>
+            <p class="post-meta">
+            	
+		          <span class="post-date">
+		            <span class="post-date-day"><sup>9</sup></span><span class="post-date-separator">/</span><span class="post-date-month">Aug</span> <span class="post-date-year">2012</span>
+		          </span>
+      				
+      				
+      					
+      				
+              
+                <span class="post-reading-time"><i class="fa fa-clock-o"></i> <em>1 min. read</em></span>
+              
+      				
+            </p>
+            <article class="post-summary">
+            	Make, Colons, and Paths: A Journey Through Hell tl;dr: If you use timestamps on your deploys, make sure they don&rsquo;t contain colons or make will explode. Including Ruby extensions. We were running into this error while running bundle install on Ubuntu: /usr/local/rvm/rubies/ruby-1.9.3-p194/bin/ruby extconf.rb checking for ffi.h... no checking for ffi.h in /usr/local/include... no checking for rb_thread_blocking_region()... yes checking for ruby_native_thread_p()... yes checking for rb_thread_call_with_gvl()... yes creating extconf.h creating Makefile make Makefile:158: *** target pattern contains no `%'.
+            </article>
+			<div class="read-more-link">
+				<a href="/articles/make-colons-and-paths-a-journey-through-hell/"><span class="read-more-slashes">//</span>Read More...</a>
+			</div>
+          </section>
+        
+          <section  class="post">
+            <header class="post-header">
+            
+            <h1 class="post-title">
+              <a href="/articles/completely-remove-xcode-from-osx-lion/">Completely remove Xcode from OSX Lion</a>
+            </h1>
+            </header>
+            <p class="post-meta">
+            	
+		          <span class="post-date">
+		            <span class="post-date-day"><sup>12</sup></span><span class="post-date-separator">/</span><span class="post-date-month">Jan</span> <span class="post-date-year">2012</span>
+		          </span>
+      				
+      				
+      					
+      				
+              
+                <span class="post-reading-time"><i class="fa fa-clock-o"></i> <em>1 min. read</em></span>
+              
+      				
+            </p>
+            <article class="post-summary">
+            	First you want to try running this: sudo /Developer/Library/uninstall-devtools -mode=all sudo rm -rf /Developer Repeat above for any other directories beginning with Developer in your root directory. For some reason I had two: Developer and Developer-3.2.6. Some systems may have a /Library/Developer/Shared directory also, so make sure you check for that directory, it will have its own uninstall-devtools script. After that delete the install app (this will make sure the AppStore knows its been uninstalled): sudo rm -rf /Applications/Install Xcode.app Some people may also find deleting the AppStore cache helps, but only do this if the above doesn&rsquo;t work, remember to replace &ldquo;your username&rdquo; with the actual directory name: sudo rm -rf /Library/Caches sudo rm -rf /User/your username/Library/Caches/com.apple.appstore Done!
+            </article>
+			<div class="read-more-link">
+				<a href="/articles/completely-remove-xcode-from-osx-lion/"><span class="read-more-slashes">//</span>Read More...</a>
 			</div>
           </section>
         
